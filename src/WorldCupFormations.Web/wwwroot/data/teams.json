@@ -1,0 +1,13 @@
+[
+  { "id": 1,  "name": "Uruguay",      "code": "URU" },
+  { "id": 2,  "name": "Argentina",    "code": "ARG" },
+  { "id": 3,  "name": "Brazil",       "code": "BRA" },
+  { "id": 4,  "name": "Sweden",       "code": "SWE" },
+  { "id": 5,  "name": "England",      "code": "ENG" },
+  { "id": 6,  "name": "West Germany", "code": "WGE" },
+  { "id": 7,  "name": "Italy",        "code": "ITA" },
+  { "id": 8,  "name": "Netherlands",  "code": "NED" },
+  { "id": 9,  "name": "France",       "code": "FRA" },
+  { "id": 10, "name": "Spain",        "code": "ESP" },
+  { "id": 11, "name": "Germany",      "code": "GER" }
+]

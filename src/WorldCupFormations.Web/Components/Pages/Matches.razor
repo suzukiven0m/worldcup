@@ -1,0 +1,51 @@
+@page "/matches/{Year:int}"
+@using WorldCupFormations.Data.Repositories
+@inject IWorldCupRepository Repo
+
+<PageTitle>@Year World Cup – Matches</PageTitle>
+
+<nav class="breadcrumb">
+    <a href="/">World Cups</a> › <span>@Year</span>
+</nav>
+
+<div class="page-header">
+    <h2>@Year World Cup — Matches</h2>
+    <p>Select a team formation to view.</p>
+</div>
+
+<div class="match-list">
+    @if (matches is null)
+    {
+        <p>Loading…</p>
+    }
+    else if (!matches.Any())
+    {
+        <p>No matches found.</p>
+    }
+    else
+    {
+        @foreach (var m in matches)
+        {
+            <div class="match-card">
+                <div class="match-stage">@m.Stage · @m.Date.ToString("d MMM yyyy")</div>
+                <div class="match-score">
+                    <a class="team-label bold home-link" href="/formation/@m.Id/@m.HomeTeamId">@m.HomeTeam.Name</a>
+                    <span class="score">@m.HomeScore – @m.AwayScore</span>
+                    <a class="team-label bold away-link" href="/formation/@m.Id/@m.AwayTeamId">@m.AwayTeam.Name</a>
+                </div>
+                <div class="match-hint">Click a team name to view their formation</div>
+            </div>
+        }
+    }
+</div>
+
+@code {
+    [Parameter] public int Year { get; set; }
+
+    private List<WorldCupFormations.Data.Entities.Match>? matches;
+
+    protected override async Task OnInitializedAsync()
+    {
+        matches = await Repo.GetMatchesForYearAsync(Year);
+    }
+}

@@ -1,0 +1,168 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: #0f1923;
+    color: #e8e8e8;
+    min-height: 100vh;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* ── App Shell ─────────────────────────────── */
+.app-shell { display: flex; flex-direction: column; min-height: 100vh; }
+
+.app-header {
+    background: #162230;
+    padding: 1rem 2rem;
+    border-bottom: 2px solid #2d7a3a;
+}
+
+.app-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #4caf7d;
+    letter-spacing: 0.5px;
+}
+
+.app-main {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* ── Breadcrumb ─────────────────────────────── */
+.breadcrumb {
+    font-size: 0.85rem;
+    color: #999;
+    margin-bottom: 1.5rem;
+}
+.breadcrumb a { color: #4caf7d; }
+.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb span { color: #ccc; }
+
+/* ── Page Header ─────────────────────────────── */
+.page-header { margin-bottom: 2rem; }
+.page-header h1, .page-header h2 { font-size: 1.8rem; color: #fff; margin-bottom: 0.4rem; }
+.page-header p  { color: #aaa; }
+
+/* ── Card Grid ─────────────────────────────── */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1rem;
+}
+
+/* ── World Cup Card ─────────────────────────── */
+.wc-card {
+    background: #162230;
+    border: 1px solid #1e3448;
+    border-radius: 10px;
+    padding: 1.2rem 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.2s, transform 0.15s;
+}
+.wc-card:hover { border-color: #4caf7d; transform: translateY(-2px); }
+.wc-year   { font-size: 1.8rem; font-weight: 700; color: #4caf7d; }
+.wc-host   { font-size: 0.85rem; color: #aaa; margin: 0.2rem 0; }
+.wc-winner { font-size: 0.9rem; color: #e0c060; margin-top: 0.4rem; }
+
+/* ── Team Card ─────────────────────────────── */
+.team-card {
+    background: #162230;
+    border: 1px solid #1e3448;
+    border-radius: 10px;
+    padding: 1.2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.2s, transform 0.15s;
+}
+.team-card:hover { border-color: #4caf7d; transform: translateY(-2px); }
+.team-code { font-size: 1.5rem; font-weight: 700; color: #fff; }
+.team-name { font-size: 0.85rem; color: #aaa; margin-top: 0.3rem; }
+
+/* ── Match List ─────────────────────────────── */
+.match-list { display: flex; flex-direction: column; gap: 0.8rem; max-width: 640px; }
+
+.match-card {
+    background: #162230;
+    border: 1px solid #1e3448;
+    border-radius: 10px;
+    padding: 1rem 1.4rem;
+    transition: border-color 0.2s;
+}
+.match-stage { font-size: 0.78rem; color: #888; margin-bottom: 0.4rem; text-transform: uppercase; letter-spacing: 0.5px; }
+.match-score { display: flex; align-items: center; gap: 1rem; font-size: 1rem; }
+.match-hint  { font-size: 0.75rem; color: #556; margin-top: 0.5rem; text-align: center; }
+.team-label  { flex: 1; }
+.team-label.bold { font-weight: 700; color: #fff; }
+.home-link { color: #7ab4ff; text-decoration: none; transition: color 0.15s; }
+.home-link:hover { color: #aed4ff; text-decoration: underline; }
+.away-link { color: #ff8888; text-decoration: none; transition: color 0.15s; }
+.away-link:hover { color: #ffaaaa; text-decoration: underline; }
+.score { font-size: 1.3rem; font-weight: 700; color: #4caf7d; white-space: nowrap; }
+
+/* ── Formation Page ─────────────────────────── */
+.formation-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.match-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    font-size: 1.4rem;
+    margin-bottom: 0.4rem;
+}
+.team { font-weight: 700; }
+.home-team { color: #5b9ef5; }
+.away-team { color: #e05555; }
+.result    { font-size: 2rem; font-weight: 900; color: #4caf7d; }
+.match-meta { color: #888; font-size: 0.85rem; margin-bottom: 0.8rem; }
+
+.formation-badges { display: flex; justify-content: center; gap: 1rem; }
+.badge {
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+.badge.home { background: #1a3a6e; color: #7ab4ff; }
+.badge.away { background: #5a1a1a; color: #ff8888; }
+
+/* ── Pitch ─────────────────────────────────── */
+.pitch-wrapper {
+    max-width: 480px;
+    margin: 0 auto;
+}
+.pitch-container svg { display: block; border-radius: 8px; }
+
+/* ── Substitutes ─────────────────────────────── */
+.substitutes {
+    max-width: 480px;
+    margin: 1.5rem auto 0;
+    background: #162230;
+    border: 1px solid #1e3448;
+    border-radius: 10px;
+    padding: 1rem 1.4rem;
+}
+.substitutes h3 { font-size: 1rem; color: #aaa; margin-bottom: 0.6rem; }
+.substitutes ul { list-style: none; padding: 0; }
+.substitutes li { color: #ccc; font-size: 0.9rem; padding: 0.25rem 0; border-bottom: 1px solid #1e3448; }
+.substitutes li:last-child { border-bottom: none; }
+
+/* ── Error UI ───────────────────────────────── */
+#blazor-error-ui {
+    background: #9a2121;
+    color: white;
+    padding: 0.5rem 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: none;
+}
+#blazor-error-ui .dismiss { cursor: pointer; float: right; }

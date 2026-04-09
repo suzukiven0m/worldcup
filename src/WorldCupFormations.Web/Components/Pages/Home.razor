@@ -1,0 +1,37 @@
+@page "/"
+@using WorldCupFormations.Data.Repositories
+@inject IWorldCupRepository Repo
+
+<PageTitle>World Cup Formations</PageTitle>
+
+<div class="page-header">
+    <h1>World Cup Formations</h1>
+    <p>Explore historic starting line-ups and formations from every FIFA World Cup.</p>
+</div>
+
+<div class="card-grid">
+    @if (worldCups is null)
+    {
+        <p>Loading…</p>
+    }
+    else
+    {
+        @foreach (var wc in worldCups)
+        {
+            <a class="wc-card" href="/matches/@wc.Year">
+                <div class="wc-year">@wc.Year</div>
+                <div class="wc-host">@wc.Host</div>
+                <div class="wc-winner">🏆 @wc.Winner</div>
+            </a>
+        }
+    }
+</div>
+
+@code {
+    private List<WorldCupFormations.Data.Entities.WorldCup>? worldCups;
+
+    protected override async Task OnInitializedAsync()
+    {
+        worldCups = await Repo.GetAllAsync();
+    }
+}

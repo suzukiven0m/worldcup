@@ -1,0 +1,99 @@
+@using WorldCupFormations.Services
+@using Microsoft.AspNetCore.Components
+
+<div class="pitch-container">
+    <svg viewBox="0 0 680 1050" xmlns="http://www.w3.org/2000/svg" width="100%">
+
+        <!-- Pitch surface -->
+        <rect x="0" y="0" width="680" height="1050" fill="#2d7a3a" />
+
+        <!-- Pitch stripes -->
+        @for (int i = 0; i < 7; i++)
+        {
+            var yy = i * 150;
+            <rect x="0" y="@yy" width="680" height="75" fill="#317d3e" opacity="0.4" />
+        }
+
+        <!-- Outer border -->
+        <rect x="10" y="10" width="660" height="1030" fill="none" stroke="white" stroke-width="3" />
+
+        <!-- Centre line -->
+        <line x1="10" y1="525" x2="670" y2="525" stroke="white" stroke-width="2" />
+
+        <!-- Centre circle -->
+        <circle cx="340" cy="525" r="91" fill="none" stroke="white" stroke-width="2" />
+        <circle cx="340" cy="525" r="5" fill="white" />
+
+        <!-- Home penalty area -->
+        <rect x="136" y="10" width="408" height="165" fill="none" stroke="white" stroke-width="2" />
+        <rect x="240" y="10" width="200" height="55" fill="none" stroke="white" stroke-width="2" />
+        <circle cx="340" cy="122" r="4" fill="white" />
+        <rect x="265" y="0" width="150" height="15" fill="#888" stroke="white" stroke-width="1" />
+
+        <!-- Away penalty area -->
+        <rect x="136" y="875" width="408" height="165" fill="none" stroke="white" stroke-width="2" />
+        <rect x="240" y="985" width="200" height="55" fill="none" stroke="white" stroke-width="2" />
+        <circle cx="340" cy="928" r="4" fill="white" />
+        <rect x="265" y="1035" width="150" height="15" fill="#888" stroke="white" stroke-width="1" />
+
+        <!-- Corner arcs -->
+        <path d="M 10 55 A 45 45 0 0 1 55 10" fill="none" stroke="white" stroke-width="2" />
+        <path d="M 625 10 A 45 45 0 0 1 670 55" fill="none" stroke="white" stroke-width="2" />
+        <path d="M 10 995 A 45 45 0 0 0 55 1040" fill="none" stroke="white" stroke-width="2" />
+        <path d="M 625 1040 A 45 45 0 0 0 670 995" fill="none" stroke="white" stroke-width="2" />
+
+        <!-- Formation labels (rendered as MarkupString to avoid Razor <text> conflict) -->
+        @((MarkupString)RenderFormationLabels())
+
+        <!-- Players -->
+        @((MarkupString)RenderPlayers(HomePlayers, "#1a6fcb", labelBelow: true))
+        @((MarkupString)RenderPlayers(AwayPlayers, "#c0392b", labelBelow: false))
+
+    </svg>
+</div>
+
+@code {
+    [Parameter] public IReadOnlyList<PlayerOnPitch> HomePlayers { get; set; } = [];
+    [Parameter] public IReadOnlyList<PlayerOnPitch> AwayPlayers { get; set; } = [];
+    [Parameter] public string HomeFormation { get; set; } = "";
+    [Parameter] public string AwayFormation { get; set; } = "";
+
+    private string RenderFormationLabels()
+    {
+        var sb = new System.Text.StringBuilder();
+        if (!string.IsNullOrEmpty(HomeFormation))
+            sb.Append($"<text x=\"340\" y=\"510\" text-anchor=\"middle\" font-size=\"18\" fill=\"white\" opacity=\"0.7\" font-family=\"Arial, sans-serif\">{HomeFormation}</text>");
+        if (!string.IsNullOrEmpty(AwayFormation))
+            sb.Append($"<text x=\"340\" y=\"545\" text-anchor=\"middle\" font-size=\"18\" fill=\"white\" opacity=\"0.7\" font-family=\"Arial, sans-serif\">{AwayFormation}</text>");
+        return sb.ToString();
+    }
+
+    private static string RenderPlayers(IReadOnlyList<PlayerOnPitch> players, string color, bool labelBelow)
+    {
+        var sb = new System.Text.StringBuilder();
+        foreach (var p in players)
+        {
+            var cx = p.Position.X.ToString("F1", System.Globalization.CultureInfo.InvariantCulture);
+            var cy = p.Position.Y.ToString("F1", System.Globalization.CultureInfo.InvariantCulture);
+            var label = p.ShirtNumber ?? p.Position.Role;
+            var name  = ShortName(p.Name);
+            double labelY = labelBelow ? p.Position.Y + 36 : p.Position.Y - 36;
+            var labelYs = labelY.ToString("F1", System.Globalization.CultureInfo.InvariantCulture);
+
+            sb.Append($"""
+                <g>
+                  <circle cx="{cx}" cy="{cy}" r="22" fill="{color}" stroke="white" stroke-width="2.5"/>
+                  <text x="{cx}" y="{cy}" text-anchor="middle" dominant-baseline="central" font-size="11" fill="white" font-family="Arial,sans-serif" font-weight="bold">{System.Web.HttpUtility.HtmlEncode(label)}</text>
+                  <text x="{cx}" y="{labelYs}" text-anchor="middle" font-size="18" fill="white" font-family="Arial,sans-serif" font-weight="bold" stroke="#2d7a3a" stroke-width="3" paint-order="stroke">{System.Web.HttpUtility.HtmlEncode(name)}</text>
+                </g>
+                """);
+        }
+        return sb.ToString();
+    }
+
+    private static string ShortName(string name)
+    {
+        var parts = name.Split(' ');
+        return parts.Length == 1 ? name : parts[^1];
+    }
+}

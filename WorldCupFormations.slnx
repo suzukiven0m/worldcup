@@ -1,0 +1,5 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/WorldCupFormations.Web/WorldCupFormations.Web.csproj" />
+  </Folder>
+</Solution>

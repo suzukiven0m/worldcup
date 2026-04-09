@@ -1,0 +1,116 @@
+@page "/formation/{MatchId:int}/{TeamId:int}"
+@rendermode InteractiveServer
+@using WorldCupFormations.Data.Entities
+@using WorldCupFormations.Data.Repositories
+@using WorldCupFormations.Services
+@inject IWorldCupRepository Repo
+@inject FormationLayoutService Layout
+
+<PageTitle>Formation</PageTitle>
+
+@if (match is null)
+{
+    <p>Loading…</p>
+}
+else
+{
+    var year = match.WorldCup.Year;
+
+    <nav class="breadcrumb">
+        <a href="/">World Cups</a> ›
+        <a href="/matches/@year">@year</a> ›
+        <span>@focusTeam?.Name vs @opponent?.Name</span>
+    </nav>
+
+    <div class="formation-header">
+        <div class="match-title">
+            <span class="team home-team">@match.HomeTeam.Name</span>
+            <span class="result">@match.HomeScore – @match.AwayScore</span>
+            <span class="team away-team">@match.AwayTeam.Name</span>
+        </div>
+        <div class="match-meta">@match.Stage · @match.Date.ToString("d MMM yyyy") · @year World Cup</div>
+        <div class="formation-badges">
+            <span class="badge home">@homeFormation</span>
+            <span class="badge away">@awayFormation</span>
+        </div>
+    </div>
+
+    <div class="pitch-wrapper">
+        <PitchSvg HomePlayers="@homePlayers"
+                  AwayPlayers="@awayPlayers"
+                  HomeFormation="@homeFormation"
+                  AwayFormation="@awayFormation" />
+    </div>
+
+    @if (substitutes.Any())
+    {
+        <div class="substitutes">
+            <h3>Substitutes</h3>
+            <ul>
+                @foreach (var s in substitutes)
+                {
+                    <li>@s.Player.Name (@s.Team.Name)</li>
+                }
+            </ul>
+        </div>
+    }
+}
+
+@code {
+    [Parameter] public int MatchId { get; set; }
+    [Parameter] public int TeamId  { get; set; }
+
+    private Match? match;
+    private Team? focusTeam;
+    private Team? opponent;
+
+    private IReadOnlyList<PlayerOnPitch> homePlayers = [];
+    private IReadOnlyList<PlayerOnPitch> awayPlayers = [];
+    private List<LineupEntry>             substitutes = [];
+
+    private string homeFormation = "";
+    private string awayFormation = "";
+
+    protected override async Task OnInitializedAsync()
+    {
+        match = await Repo.GetMatchWithLineupAsync(MatchId);
+        if (match is null) return;
+
+        focusTeam = match.HomeTeamId == TeamId ? match.HomeTeam : match.AwayTeam;
+        opponent  = match.HomeTeamId == TeamId ? match.AwayTeam : match.HomeTeam;
+
+        var starters = match.LineupEntries.Where(l => l.IsStarting).ToList();
+        substitutes  = match.LineupEntries.Where(l => !l.IsStarting).ToList();
+
+        var homeEntries = starters.Where(l => l.TeamId == match.HomeTeamId).ToList();
+        var awayEntries = starters.Where(l => l.TeamId == match.AwayTeamId).ToList();
+
+        homeFormation = homeEntries.FirstOrDefault()?.Formation ?? "";
+        awayFormation = awayEntries.FirstOrDefault()?.Formation ?? "";
+
+        homePlayers = BuildPlayers(homeEntries, homeFormation, TeamSide.Home);
+        awayPlayers = BuildPlayers(awayEntries, awayFormation, TeamSide.Away);
+    }
+
+    private IReadOnlyList<PlayerOnPitch> BuildPlayers(
+        List<LineupEntry> entries, string formation, TeamSide side)
+    {
+        if (string.IsNullOrEmpty(formation) || !entries.Any())
+            return [];
+
+        var positions = Layout.GetPositions(formation, side);
+        var result    = new List<PlayerOnPitch>();
+
+        // Sort entries: GK first, then by role order matching positions list
+        var gk = entries.FirstOrDefault(e => e.PositionRole == "GK");
+        var outfield = entries.Where(e => e.PositionRole != "GK").ToList();
+
+        if (gk is not null && positions.Count > 0)
+            result.Add(new PlayerOnPitch(gk.Player.Name, gk.Player.ShirtNumber, positions[0]));
+
+        for (int i = 0; i < outfield.Count && i + 1 < positions.Count; i++)
+            result.Add(new PlayerOnPitch(outfield[i].Player.Name, outfield[i].Player.ShirtNumber, positions[i + 1]));
+
+        return result;
+    }
+}
