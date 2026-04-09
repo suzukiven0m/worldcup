@@ -1,0 +1,48 @@
+# Claude
+.claude
+
+# Build output
+bin/
+obj/
+
+# SQLite database (generated at runtime)
+App_Data/
+*.db
+*.db-shm
+*.db-wal
+
+# .NET
+*.user
+*.suo
+.vs/
+.vscode/
+*.DotSettings.user
+
+# EF Core migrations snapshot conflicts
+# (keep Migrations/ tracked but ignore the compiled snapshot if generated separately)
+
+# Rider / JetBrains
+.idea/
+*.sln.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Published output
+publish/
+out/
+
+# NuGet
+.nuget/
+packages/
+*.nupkg
+
+# Environment / secrets
+*.env
+appsettings.*.json
+!appsettings.Development.json
