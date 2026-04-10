@@ -5,6 +5,7 @@
 @using WorldCupFormations.Services
 @inject IWorldCupRepository Repo
 @inject FormationLayoutService Layout
+@inject NavigationManager Nav
 
 <PageTitle>Formation</PageTitle>
 
@@ -35,11 +36,16 @@ else
         </div>
     </div>
 
+    <a class="team-toggle-btn" href="/formation/@MatchId/@opponentId">
+        Switch to @opponent?.Name's view ⇄
+    </a>
+
     <div class="pitch-wrapper">
         <PitchSvg HomePlayers="@homePlayers"
                   AwayPlayers="@awayPlayers"
                   HomeFormation="@homeFormation"
-                  AwayFormation="@awayFormation" />
+                  AwayFormation="@awayFormation"
+                  FocusedSide="@focusedSide" />
     </div>
 
     @if (substitutes.Any())
@@ -63,6 +69,8 @@ else
     private Match? match;
     private Team? focusTeam;
     private Team? opponent;
+    private int opponentId;
+    private TeamSide? focusedSide;
 
     private IReadOnlyList<PlayerOnPitch> homePlayers = [];
     private IReadOnlyList<PlayerOnPitch> awayPlayers = [];
@@ -76,8 +84,10 @@ else
         match = await Repo.GetMatchWithLineupAsync(MatchId);
         if (match is null) return;
 
-        focusTeam = match.HomeTeamId == TeamId ? match.HomeTeam : match.AwayTeam;
-        opponent  = match.HomeTeamId == TeamId ? match.AwayTeam : match.HomeTeam;
+        focusTeam   = match.HomeTeamId == TeamId ? match.HomeTeam : match.AwayTeam;
+        opponent    = match.HomeTeamId == TeamId ? match.AwayTeam : match.HomeTeam;
+        opponentId  = match.HomeTeamId == TeamId ? match.AwayTeamId : match.HomeTeamId;
+        focusedSide = match.HomeTeamId == TeamId ? TeamSide.Home : TeamSide.Away;
 
         var starters = match.LineupEntries.Where(l => l.IsStarting).ToList();
         substitutes  = match.LineupEntries.Where(l => !l.IsStarting).ToList();
