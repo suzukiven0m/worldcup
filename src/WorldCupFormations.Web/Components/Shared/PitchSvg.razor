@@ -1,5 +1,7 @@
 @using WorldCupFormations.Services
 @using Microsoft.AspNetCore.Components
+@using System.Globalization
+@using System.Web
 
 <div class="pitch-container">
     <svg viewBox="0 0 680 1050" xmlns="http://www.w3.org/2000/svg" width="100%" style="overflow: visible;">
@@ -42,15 +44,81 @@
         <path d="M 10 995 A 45 45 0 0 0 55 1040" fill="none" stroke="white" stroke-width="2" />
         <path d="M 625 1040 A 45 45 0 0 0 670 995" fill="none" stroke="white" stroke-width="2" />
 
-        <!-- Formation labels (rendered as MarkupString to avoid Razor <text> conflict) -->
+        <!-- Formation labels (MarkupString to avoid Razor <text> conflict) -->
         @((MarkupString)RenderFormationLabels())
 
-        <!-- Players -->
-        @((MarkupString)RenderPlayers(HomePlayers, "#1a6fcb", labelBelow: true, focused: FocusedSide == null || FocusedSide == TeamSide.Home, indexOffset: 0))
-        @((MarkupString)RenderPlayers(AwayPlayers, "#c0392b", labelBelow: false, focused: FocusedSide == null || FocusedSide == TeamSide.Away, indexOffset: HomePlayers.Count))
+        <!-- Home players -->
+        @{
+            var homeFocused = FocusedSide is null || FocusedSide == TeamSide.Home;
+            var homeOpacity = homeFocused ? "1" : "0.35";
+            var homeFill    = homeFocused ? "#1a6fcb" : "#555";
+        }
+        @foreach (var (p, idx) in HomePlayers.Select((x, i) => (x, i)))
+        {
+            var cx      = p.Position.X.ToString("F1", CultureInfo.InvariantCulture);
+            var cy      = p.Position.Y.ToString("F1", CultureInfo.InvariantCulture);
+            var labelY  = (p.Position.Y + 36).ToString("F1", CultureInfo.InvariantCulture);
+            var label   = HttpUtility.HtmlEncode(p.ShirtNumber ?? p.Position.Role);
+            var name    = HttpUtility.HtmlEncode(ShortName(p.Name));
+            var delay   = (idx * 0.07).ToString("F2", CultureInfo.InvariantCulture);
+            var player  = p;
+            <g style="animation: fadeInPlayer 0.35s ease both; animation-delay: @(delay)s; opacity: 0; cursor: pointer;"
+               @onclick="() => _selected = player">
+                @((MarkupString)$"<circle cx=\"{cx}\" cy=\"{cy}\" r=\"22\" fill=\"{homeFill}\" stroke=\"white\" stroke-width=\"2.5\" opacity=\"{homeOpacity}\"/>")
+                @((MarkupString)$"<text x=\"{cx}\" y=\"{cy}\" text-anchor=\"middle\" dominant-baseline=\"central\" font-size=\"11\" fill=\"white\" font-family=\"Arial,sans-serif\" font-weight=\"bold\" opacity=\"{homeOpacity}\">{label}</text>")
+                @((MarkupString)$"<text x=\"{cx}\" y=\"{labelY}\" text-anchor=\"middle\" font-size=\"18\" fill=\"white\" font-family=\"Arial,sans-serif\" font-weight=\"bold\" stroke=\"#2d7a3a\" stroke-width=\"3\" paint-order=\"stroke\" opacity=\"{homeOpacity}\">{name}</text>")
+            </g>
+        }
+
+        <!-- Away players -->
+        @{
+            var awayFocused = FocusedSide is null || FocusedSide == TeamSide.Away;
+            var awayOpacity = awayFocused ? "1" : "0.35";
+            var awayFill    = awayFocused ? "#c0392b" : "#555";
+        }
+        @foreach (var (p, idx) in AwayPlayers.Select((x, i) => (x, i)))
+        {
+            var cx      = p.Position.X.ToString("F1", CultureInfo.InvariantCulture);
+            var cy      = p.Position.Y.ToString("F1", CultureInfo.InvariantCulture);
+            var labelY  = (p.Position.Y - 36).ToString("F1", CultureInfo.InvariantCulture);
+            var label   = HttpUtility.HtmlEncode(p.ShirtNumber ?? p.Position.Role);
+            var name    = HttpUtility.HtmlEncode(ShortName(p.Name));
+            var delay   = ((HomePlayers.Count + idx) * 0.07).ToString("F2", CultureInfo.InvariantCulture);
+            var player  = p;
+            <g style="animation: fadeInPlayer 0.35s ease both; animation-delay: @(delay)s; opacity: 0; cursor: pointer;"
+               @onclick="() => _selected = player">
+                @((MarkupString)$"<circle cx=\"{cx}\" cy=\"{cy}\" r=\"22\" fill=\"{awayFill}\" stroke=\"white\" stroke-width=\"2.5\" opacity=\"{awayOpacity}\"/>")
+                @((MarkupString)$"<text x=\"{cx}\" y=\"{cy}\" text-anchor=\"middle\" dominant-baseline=\"central\" font-size=\"11\" fill=\"white\" font-family=\"Arial,sans-serif\" font-weight=\"bold\" opacity=\"{awayOpacity}\">{label}</text>")
+                @((MarkupString)$"<text x=\"{cx}\" y=\"{labelY}\" text-anchor=\"middle\" font-size=\"18\" fill=\"white\" font-family=\"Arial,sans-serif\" font-weight=\"bold\" stroke=\"#2d7a3a\" stroke-width=\"3\" paint-order=\"stroke\" opacity=\"{awayOpacity}\">{name}</text>")
+            </g>
+        }
 
     </svg>
 </div>
+
+@if (_selected is not null)
+{
+    <div class="player-popover-backdrop" @onclick="() => _selected = null">
+        <div class="player-popover" @onclick:stopPropagation>
+            <button class="popover-close" @onclick="() => _selected = null">✕</button>
+            <div class="popover-name">@_selected.Name</div>
+            <div class="popover-rows">
+                <div class="popover-row">
+                    <span class="popover-label">No.</span>
+                    <span>@(_selected.ShirtNumber ?? "—")</span>
+                </div>
+                <div class="popover-row">
+                    <span class="popover-label">Club</span>
+                    <span>@(_selected.Club ?? "—")</span>
+                </div>
+                <div class="popover-row">
+                    <span class="popover-label">Caps</span>
+                    <span>@(_selected.Caps?.ToString() ?? "—")</span>
+                </div>
+            </div>
+        </div>
+    </div>
+}
 
 @code {
     [Parameter] public IReadOnlyList<PlayerOnPitch> HomePlayers { get; set; } = [];
@@ -59,6 +127,8 @@
     [Parameter] public string AwayFormation { get; set; } = "";
     [Parameter] public TeamSide? FocusedSide { get; set; }
 
+    private PlayerOnPitch? _selected;
+
     private string RenderFormationLabels()
     {
         var sb = new System.Text.StringBuilder();
@@ -66,35 +136,6 @@
             sb.Append($"<text x=\"340\" y=\"510\" text-anchor=\"middle\" font-size=\"18\" fill=\"white\" opacity=\"0.7\" font-family=\"Arial, sans-serif\">{HomeFormation}</text>");
         if (!string.IsNullOrEmpty(AwayFormation))
             sb.Append($"<text x=\"340\" y=\"545\" text-anchor=\"middle\" font-size=\"18\" fill=\"white\" opacity=\"0.7\" font-family=\"Arial, sans-serif\">{AwayFormation}</text>");
-        return sb.ToString();
-    }
-
-    private static string RenderPlayers(IReadOnlyList<PlayerOnPitch> players, string color, bool labelBelow, bool focused, int indexOffset)
-    {
-        var sb = new System.Text.StringBuilder();
-        var opacity = focused ? "1" : "0.35";
-        var strokeColor = focused ? color : "#888";
-
-        for (int i = 0; i < players.Count; i++)
-        {
-            var p = players[i];
-            var cx = p.Position.X.ToString("F1", System.Globalization.CultureInfo.InvariantCulture);
-            var cy = p.Position.Y.ToString("F1", System.Globalization.CultureInfo.InvariantCulture);
-            var label = p.ShirtNumber ?? p.Position.Role;
-            var name  = ShortName(p.Name);
-            double labelY = labelBelow ? p.Position.Y + 36 : p.Position.Y - 36;
-            var labelYs = labelY.ToString("F1", System.Globalization.CultureInfo.InvariantCulture);
-            var delay = ((indexOffset + i) * 0.07).ToString("F2", System.Globalization.CultureInfo.InvariantCulture);
-            var fillColor = focused ? color : "#555";
-
-            sb.Append($"""
-                <g style="animation: fadeInPlayer 0.35s ease both; animation-delay: {delay}s; opacity: 0;">
-                  <circle cx="{cx}" cy="{cy}" r="22" fill="{fillColor}" stroke="white" stroke-width="2.5" opacity="{opacity}"/>
-                  <text x="{cx}" y="{cy}" text-anchor="middle" dominant-baseline="central" font-size="11" fill="white" font-family="Arial,sans-serif" font-weight="bold" opacity="{opacity}">{System.Web.HttpUtility.HtmlEncode(label)}</text>
-                  <text x="{cx}" y="{labelYs}" text-anchor="middle" font-size="18" fill="white" font-family="Arial,sans-serif" font-weight="bold" stroke="#2d7a3a" stroke-width="3" paint-order="stroke" opacity="{opacity}">{System.Web.HttpUtility.HtmlEncode(name)}</text>
-                </g>
-                """);
-        }
         return sb.ToString();
     }
 

@@ -48,7 +48,8 @@ public static class JsonSeedLoader
         var dtos = JsonSerializer.Deserialize<List<PlayerDto>>(json, Options)!;
         return dtos.Select(d => new Player
         {
-            Id = d.Id, TeamId = d.TeamId, Name = d.Name, ShirtNumber = d.ShirtNumber
+            Id = d.Id, TeamId = d.TeamId, Name = d.Name, ShirtNumber = d.ShirtNumber,
+            Club = d.Club, Caps = d.Caps
         }).ToList();
     }
 
@@ -81,7 +82,7 @@ public static class JsonSeedLoader
     private record TeamDto(int Id, string Name, string Code);
     private record MatchDto(int Id, int WorldCupId, int HomeTeamId, int AwayTeamId,
         int HomeScore, int AwayScore, string Stage, string Date);
-    private record PlayerDto(int Id, int TeamId, string Name, string? ShirtNumber);
+    private record PlayerDto(int Id, int TeamId, string Name, string? ShirtNumber, string? Club = null, int? Caps = null);
     private record LineupDto(int Id, int MatchId, int TeamId, int PlayerId,
         string PositionRole, string Formation, bool IsStarting);
 }

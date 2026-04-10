@@ -7,4 +7,6 @@ public class Player
     public Team Team { get; set; } = null!;
     public string Name { get; set; } = "";
     public string? ShirtNumber { get; set; }
+    public string? Club { get; set; }
+    public int? Caps { get; set; }
 }

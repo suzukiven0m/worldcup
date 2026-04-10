@@ -4,7 +4,7 @@ public enum TeamSide { Home, Away }
 
 public record FormationPosition(string Role, double X, double Y);
 
-public record PlayerOnPitch(string Name, string? ShirtNumber, FormationPosition Position);
+public record PlayerOnPitch(string Name, string? ShirtNumber, FormationPosition Position, string? Club = null, int? Caps = null);
 
 public class FormationLayoutService
 {

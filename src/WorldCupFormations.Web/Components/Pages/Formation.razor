@@ -116,10 +116,10 @@ else
         var outfield = entries.Where(e => e.PositionRole != "GK").ToList();
 
         if (gk is not null && positions.Count > 0)
-            result.Add(new PlayerOnPitch(gk.Player.Name, gk.Player.ShirtNumber, positions[0]));
+            result.Add(new PlayerOnPitch(gk.Player.Name, gk.Player.ShirtNumber, positions[0], gk.Player.Club, gk.Player.Caps));
 
         for (int i = 0; i < outfield.Count && i + 1 < positions.Count; i++)
-            result.Add(new PlayerOnPitch(outfield[i].Player.Name, outfield[i].Player.ShirtNumber, positions[i + 1]));
+            result.Add(new PlayerOnPitch(outfield[i].Player.Name, outfield[i].Player.ShirtNumber, positions[i + 1], outfield[i].Player.Club, outfield[i].Player.Caps));
 
         return result;
     }
