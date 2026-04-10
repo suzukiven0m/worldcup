@@ -25,8 +25,6 @@ variable "app_name" {
 variable "container_image" {
   description = "Docker image to deploy, e.g. ghcr.io/youruser/worldcup:latest"
   type        = string
-  # Public placeholder — replaced on first real deploy via az containerapp update
-  default     = "mcr.microsoft.com/azuredocs/containerapps-helloworld:latest"
 }
 
 variable "min_replicas" {
