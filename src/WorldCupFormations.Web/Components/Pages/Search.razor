@@ -1,0 +1,101 @@
+@page "/search"
+@rendermode InteractiveServer
+@using WorldCupFormations.Data.Entities
+@using WorldCupFormations.Data.Repositories
+@inject IWorldCupRepository Repo
+@inject NavigationManager Nav
+
+<PageTitle>Search — World Cup Formations</PageTitle>
+
+<nav class="breadcrumb">
+    <a href="/">World Cups</a> › <span>Search</span>
+</nav>
+
+<div class="page-header">
+    <h2>Search Players</h2>
+</div>
+
+<form class="search-form" @onsubmit:preventDefault @onsubmit="DoSearch">
+    <input class="search-input" type="text" placeholder="Player name…"
+           @bind="query" @bind:event="oninput" @onkeydown="OnKeyDown" autofocus />
+    <button class="search-btn" type="submit">Search</button>
+</form>
+
+@if (searched)
+{
+    @if (!results.Any())
+    {
+        <p style="color:#888; margin-top:1rem">No players found for "@query".</p>
+    }
+    else
+    {
+        <p style="color:#888; margin-top:1rem; margin-bottom:0.5rem">
+            @results.Count result@(results.Count == 1 ? "" : "s") for "@query"
+        </p>
+
+        @foreach (var group in ByPlayer)
+        {
+            var first = group.First();
+            <div class="search-player-group">
+                <div class="search-player-header">
+                    <a class="search-player-name" href="/player/@first.PlayerId">@first.Player.Name</a>
+                    <span class="search-player-team">@first.Team.Name</span>
+                </div>
+                <div class="match-list">
+                    @foreach (var e in group.OrderBy(e => e.Match.WorldCup.Year))
+                    {
+                        var m = e.Match;
+                        var label = e.IsStarting ? $"{e.PositionRole} · {e.Formation}" : "Substitute";
+                        <div class="match-card">
+                            <div class="match-stage">@m.WorldCup.Year · @m.Stage · @m.Date.ToString("d MMM yyyy")</div>
+                            <div class="match-score">
+                                <a class="team-label bold home-link" href="/formation/@m.Id/@m.HomeTeamId">@m.HomeTeam.Name</a>
+                                <span class="score">@m.HomeScore – @m.AwayScore</span>
+                                <a class="team-label bold away-link" href="/formation/@m.Id/@m.AwayTeamId">@m.AwayTeam.Name</a>
+                            </div>
+                            <div class="match-hint">@label</div>
+                        </div>
+                    }
+                </div>
+            </div>
+        }
+    }
+}
+
+@code {
+    [SupplyParameterFromQuery(Name = "q")] public string? Q { get; set; }
+
+    private string query = "";
+    private List<LineupEntry> results = [];
+    private bool searched;
+
+    private IEnumerable<IGrouping<int, LineupEntry>> ByPlayer =>
+        results.GroupBy(e => e.PlayerId);
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (!string.IsNullOrWhiteSpace(Q))
+        {
+            query = Q;
+            await RunSearch();
+        }
+    }
+
+    private async Task DoSearch()
+    {
+        if (string.IsNullOrWhiteSpace(query)) return;
+        Nav.NavigateTo($"/search?q={Uri.EscapeDataString(query.Trim())}", replace: true);
+        await RunSearch();
+    }
+
+    private async Task OnKeyDown(KeyboardEventArgs e)
+    {
+        if (e.Key == "Enter") await DoSearch();
+    }
+
+    private async Task RunSearch()
+    {
+        results  = await Repo.SearchPlayersAsync(query);
+        searched = true;
+    }
+}

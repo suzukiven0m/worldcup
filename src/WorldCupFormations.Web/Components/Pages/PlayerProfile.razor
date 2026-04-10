@@ -1,0 +1,98 @@
+@page "/player/{PlayerId:int}"
+@rendermode InteractiveServer
+@using WorldCupFormations.Data.Entities
+@using WorldCupFormations.Data.Repositories
+@inject IWorldCupRepository Repo
+
+<PageTitle>@(player?.Name ?? "Player") — World Cup Profile</PageTitle>
+
+@if (player is null)
+{
+    <p>Loading…</p>
+}
+else
+{
+    <nav class="breadcrumb">
+        <a href="/">World Cups</a> › <a href="/team/@player.TeamId">@player.Team.Name</a> › <span>@player.Name</span>
+    </nav>
+
+    <div class="page-header">
+        <h2>@player.Name</h2>
+        <p>
+            <a class="team-link" href="/team/@player.TeamId">@player.Team.Name</a>
+            @if (player.ShirtNumber is not null)
+            {
+                <span class="profile-meta"> · No. @player.ShirtNumber</span>
+            }
+            @if (player.Club is not null)
+            {
+                <span class="profile-meta"> · @player.Club</span>
+            }
+            @if (player.Caps is not null)
+            {
+                <span class="profile-meta"> · @player.Caps caps</span>
+            }
+        </p>
+    </div>
+
+    @if (!player.LineupEntries.Any())
+    {
+        <p style="color:#888">No appearances found.</p>
+    }
+    else
+    {
+        var starters = player.LineupEntries.Where(l => l.IsStarting).OrderBy(l => l.Match.WorldCup.Year).ToList();
+        var subApps  = player.LineupEntries.Where(l => !l.IsStarting).OrderBy(l => l.Match.WorldCup.Year).ToList();
+
+        if (starters.Any())
+        {
+            <h3 class="appearances-heading">Starting Appearances</h3>
+            <div class="match-list">
+                @foreach (var e in starters)
+                {
+                    var m = e.Match;
+                    <div class="match-card">
+                        <div class="match-stage">@m.WorldCup.Year · @m.Stage · @m.Date.ToString("d MMM yyyy")</div>
+                        <div class="match-score">
+                            <a class="team-label bold home-link" href="/formation/@m.Id/@m.HomeTeamId">@m.HomeTeam.Name</a>
+                            <span class="score">@m.HomeScore – @m.AwayScore</span>
+                            <a class="team-label bold away-link" href="/formation/@m.Id/@m.AwayTeamId">@m.AwayTeam.Name</a>
+                        </div>
+                        <div class="match-hint">Position: @e.PositionRole · Formation: @e.Formation</div>
+                    </div>
+                }
+            </div>
+        }
+
+        if (subApps.Any())
+        {
+            <h3 class="appearances-heading" style="margin-top:1.5rem">Substitute Appearances</h3>
+            <div class="match-list">
+                @foreach (var e in subApps)
+                {
+                    var m = e.Match;
+                    <div class="match-card">
+                        <div class="match-stage">@m.WorldCup.Year · @m.Stage · @m.Date.ToString("d MMM yyyy")</div>
+                        <div class="match-score">
+                            <a class="team-label bold home-link" href="/formation/@m.Id/@m.HomeTeamId">@m.HomeTeam.Name</a>
+                            <span class="score">@m.HomeScore – @m.AwayScore</span>
+                            <a class="team-label bold away-link" href="/formation/@m.Id/@m.AwayTeamId">@m.AwayTeam.Name</a>
+                        </div>
+                        <div class="match-hint">Substitute</div>
+                    </div>
+                }
+            </div>
+        }
+    }
+}
+
+@code {
+    [Parameter] public int PlayerId { get; set; }
+
+    private Player? player;
+
+    protected override async Task OnInitializedAsync()
+    {
+        player = await Repo.GetPlayerProfileAsync(PlayerId);
+    }
+}

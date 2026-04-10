@@ -9,4 +9,5 @@ public class Player
     public string? ShirtNumber { get; set; }
     public string? Club { get; set; }
     public int? Caps { get; set; }
+    public ICollection<LineupEntry> LineupEntries { get; set; } = [];
 }

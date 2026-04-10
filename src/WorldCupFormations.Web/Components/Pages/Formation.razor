@@ -25,9 +25,9 @@ else
 
     <div class="formation-header">
         <div class="match-title">
-            <span class="team home-team">@match.HomeTeam.Name</span>
+            <a class="team home-team" href="/team/@match.HomeTeamId">@match.HomeTeam.Name</a>
             <span class="result">@match.HomeScore – @match.AwayScore</span>
-            <span class="team away-team">@match.AwayTeam.Name</span>
+            <a class="team away-team" href="/team/@match.AwayTeamId">@match.AwayTeam.Name</a>
         </div>
         <div class="match-meta">@match.Stage · @match.Date.ToString("d MMM yyyy") · @year World Cup</div>
         <div class="formation-badges">

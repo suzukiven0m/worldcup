@@ -1,0 +1,65 @@
+@page "/famous"
+
+<PageTitle>Famous Formations — World Cup Formations</PageTitle>
+
+<nav class="breadcrumb">
+    <a href="/">World Cups</a> › <span>Famous Formations</span>
+</nav>
+
+<div class="page-header">
+    <h2>Famous Formations</h2>
+    <p>Historically significant line-ups — direct links to the formation view.</p>
+</div>
+
+<div class="famous-list">
+    @foreach (var f in _formations)
+    {
+        <a class="famous-card" href="@f.Url">
+            <div class="famous-formation-badge">@f.Formation</div>
+            <div class="famous-body">
+                <div class="famous-title">@f.Title</div>
+                <div class="famous-desc">@f.Description</div>
+            </div>
+            <div class="famous-arrow">›</div>
+        </a>
+    }
+</div>
+
+@code {
+    private static readonly FamousEntry[] _formations =
+    [
+        new("Uruguay 1930 — The First World Champions",
+            "The 2-3-5 pyramid that won the inaugural World Cup, played in front of 93,000 in Montevideo.",
+            "2-3-5", "/formation/1/1"),
+
+        new("Brazil 1958 — A Star Is Born",
+            "The 17-year-old Pelé announced himself to the world with two goals in the final against Sweden.",
+            "4-2-4", "/formation/3/3"),
+
+        new("Brazil 1970 — The Beautiful Game's Zenith",
+            "Pelé, Tostão, Jairzinho, and Rivelino. Widely considered the greatest World Cup side ever assembled.",
+            "4-3-3", "/formation/5/3"),
+
+        new("Netherlands 1974 — Total Football",
+            "Cruyff's Netherlands revolutionised football with positional fluidity and pressing intensity.",
+            "4-3-3", "/formation/6/8"),
+
+        new("Argentina 1986 — Maradona's Masterclass",
+            "The tournament where Diego Maradona single-handedly carried Argentina to glory in Mexico.",
+            "3-5-2", "/formation/7/2"),
+
+        new("France 1998 — Home Victory",
+            "Zidane's brace in the final, Deschamps as captain. France's first World Cup on home soil.",
+            "4-3-2-1", "/formation/8/9"),
+
+        new("Spain 2010 — Tiki-Taka Supreme",
+            "Del Bosque's Spain completed the treble of Euro 2008, World Cup 2010, and Euro 2012 with the same core.",
+            "4-2-3-1", "/formation/9/10"),
+
+        new("Germany 2014 — The 7-1 Machine",
+            "The side that humiliated Brazil 7-1 in the semis went on to win with a Götze extra-time goal.",
+            "4-3-2-1", "/formation/10/11"),
+    ];
+
+    private record FamousEntry(string Title, string Description, string Formation, string Url);
+}

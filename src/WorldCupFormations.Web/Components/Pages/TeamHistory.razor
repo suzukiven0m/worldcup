@@ -1,0 +1,77 @@
+@page "/team/{TeamId:int}"
+@rendermode InteractiveServer
+@using WorldCupFormations.Data.Entities
+@using WorldCupFormations.Data.Repositories
+@inject IWorldCupRepository Repo
+
+<PageTitle>@(team?.Name ?? "Team") — World Cup History</PageTitle>
+
+@if (team is null)
+{
+    <p>Loading…</p>
+}
+else
+{
+    <nav class="breadcrumb">
+        <a href="/">World Cups</a> › <span>@team.Name</span>
+    </nav>
+
+    <div class="page-header">
+        <h2>@team.Name — World Cup History</h2>
+        <p>@matches.Count match@(matches.Count == 1 ? "" : "es") across @TournamentCount tournament@(TournamentCount == 1 ? "" : "s") in the database.</p>
+    </div>
+
+    @if (!matches.Any())
+    {
+        <p style="color:#888">No matches found for this team yet.</p>
+    }
+    else
+    {
+        @foreach (var group in ByYear)
+        {
+            <div class="history-year-group">
+                <h3 class="history-year">
+                    <a href="/matches/@group.Key">@group.Key World Cup</a>
+                </h3>
+                <div class="match-list">
+                    @foreach (var m in group)
+                    {
+                        var isHome = m.HomeTeamId == TeamId;
+                        var opponent = isHome ? m.AwayTeam : m.HomeTeam;
+                        var teamScore = isHome ? m.HomeScore : m.AwayScore;
+                        var oppScore  = isHome ? m.AwayScore : m.HomeScore;
+                        var resultClass = teamScore > oppScore ? "win" : teamScore == oppScore ? "draw" : "loss";
+                        <div class="match-card">
+                            <div class="match-stage">@m.Stage · @m.Date.ToString("d MMM yyyy")</div>
+                            <div class="match-score">
+                                <a class="team-label bold home-link" href="/formation/@m.Id/@TeamId">@team.Name</a>
+                                <span class="score result-@resultClass">@teamScore – @oppScore</span>
+                                <a class="team-label bold away-link" href="/team/@opponent.Id">@opponent.Name</a>
+                            </div>
+                            <div class="match-hint">Click your team's name to view their formation</div>
+                        </div>
+                    }
+                </div>
+            </div>
+        }
+    }
+}
+
+@code {
+    [Parameter] public int TeamId { get; set; }
+
+    private Team? team;
+    private List<Match> matches = [];
+
+    private IEnumerable<IGrouping<int, Match>> ByYear =>
+        matches.GroupBy(m => m.WorldCup.Year).OrderBy(g => g.Key);
+
+    private int TournamentCount =>
+        matches.Select(m => m.WorldCup.Year).Distinct().Count();
+
+    protected override async Task OnInitializedAsync()
+    {
+        team    = await Repo.GetTeamAsync(TeamId);
+        matches = await Repo.GetTeamMatchesAsync(TeamId);
+    }
+}

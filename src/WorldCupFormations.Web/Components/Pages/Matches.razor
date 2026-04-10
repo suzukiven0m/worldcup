@@ -13,18 +13,28 @@
     <p>Select a team formation to view.</p>
 </div>
 
-<div class="match-list">
-    @if (matches is null)
+@if (matches is null)
+{
+    <p>Loading…</p>
+}
+else
+{
+    @if (stages.Count > 1)
     {
-        <p>Loading…</p>
+        <div class="stage-filter">
+            <button class="stage-pill @(activeStage is null ? "active" : "")"
+                    @onclick="() => activeStage = null">All</button>
+            @foreach (var s in stages)
+            {
+                var stage = s;
+                <button class="stage-pill @(activeStage == stage ? "active" : "")"
+                        @onclick="() => activeStage = stage">@stage</button>
+            }
+        </div>
     }
-    else if (!matches.Any())
-    {
-        <p>No matches found.</p>
-    }
-    else
-    {
-        @foreach (var m in matches)
+
+    <div class="match-list">
+        @foreach (var m in Filtered)
         {
             <div class="match-card">
                 <div class="match-stage">@m.Stage · @m.Date.ToString("d MMM yyyy")</div>
@@ -36,16 +46,26 @@
                 <div class="match-hint">Click a team name to view their formation</div>
             </div>
         }
-    }
-</div>
+        @if (!Filtered.Any())
+        {
+            <p style="color:#888">No matches for this stage.</p>
+        }
+    </div>
+}
 
 @code {
     [Parameter] public int Year { get; set; }
 
     private List<WorldCupFormations.Data.Entities.Match>? matches;
+    private List<string> stages = [];
+    private string? activeStage;
+
+    private IEnumerable<WorldCupFormations.Data.Entities.Match> Filtered =>
+        activeStage is null ? matches! : matches!.Where(m => m.Stage == activeStage);
 
     protected override async Task OnInitializedAsync()
     {
         matches = await Repo.GetMatchesForYearAsync(Year);
+        stages  = matches.Select(m => m.Stage).Distinct().Order().ToList();
     }
 }
