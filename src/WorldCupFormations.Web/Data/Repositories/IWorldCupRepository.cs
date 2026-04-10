@@ -11,4 +11,5 @@ public interface IWorldCupRepository
     Task<Player?> GetPlayerProfileAsync(int playerId);
     Task<Team?> GetTeamAsync(int teamId);
     Task<List<Match>> GetTeamMatchesAsync(int teamId);
+    Task<Match?> FindFinalAsync(int year);
 }

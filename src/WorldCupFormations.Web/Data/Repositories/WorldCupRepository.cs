@@ -86,4 +86,15 @@ public class WorldCupRepository(IDbContextFactory<AppDbContext> factory) : IWorl
             .ThenBy(m => m.Date)
             .ToListAsync();
     }
+
+    public async Task<Match?> FindFinalAsync(int year)
+    {
+        await using var db = await factory.CreateDbContextAsync();
+        return await db.Matches
+            .Include(m => m.HomeTeam)
+            .Include(m => m.AwayTeam)
+            .Include(m => m.WorldCup)
+            .Where(m => m.WorldCup.Year == year && m.Stage == "Final")
+            .FirstOrDefaultAsync();
+    }
 }

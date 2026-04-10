@@ -328,6 +328,9 @@ a { color: inherit; text-decoration: none; }
 .famous-title { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 0.25rem; }
 .famous-desc  { font-size: 0.82rem; color: #888; line-height: 1.4; }
 .famous-arrow { color: #4caf7d; font-size: 1.4rem; }
+.famous-card-unavailable { opacity: 0.45; cursor: default; }
+.famous-card-unavailable:hover { transform: none; border-color: #1e3448; }
+.famous-na { font-size: 0.78rem; color: #666; margin-top: 0.3rem; }
 
 /* ── Team History ─────────────────────────────── */
 .history-year-group { margin-bottom: 2rem; }

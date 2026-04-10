@@ -1,13 +1,412 @@
 [
-  { "id": 1,  "name": "Uruguay",      "code": "URU" },
-  { "id": 2,  "name": "Argentina",    "code": "ARG" },
-  { "id": 3,  "name": "Brazil",       "code": "BRA" },
-  { "id": 4,  "name": "Sweden",       "code": "SWE" },
-  { "id": 5,  "name": "England",      "code": "ENG" },
-  { "id": 6,  "name": "West Germany", "code": "WGE" },
-  { "id": 7,  "name": "Italy",        "code": "ITA" },
-  { "id": 8,  "name": "Netherlands",  "code": "NED" },
-  { "id": 9,  "name": "France",       "code": "FRA" },
-  { "id": 10, "name": "Spain",        "code": "ESP" },
-  { "id": 11, "name": "Germany",      "code": "GER" }
+  {
+    "id": 1,
+    "name": "Algeria",
+    "code": "ALG"
+  },
+  {
+    "id": 2,
+    "name": "Angola",
+    "code": "ANG"
+  },
+  {
+    "id": 3,
+    "name": "Argentina",
+    "code": "ARG"
+  },
+  {
+    "id": 4,
+    "name": "Australia",
+    "code": "AUS"
+  },
+  {
+    "id": 5,
+    "name": "Austria",
+    "code": "AUT"
+  },
+  {
+    "id": 6,
+    "name": "Belgium",
+    "code": "BEL"
+  },
+  {
+    "id": 7,
+    "name": "Bosnia and Herzegovina",
+    "code": "BIH"
+  },
+  {
+    "id": 8,
+    "name": "Bolivia",
+    "code": "BOL"
+  },
+  {
+    "id": 9,
+    "name": "Brazil",
+    "code": "BRA"
+  },
+  {
+    "id": 10,
+    "name": "Bulgaria",
+    "code": "BUL"
+  },
+  {
+    "id": 11,
+    "name": "Canada",
+    "code": "CAN"
+  },
+  {
+    "id": 12,
+    "name": "Chile",
+    "code": "CHI"
+  },
+  {
+    "id": 13,
+    "name": "China PR",
+    "code": "CHN"
+  },
+  {
+    "id": 14,
+    "name": "Ivory Coast",
+    "code": "CIV"
+  },
+  {
+    "id": 15,
+    "name": "Cameroon",
+    "code": "CMR"
+  },
+  {
+    "id": 16,
+    "name": "Colombia",
+    "code": "COL"
+  },
+  {
+    "id": 17,
+    "name": "Costa Rica",
+    "code": "CRC"
+  },
+  {
+    "id": 18,
+    "name": "Croatia",
+    "code": "CRO"
+  },
+  {
+    "id": 19,
+    "name": "Cuba",
+    "code": "CUB"
+  },
+  {
+    "id": 20,
+    "name": "Czech Republic",
+    "code": "CZE"
+  },
+  {
+    "id": 21,
+    "name": "Denmark",
+    "code": "DEN"
+  },
+  {
+    "id": 22,
+    "name": "Ecuador",
+    "code": "ECU"
+  },
+  {
+    "id": 23,
+    "name": "Egypt",
+    "code": "EGY"
+  },
+  {
+    "id": 24,
+    "name": "England",
+    "code": "ENG"
+  },
+  {
+    "id": 25,
+    "name": "Spain",
+    "code": "ESP"
+  },
+  {
+    "id": 26,
+    "name": "France",
+    "code": "FRA"
+  },
+  {
+    "id": 27,
+    "name": "West Germany",
+    "code": "FRG"
+  },
+  {
+    "id": 28,
+    "name": "German DR",
+    "code": "GDR"
+  },
+  {
+    "id": 29,
+    "name": "Germany",
+    "code": "GER"
+  },
+  {
+    "id": 30,
+    "name": "Ghana",
+    "code": "GHA"
+  },
+  {
+    "id": 31,
+    "name": "Greece",
+    "code": "GRE"
+  },
+  {
+    "id": 32,
+    "name": "Haiti",
+    "code": "HAI"
+  },
+  {
+    "id": 33,
+    "name": "Honduras",
+    "code": "HON"
+  },
+  {
+    "id": 34,
+    "name": "Hungary",
+    "code": "HUN"
+  },
+  {
+    "id": 35,
+    "name": "Dutch East Indies",
+    "code": "INH"
+  },
+  {
+    "id": 36,
+    "name": "Republic of Ireland",
+    "code": "IRL"
+  },
+  {
+    "id": 37,
+    "name": "IR Iran",
+    "code": "IRN"
+  },
+  {
+    "id": 38,
+    "name": "Iraq",
+    "code": "IRQ"
+  },
+  {
+    "id": 39,
+    "name": "Israel",
+    "code": "ISR"
+  },
+  {
+    "id": 40,
+    "name": "Italy",
+    "code": "ITA"
+  },
+  {
+    "id": 41,
+    "name": "Jamaica",
+    "code": "JAM"
+  },
+  {
+    "id": 42,
+    "name": "Japan",
+    "code": "JPN"
+  },
+  {
+    "id": 43,
+    "name": "Korea Republic",
+    "code": "KOR"
+  },
+  {
+    "id": 44,
+    "name": "Saudi Arabia",
+    "code": "KSA"
+  },
+  {
+    "id": 45,
+    "name": "Kuwait",
+    "code": "KUW"
+  },
+  {
+    "id": 46,
+    "name": "Morocco",
+    "code": "MAR"
+  },
+  {
+    "id": 47,
+    "name": "Mexico",
+    "code": "MEX"
+  },
+  {
+    "id": 48,
+    "name": "Netherlands",
+    "code": "NED"
+  },
+  {
+    "id": 49,
+    "name": "Nigeria",
+    "code": "NGA"
+  },
+  {
+    "id": 50,
+    "name": "Northern Ireland",
+    "code": "NIR"
+  },
+  {
+    "id": 51,
+    "name": "Norway",
+    "code": "NOR"
+  },
+  {
+    "id": 52,
+    "name": "New Zealand",
+    "code": "NZL"
+  },
+  {
+    "id": 53,
+    "name": "Paraguay",
+    "code": "PAR"
+  },
+  {
+    "id": 54,
+    "name": "Peru",
+    "code": "PER"
+  },
+  {
+    "id": 55,
+    "name": "Poland",
+    "code": "POL"
+  },
+  {
+    "id": 56,
+    "name": "Portugal",
+    "code": "POR"
+  },
+  {
+    "id": 57,
+    "name": "Korea DPR",
+    "code": "PRK"
+  },
+  {
+    "id": 58,
+    "name": "Romania",
+    "code": "ROU"
+  },
+  {
+    "id": 59,
+    "name": "South Africa",
+    "code": "RSA"
+  },
+  {
+    "id": 60,
+    "name": "Russia",
+    "code": "RUS"
+  },
+  {
+    "id": 61,
+    "name": "Serbia and Montenegro",
+    "code": "SCG"
+  },
+  {
+    "id": 62,
+    "name": "Scotland",
+    "code": "SCO"
+  },
+  {
+    "id": 63,
+    "name": "Senegal",
+    "code": "SEN"
+  },
+  {
+    "id": 64,
+    "name": "El Salvador",
+    "code": "SLV"
+  },
+  {
+    "id": 65,
+    "name": "Serbia",
+    "code": "SRB"
+  },
+  {
+    "id": 66,
+    "name": "Switzerland",
+    "code": "SUI"
+  },
+  {
+    "id": 67,
+    "name": "Slovakia",
+    "code": "SVK"
+  },
+  {
+    "id": 68,
+    "name": "Slovenia",
+    "code": "SVN"
+  },
+  {
+    "id": 69,
+    "name": "Sweden",
+    "code": "SWE"
+  },
+  {
+    "id": 70,
+    "name": "Czechoslovakia",
+    "code": "TCH"
+  },
+  {
+    "id": 71,
+    "name": "Togo",
+    "code": "TOG"
+  },
+  {
+    "id": 72,
+    "name": "Trinidad and Tobago",
+    "code": "TRI"
+  },
+  {
+    "id": 73,
+    "name": "Tunisia",
+    "code": "TUN"
+  },
+  {
+    "id": 74,
+    "name": "Turkey",
+    "code": "TUR"
+  },
+  {
+    "id": 75,
+    "name": "United Arab Emirates",
+    "code": "UAE"
+  },
+  {
+    "id": 76,
+    "name": "Ukraine",
+    "code": "UKR"
+  },
+  {
+    "id": 77,
+    "name": "Soviet Union",
+    "code": "URS"
+  },
+  {
+    "id": 78,
+    "name": "Uruguay",
+    "code": "URU"
+  },
+  {
+    "id": 79,
+    "name": "USA",
+    "code": "USA"
+  },
+  {
+    "id": 80,
+    "name": "Wales",
+    "code": "WAL"
+  },
+  {
+    "id": 81,
+    "name": "Yugoslavia",
+    "code": "YUG"
+  },
+  {
+    "id": 82,
+    "name": "Zaire",
+    "code": "ZAI"
+  }
 ]

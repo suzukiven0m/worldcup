@@ -1,13 +1,8362 @@
 [
-  { "id": 1, "worldCupId": 1, "homeTeamId": 1, "awayTeamId": 2, "homeScore": 4, "awayScore": 2, "stage": "Final",       "date": "1930-07-30" },
-  { "id": 2, "worldCupId": 4, "homeTeamId": 3, "awayTeamId": 1, "homeScore": 2, "awayScore": 1, "stage": "Final Round", "date": "1950-07-16" },
-  { "id": 3, "worldCupId": 6, "homeTeamId": 3, "awayTeamId": 4, "homeScore": 5, "awayScore": 2, "stage": "Final",       "date": "1958-06-29" },
-  { "id": 4, "worldCupId": 8, "homeTeamId": 5, "awayTeamId": 6, "homeScore": 4, "awayScore": 2, "stage": "Final",       "date": "1966-07-30" },
-  { "id": 5, "worldCupId": 9, "homeTeamId": 3, "awayTeamId": 7, "homeScore": 4, "awayScore": 1, "stage": "Final",       "date": "1970-06-21" },
-  { "id": 6, "worldCupId": 10,"homeTeamId": 6, "awayTeamId": 8, "homeScore": 2, "awayScore": 1, "stage": "Final",       "date": "1974-07-07" },
-  { "id": 7, "worldCupId": 13,"homeTeamId": 2, "awayTeamId": 6, "homeScore": 3, "awayScore": 2, "stage": "Final",       "date": "1986-06-29" },
-  { "id": 8, "worldCupId": 16,"homeTeamId": 9, "awayTeamId": 3, "homeScore": 3, "awayScore": 0, "stage": "Final",       "date": "1998-07-12" },
-  { "id": 9, "worldCupId": 19,"homeTeamId": 10,"awayTeamId": 8, "homeScore": 1, "awayScore": 0, "stage": "Final",       "date": "2010-07-11" },
-  { "id": 10,"worldCupId": 20,"homeTeamId": 11,"awayTeamId": 2, "homeScore": 1, "awayScore": 0, "stage": "Final",       "date": "2014-07-13" },
-  { "id": 11,"worldCupId": 22,"homeTeamId": 2, "awayTeamId": 9, "homeScore": 3, "awayScore": 3, "stage": "Final",       "date": "2022-12-18" }
+  {
+    "id": 1,
+    "worldCupId": 1,
+    "homeTeamId": 26,
+    "awayTeamId": 47,
+    "homeScore": 4,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1930-07-13"
+  },
+  {
+    "id": 2,
+    "worldCupId": 1,
+    "homeTeamId": 79,
+    "awayTeamId": 6,
+    "homeScore": 3,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1930-07-13"
+  },
+  {
+    "id": 3,
+    "worldCupId": 1,
+    "homeTeamId": 81,
+    "awayTeamId": 9,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1930-07-14"
+  },
+  {
+    "id": 4,
+    "worldCupId": 1,
+    "homeTeamId": 58,
+    "awayTeamId": 54,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1930-07-14"
+  },
+  {
+    "id": 5,
+    "worldCupId": 1,
+    "homeTeamId": 3,
+    "awayTeamId": 26,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1930-07-15"
+  },
+  {
+    "id": 6,
+    "worldCupId": 1,
+    "homeTeamId": 12,
+    "awayTeamId": 47,
+    "homeScore": 3,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1930-07-16"
+  },
+  {
+    "id": 7,
+    "worldCupId": 1,
+    "homeTeamId": 81,
+    "awayTeamId": 8,
+    "homeScore": 4,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1930-07-17"
+  },
+  {
+    "id": 8,
+    "worldCupId": 1,
+    "homeTeamId": 79,
+    "awayTeamId": 53,
+    "homeScore": 3,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1930-07-17"
+  },
+  {
+    "id": 9,
+    "worldCupId": 1,
+    "homeTeamId": 78,
+    "awayTeamId": 54,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1930-07-18"
+  },
+  {
+    "id": 10,
+    "worldCupId": 1,
+    "homeTeamId": 12,
+    "awayTeamId": 26,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1930-07-19"
+  },
+  {
+    "id": 11,
+    "worldCupId": 1,
+    "homeTeamId": 3,
+    "awayTeamId": 47,
+    "homeScore": 6,
+    "awayScore": 3,
+    "stage": "Group Stage",
+    "date": "1930-07-19"
+  },
+  {
+    "id": 12,
+    "worldCupId": 1,
+    "homeTeamId": 9,
+    "awayTeamId": 8,
+    "homeScore": 4,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1930-07-20"
+  },
+  {
+    "id": 13,
+    "worldCupId": 1,
+    "homeTeamId": 53,
+    "awayTeamId": 6,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1930-07-20"
+  },
+  {
+    "id": 14,
+    "worldCupId": 1,
+    "homeTeamId": 78,
+    "awayTeamId": 58,
+    "homeScore": 4,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1930-07-21"
+  },
+  {
+    "id": 15,
+    "worldCupId": 1,
+    "homeTeamId": 3,
+    "awayTeamId": 12,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1930-07-22"
+  },
+  {
+    "id": 16,
+    "worldCupId": 1,
+    "homeTeamId": 3,
+    "awayTeamId": 79,
+    "homeScore": 6,
+    "awayScore": 1,
+    "stage": "Semi-final",
+    "date": "1930-07-26"
+  },
+  {
+    "id": 17,
+    "worldCupId": 1,
+    "homeTeamId": 78,
+    "awayTeamId": 81,
+    "homeScore": 6,
+    "awayScore": 1,
+    "stage": "Semi-final",
+    "date": "1930-07-27"
+  },
+  {
+    "id": 18,
+    "worldCupId": 1,
+    "homeTeamId": 78,
+    "awayTeamId": 3,
+    "homeScore": 4,
+    "awayScore": 2,
+    "stage": "Final",
+    "date": "1930-07-30"
+  },
+  {
+    "id": 19,
+    "worldCupId": 2,
+    "homeTeamId": 5,
+    "awayTeamId": 26,
+    "homeScore": 3,
+    "awayScore": 2,
+    "stage": "Preliminary Round",
+    "date": "1934-05-27"
+  },
+  {
+    "id": 20,
+    "worldCupId": 2,
+    "homeTeamId": 34,
+    "awayTeamId": 23,
+    "homeScore": 4,
+    "awayScore": 2,
+    "stage": "Preliminary Round",
+    "date": "1934-05-27"
+  },
+  {
+    "id": 21,
+    "worldCupId": 2,
+    "homeTeamId": 66,
+    "awayTeamId": 48,
+    "homeScore": 3,
+    "awayScore": 2,
+    "stage": "Preliminary Round",
+    "date": "1934-05-27"
+  },
+  {
+    "id": 22,
+    "worldCupId": 2,
+    "homeTeamId": 69,
+    "awayTeamId": 3,
+    "homeScore": 3,
+    "awayScore": 2,
+    "stage": "Preliminary Round",
+    "date": "1934-05-27"
+  },
+  {
+    "id": 23,
+    "worldCupId": 2,
+    "homeTeamId": 29,
+    "awayTeamId": 6,
+    "homeScore": 5,
+    "awayScore": 2,
+    "stage": "Preliminary Round",
+    "date": "1934-05-27"
+  },
+  {
+    "id": 24,
+    "worldCupId": 2,
+    "homeTeamId": 25,
+    "awayTeamId": 9,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Preliminary Round",
+    "date": "1934-05-27"
+  },
+  {
+    "id": 25,
+    "worldCupId": 2,
+    "homeTeamId": 40,
+    "awayTeamId": 79,
+    "homeScore": 7,
+    "awayScore": 1,
+    "stage": "Preliminary Round",
+    "date": "1934-05-27"
+  },
+  {
+    "id": 26,
+    "worldCupId": 2,
+    "homeTeamId": 70,
+    "awayTeamId": 58,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Preliminary Round",
+    "date": "1934-05-27"
+  },
+  {
+    "id": 27,
+    "worldCupId": 2,
+    "homeTeamId": 70,
+    "awayTeamId": 66,
+    "homeScore": 3,
+    "awayScore": 2,
+    "stage": "Quarter-final",
+    "date": "1934-05-31"
+  },
+  {
+    "id": 28,
+    "worldCupId": 2,
+    "homeTeamId": 29,
+    "awayTeamId": 69,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Quarter-final",
+    "date": "1934-05-31"
+  },
+  {
+    "id": 29,
+    "worldCupId": 2,
+    "homeTeamId": 40,
+    "awayTeamId": 25,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Quarter-final",
+    "date": "1934-05-31"
+  },
+  {
+    "id": 30,
+    "worldCupId": 2,
+    "homeTeamId": 5,
+    "awayTeamId": 34,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Quarter-final",
+    "date": "1934-05-31"
+  },
+  {
+    "id": 31,
+    "worldCupId": 2,
+    "homeTeamId": 40,
+    "awayTeamId": 25,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Quarter-final",
+    "date": "1934-06-01"
+  },
+  {
+    "id": 32,
+    "worldCupId": 2,
+    "homeTeamId": 40,
+    "awayTeamId": 5,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Semi-final",
+    "date": "1934-06-03"
+  },
+  {
+    "id": 33,
+    "worldCupId": 2,
+    "homeTeamId": 70,
+    "awayTeamId": 29,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Semi-final",
+    "date": "1934-06-03"
+  },
+  {
+    "id": 34,
+    "worldCupId": 2,
+    "homeTeamId": 29,
+    "awayTeamId": 5,
+    "homeScore": 3,
+    "awayScore": 2,
+    "stage": "Match for third place",
+    "date": "1934-06-07"
+  },
+  {
+    "id": 35,
+    "worldCupId": 2,
+    "homeTeamId": 40,
+    "awayTeamId": 70,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Final",
+    "date": "1934-06-10"
+  },
+  {
+    "id": 36,
+    "worldCupId": 3,
+    "homeTeamId": 66,
+    "awayTeamId": 29,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1938-06-04"
+  },
+  {
+    "id": 37,
+    "worldCupId": 3,
+    "homeTeamId": 34,
+    "awayTeamId": 35,
+    "homeScore": 6,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1938-06-05"
+  },
+  {
+    "id": 38,
+    "worldCupId": 3,
+    "homeTeamId": 26,
+    "awayTeamId": 6,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1938-06-05"
+  },
+  {
+    "id": 39,
+    "worldCupId": 3,
+    "homeTeamId": 19,
+    "awayTeamId": 58,
+    "homeScore": 3,
+    "awayScore": 3,
+    "stage": "Group Stage",
+    "date": "1938-06-05"
+  },
+  {
+    "id": 40,
+    "worldCupId": 3,
+    "homeTeamId": 40,
+    "awayTeamId": 51,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1938-06-05"
+  },
+  {
+    "id": 41,
+    "worldCupId": 3,
+    "homeTeamId": 9,
+    "awayTeamId": 55,
+    "homeScore": 6,
+    "awayScore": 5,
+    "stage": "Group Stage",
+    "date": "1938-06-05"
+  },
+  {
+    "id": 42,
+    "worldCupId": 3,
+    "homeTeamId": 70,
+    "awayTeamId": 48,
+    "homeScore": 3,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1938-06-05"
+  },
+  {
+    "id": 43,
+    "worldCupId": 3,
+    "homeTeamId": 19,
+    "awayTeamId": 58,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1938-06-09"
+  },
+  {
+    "id": 44,
+    "worldCupId": 3,
+    "homeTeamId": 66,
+    "awayTeamId": 29,
+    "homeScore": 4,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1938-06-09"
+  },
+  {
+    "id": 45,
+    "worldCupId": 3,
+    "homeTeamId": 9,
+    "awayTeamId": 70,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Quarter-final",
+    "date": "1938-06-12"
+  },
+  {
+    "id": 46,
+    "worldCupId": 3,
+    "homeTeamId": 34,
+    "awayTeamId": 66,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Quarter-final",
+    "date": "1938-06-12"
+  },
+  {
+    "id": 47,
+    "worldCupId": 3,
+    "homeTeamId": 69,
+    "awayTeamId": 19,
+    "homeScore": 8,
+    "awayScore": 0,
+    "stage": "Quarter-final",
+    "date": "1938-06-12"
+  },
+  {
+    "id": 48,
+    "worldCupId": 3,
+    "homeTeamId": 40,
+    "awayTeamId": 26,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Quarter-final",
+    "date": "1938-06-12"
+  },
+  {
+    "id": 49,
+    "worldCupId": 3,
+    "homeTeamId": 9,
+    "awayTeamId": 70,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Quarter-final",
+    "date": "1938-06-14"
+  },
+  {
+    "id": 50,
+    "worldCupId": 3,
+    "homeTeamId": 34,
+    "awayTeamId": 69,
+    "homeScore": 5,
+    "awayScore": 1,
+    "stage": "Semi-final",
+    "date": "1938-06-16"
+  },
+  {
+    "id": 51,
+    "worldCupId": 3,
+    "homeTeamId": 40,
+    "awayTeamId": 9,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Semi-final",
+    "date": "1938-06-16"
+  },
+  {
+    "id": 52,
+    "worldCupId": 3,
+    "homeTeamId": 9,
+    "awayTeamId": 69,
+    "homeScore": 4,
+    "awayScore": 2,
+    "stage": "Match for third place",
+    "date": "1938-06-19"
+  },
+  {
+    "id": 53,
+    "worldCupId": 3,
+    "homeTeamId": 40,
+    "awayTeamId": 34,
+    "homeScore": 4,
+    "awayScore": 2,
+    "stage": "Final",
+    "date": "1938-06-19"
+  },
+  {
+    "id": 54,
+    "worldCupId": 4,
+    "homeTeamId": 9,
+    "awayTeamId": 47,
+    "homeScore": 4,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1950-06-24"
+  },
+  {
+    "id": 55,
+    "worldCupId": 4,
+    "homeTeamId": 24,
+    "awayTeamId": 12,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1950-06-25"
+  },
+  {
+    "id": 56,
+    "worldCupId": 4,
+    "homeTeamId": 25,
+    "awayTeamId": 79,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1950-06-25"
+  },
+  {
+    "id": 57,
+    "worldCupId": 4,
+    "homeTeamId": 69,
+    "awayTeamId": 40,
+    "homeScore": 3,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1950-06-25"
+  },
+  {
+    "id": 58,
+    "worldCupId": 4,
+    "homeTeamId": 81,
+    "awayTeamId": 66,
+    "homeScore": 3,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1950-06-25"
+  },
+  {
+    "id": 59,
+    "worldCupId": 4,
+    "homeTeamId": 9,
+    "awayTeamId": 66,
+    "homeScore": 2,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1950-06-28"
+  },
+  {
+    "id": 60,
+    "worldCupId": 4,
+    "homeTeamId": 81,
+    "awayTeamId": 47,
+    "homeScore": 4,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1950-06-28"
+  },
+  {
+    "id": 61,
+    "worldCupId": 4,
+    "homeTeamId": 25,
+    "awayTeamId": 12,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1950-06-29"
+  },
+  {
+    "id": 62,
+    "worldCupId": 4,
+    "homeTeamId": 69,
+    "awayTeamId": 53,
+    "homeScore": 2,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1950-06-29"
+  },
+  {
+    "id": 63,
+    "worldCupId": 4,
+    "homeTeamId": 79,
+    "awayTeamId": 24,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1950-06-29"
+  },
+  {
+    "id": 64,
+    "worldCupId": 4,
+    "homeTeamId": 9,
+    "awayTeamId": 81,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1950-07-01"
+  },
+  {
+    "id": 65,
+    "worldCupId": 4,
+    "homeTeamId": 25,
+    "awayTeamId": 24,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1950-07-02"
+  },
+  {
+    "id": 66,
+    "worldCupId": 4,
+    "homeTeamId": 40,
+    "awayTeamId": 53,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1950-07-02"
+  },
+  {
+    "id": 67,
+    "worldCupId": 4,
+    "homeTeamId": 78,
+    "awayTeamId": 8,
+    "homeScore": 8,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1950-07-02"
+  },
+  {
+    "id": 68,
+    "worldCupId": 4,
+    "homeTeamId": 66,
+    "awayTeamId": 47,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1950-07-02"
+  },
+  {
+    "id": 69,
+    "worldCupId": 4,
+    "homeTeamId": 12,
+    "awayTeamId": 79,
+    "homeScore": 5,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1950-07-02"
+  },
+  {
+    "id": 70,
+    "worldCupId": 4,
+    "homeTeamId": 78,
+    "awayTeamId": 25,
+    "homeScore": 2,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1950-07-09"
+  },
+  {
+    "id": 71,
+    "worldCupId": 4,
+    "homeTeamId": 9,
+    "awayTeamId": 69,
+    "homeScore": 7,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1950-07-09"
+  },
+  {
+    "id": 72,
+    "worldCupId": 4,
+    "homeTeamId": 9,
+    "awayTeamId": 25,
+    "homeScore": 6,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1950-07-13"
+  },
+  {
+    "id": 73,
+    "worldCupId": 4,
+    "homeTeamId": 78,
+    "awayTeamId": 69,
+    "homeScore": 3,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1950-07-13"
+  },
+  {
+    "id": 74,
+    "worldCupId": 4,
+    "homeTeamId": 69,
+    "awayTeamId": 25,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1950-07-16"
+  },
+  {
+    "id": 75,
+    "worldCupId": 4,
+    "homeTeamId": 78,
+    "awayTeamId": 9,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1950-07-16"
+  },
+  {
+    "id": 76,
+    "worldCupId": 5,
+    "homeTeamId": 78,
+    "awayTeamId": 70,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1954-06-16"
+  },
+  {
+    "id": 77,
+    "worldCupId": 5,
+    "homeTeamId": 5,
+    "awayTeamId": 62,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1954-06-16"
+  },
+  {
+    "id": 78,
+    "worldCupId": 5,
+    "homeTeamId": 9,
+    "awayTeamId": 47,
+    "homeScore": 5,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1954-06-16"
+  },
+  {
+    "id": 79,
+    "worldCupId": 5,
+    "homeTeamId": 81,
+    "awayTeamId": 26,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1954-06-16"
+  },
+  {
+    "id": 80,
+    "worldCupId": 5,
+    "homeTeamId": 27,
+    "awayTeamId": 74,
+    "homeScore": 4,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1954-06-17"
+  },
+  {
+    "id": 81,
+    "worldCupId": 5,
+    "homeTeamId": 34,
+    "awayTeamId": 43,
+    "homeScore": 9,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1954-06-17"
+  },
+  {
+    "id": 82,
+    "worldCupId": 5,
+    "homeTeamId": 24,
+    "awayTeamId": 6,
+    "homeScore": 4,
+    "awayScore": 4,
+    "stage": "Group Stage",
+    "date": "1954-06-17"
+  },
+  {
+    "id": 83,
+    "worldCupId": 5,
+    "homeTeamId": 66,
+    "awayTeamId": 40,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1954-06-17"
+  },
+  {
+    "id": 84,
+    "worldCupId": 5,
+    "homeTeamId": 78,
+    "awayTeamId": 62,
+    "homeScore": 7,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1954-06-19"
+  },
+  {
+    "id": 85,
+    "worldCupId": 5,
+    "homeTeamId": 5,
+    "awayTeamId": 70,
+    "homeScore": 5,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1954-06-19"
+  },
+  {
+    "id": 86,
+    "worldCupId": 5,
+    "homeTeamId": 26,
+    "awayTeamId": 47,
+    "homeScore": 3,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1954-06-19"
+  },
+  {
+    "id": 87,
+    "worldCupId": 5,
+    "homeTeamId": 9,
+    "awayTeamId": 81,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1954-06-19"
+  },
+  {
+    "id": 88,
+    "worldCupId": 5,
+    "homeTeamId": 34,
+    "awayTeamId": 27,
+    "homeScore": 8,
+    "awayScore": 3,
+    "stage": "Group Stage",
+    "date": "1954-06-20"
+  },
+  {
+    "id": 89,
+    "worldCupId": 5,
+    "homeTeamId": 74,
+    "awayTeamId": 43,
+    "homeScore": 7,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1954-06-20"
+  },
+  {
+    "id": 90,
+    "worldCupId": 5,
+    "homeTeamId": 24,
+    "awayTeamId": 66,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1954-06-20"
+  },
+  {
+    "id": 91,
+    "worldCupId": 5,
+    "homeTeamId": 40,
+    "awayTeamId": 6,
+    "homeScore": 4,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1954-06-20"
+  },
+  {
+    "id": 92,
+    "worldCupId": 5,
+    "homeTeamId": 27,
+    "awayTeamId": 74,
+    "homeScore": 7,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1954-06-23"
+  },
+  {
+    "id": 93,
+    "worldCupId": 5,
+    "homeTeamId": 66,
+    "awayTeamId": 40,
+    "homeScore": 4,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1954-06-23"
+  },
+  {
+    "id": 94,
+    "worldCupId": 5,
+    "homeTeamId": 78,
+    "awayTeamId": 24,
+    "homeScore": 4,
+    "awayScore": 2,
+    "stage": "Quarter-final",
+    "date": "1954-06-26"
+  },
+  {
+    "id": 95,
+    "worldCupId": 5,
+    "homeTeamId": 5,
+    "awayTeamId": 66,
+    "homeScore": 7,
+    "awayScore": 5,
+    "stage": "Quarter-final",
+    "date": "1954-06-26"
+  },
+  {
+    "id": 96,
+    "worldCupId": 5,
+    "homeTeamId": 27,
+    "awayTeamId": 81,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Quarter-final",
+    "date": "1954-06-27"
+  },
+  {
+    "id": 97,
+    "worldCupId": 5,
+    "homeTeamId": 34,
+    "awayTeamId": 9,
+    "homeScore": 4,
+    "awayScore": 2,
+    "stage": "Quarter-final",
+    "date": "1954-06-27"
+  },
+  {
+    "id": 98,
+    "worldCupId": 5,
+    "homeTeamId": 27,
+    "awayTeamId": 5,
+    "homeScore": 6,
+    "awayScore": 1,
+    "stage": "Semi-final",
+    "date": "1954-06-30"
+  },
+  {
+    "id": 99,
+    "worldCupId": 5,
+    "homeTeamId": 34,
+    "awayTeamId": 78,
+    "homeScore": 4,
+    "awayScore": 2,
+    "stage": "Semi-final",
+    "date": "1954-06-30"
+  },
+  {
+    "id": 100,
+    "worldCupId": 5,
+    "homeTeamId": 5,
+    "awayTeamId": 78,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Match for third place",
+    "date": "1954-07-03"
+  },
+  {
+    "id": 101,
+    "worldCupId": 5,
+    "homeTeamId": 27,
+    "awayTeamId": 34,
+    "homeScore": 3,
+    "awayScore": 2,
+    "stage": "Final",
+    "date": "1954-07-04"
+  },
+  {
+    "id": 102,
+    "worldCupId": 6,
+    "homeTeamId": 69,
+    "awayTeamId": 47,
+    "homeScore": 3,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1958-06-08"
+  },
+  {
+    "id": 103,
+    "worldCupId": 6,
+    "homeTeamId": 77,
+    "awayTeamId": 24,
+    "homeScore": 2,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1958-06-08"
+  },
+  {
+    "id": 104,
+    "worldCupId": 6,
+    "homeTeamId": 3,
+    "awayTeamId": 27,
+    "homeScore": 1,
+    "awayScore": 3,
+    "stage": "Group Stage",
+    "date": "1958-06-08"
+  },
+  {
+    "id": 105,
+    "worldCupId": 6,
+    "homeTeamId": 34,
+    "awayTeamId": 80,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1958-06-08"
+  },
+  {
+    "id": 106,
+    "worldCupId": 6,
+    "homeTeamId": 26,
+    "awayTeamId": 53,
+    "homeScore": 7,
+    "awayScore": 3,
+    "stage": "Group Stage",
+    "date": "1958-06-08"
+  },
+  {
+    "id": 107,
+    "worldCupId": 6,
+    "homeTeamId": 81,
+    "awayTeamId": 62,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1958-06-08"
+  },
+  {
+    "id": 108,
+    "worldCupId": 6,
+    "homeTeamId": 9,
+    "awayTeamId": 5,
+    "homeScore": 3,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1958-06-08"
+  },
+  {
+    "id": 109,
+    "worldCupId": 6,
+    "homeTeamId": 50,
+    "awayTeamId": 70,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1958-06-08"
+  },
+  {
+    "id": 110,
+    "worldCupId": 6,
+    "homeTeamId": 9,
+    "awayTeamId": 24,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1958-06-11"
+  },
+  {
+    "id": 111,
+    "worldCupId": 6,
+    "homeTeamId": 47,
+    "awayTeamId": 80,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1958-06-11"
+  },
+  {
+    "id": 112,
+    "worldCupId": 6,
+    "homeTeamId": 53,
+    "awayTeamId": 62,
+    "homeScore": 3,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1958-06-11"
+  },
+  {
+    "id": 113,
+    "worldCupId": 6,
+    "homeTeamId": 81,
+    "awayTeamId": 26,
+    "homeScore": 3,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1958-06-11"
+  },
+  {
+    "id": 114,
+    "worldCupId": 6,
+    "homeTeamId": 77,
+    "awayTeamId": 5,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1958-06-11"
+  },
+  {
+    "id": 115,
+    "worldCupId": 6,
+    "homeTeamId": 27,
+    "awayTeamId": 70,
+    "homeScore": 2,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1958-06-11"
+  },
+  {
+    "id": 116,
+    "worldCupId": 6,
+    "homeTeamId": 3,
+    "awayTeamId": 50,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1958-06-11"
+  },
+  {
+    "id": 117,
+    "worldCupId": 6,
+    "homeTeamId": 69,
+    "awayTeamId": 34,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1958-06-12"
+  },
+  {
+    "id": 118,
+    "worldCupId": 6,
+    "homeTeamId": 69,
+    "awayTeamId": 80,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1958-06-15"
+  },
+  {
+    "id": 119,
+    "worldCupId": 6,
+    "homeTeamId": 9,
+    "awayTeamId": 77,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1958-06-15"
+  },
+  {
+    "id": 120,
+    "worldCupId": 6,
+    "homeTeamId": 27,
+    "awayTeamId": 50,
+    "homeScore": 2,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1958-06-15"
+  },
+  {
+    "id": 121,
+    "worldCupId": 6,
+    "homeTeamId": 34,
+    "awayTeamId": 47,
+    "homeScore": 4,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1958-06-15"
+  },
+  {
+    "id": 122,
+    "worldCupId": 6,
+    "homeTeamId": 53,
+    "awayTeamId": 81,
+    "homeScore": 3,
+    "awayScore": 3,
+    "stage": "Group Stage",
+    "date": "1958-06-15"
+  },
+  {
+    "id": 123,
+    "worldCupId": 6,
+    "homeTeamId": 26,
+    "awayTeamId": 62,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1958-06-15"
+  },
+  {
+    "id": 124,
+    "worldCupId": 6,
+    "homeTeamId": 24,
+    "awayTeamId": 5,
+    "homeScore": 2,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1958-06-15"
+  },
+  {
+    "id": 125,
+    "worldCupId": 6,
+    "homeTeamId": 70,
+    "awayTeamId": 3,
+    "homeScore": 6,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1958-06-15"
+  },
+  {
+    "id": 126,
+    "worldCupId": 6,
+    "homeTeamId": 77,
+    "awayTeamId": 24,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1958-06-17"
+  },
+  {
+    "id": 127,
+    "worldCupId": 6,
+    "homeTeamId": 50,
+    "awayTeamId": 70,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1958-06-17"
+  },
+  {
+    "id": 128,
+    "worldCupId": 6,
+    "homeTeamId": 80,
+    "awayTeamId": 34,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1958-06-17"
+  },
+  {
+    "id": 129,
+    "worldCupId": 6,
+    "homeTeamId": 9,
+    "awayTeamId": 80,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Quarter-final",
+    "date": "1958-06-19"
+  },
+  {
+    "id": 130,
+    "worldCupId": 6,
+    "homeTeamId": 27,
+    "awayTeamId": 81,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Quarter-final",
+    "date": "1958-06-19"
+  },
+  {
+    "id": 131,
+    "worldCupId": 6,
+    "homeTeamId": 69,
+    "awayTeamId": 77,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Quarter-final",
+    "date": "1958-06-19"
+  },
+  {
+    "id": 132,
+    "worldCupId": 6,
+    "homeTeamId": 26,
+    "awayTeamId": 50,
+    "homeScore": 4,
+    "awayScore": 0,
+    "stage": "Quarter-final",
+    "date": "1958-06-19"
+  },
+  {
+    "id": 133,
+    "worldCupId": 6,
+    "homeTeamId": 69,
+    "awayTeamId": 27,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Semi-final",
+    "date": "1958-06-24"
+  },
+  {
+    "id": 134,
+    "worldCupId": 6,
+    "homeTeamId": 9,
+    "awayTeamId": 26,
+    "homeScore": 5,
+    "awayScore": 2,
+    "stage": "Semi-final",
+    "date": "1958-06-24"
+  },
+  {
+    "id": 135,
+    "worldCupId": 6,
+    "homeTeamId": 26,
+    "awayTeamId": 27,
+    "homeScore": 6,
+    "awayScore": 3,
+    "stage": "Match for third place",
+    "date": "1958-06-28"
+  },
+  {
+    "id": 136,
+    "worldCupId": 6,
+    "homeTeamId": 9,
+    "awayTeamId": 69,
+    "homeScore": 5,
+    "awayScore": 2,
+    "stage": "Final",
+    "date": "1958-06-29"
+  },
+  {
+    "id": 137,
+    "worldCupId": 7,
+    "homeTeamId": 78,
+    "awayTeamId": 16,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1962-05-30"
+  },
+  {
+    "id": 138,
+    "worldCupId": 7,
+    "homeTeamId": 9,
+    "awayTeamId": 47,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1962-05-30"
+  },
+  {
+    "id": 139,
+    "worldCupId": 7,
+    "homeTeamId": 3,
+    "awayTeamId": 10,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1962-05-30"
+  },
+  {
+    "id": 140,
+    "worldCupId": 7,
+    "homeTeamId": 12,
+    "awayTeamId": 66,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1962-05-30"
+  },
+  {
+    "id": 141,
+    "worldCupId": 7,
+    "homeTeamId": 77,
+    "awayTeamId": 81,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1962-05-31"
+  },
+  {
+    "id": 142,
+    "worldCupId": 7,
+    "homeTeamId": 70,
+    "awayTeamId": 25,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1962-05-31"
+  },
+  {
+    "id": 143,
+    "worldCupId": 7,
+    "homeTeamId": 34,
+    "awayTeamId": 24,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1962-05-31"
+  },
+  {
+    "id": 144,
+    "worldCupId": 7,
+    "homeTeamId": 27,
+    "awayTeamId": 40,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1962-05-31"
+  },
+  {
+    "id": 145,
+    "worldCupId": 7,
+    "homeTeamId": 81,
+    "awayTeamId": 78,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1962-06-02"
+  },
+  {
+    "id": 146,
+    "worldCupId": 7,
+    "homeTeamId": 9,
+    "awayTeamId": 70,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1962-06-02"
+  },
+  {
+    "id": 147,
+    "worldCupId": 7,
+    "homeTeamId": 24,
+    "awayTeamId": 3,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1962-06-02"
+  },
+  {
+    "id": 148,
+    "worldCupId": 7,
+    "homeTeamId": 12,
+    "awayTeamId": 40,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1962-06-02"
+  },
+  {
+    "id": 149,
+    "worldCupId": 7,
+    "homeTeamId": 77,
+    "awayTeamId": 16,
+    "homeScore": 4,
+    "awayScore": 4,
+    "stage": "Group Stage",
+    "date": "1962-06-03"
+  },
+  {
+    "id": 150,
+    "worldCupId": 7,
+    "homeTeamId": 25,
+    "awayTeamId": 47,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1962-06-03"
+  },
+  {
+    "id": 151,
+    "worldCupId": 7,
+    "homeTeamId": 34,
+    "awayTeamId": 10,
+    "homeScore": 6,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1962-06-03"
+  },
+  {
+    "id": 152,
+    "worldCupId": 7,
+    "homeTeamId": 27,
+    "awayTeamId": 66,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1962-06-03"
+  },
+  {
+    "id": 153,
+    "worldCupId": 7,
+    "homeTeamId": 77,
+    "awayTeamId": 78,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1962-06-06"
+  },
+  {
+    "id": 154,
+    "worldCupId": 7,
+    "homeTeamId": 9,
+    "awayTeamId": 25,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1962-06-06"
+  },
+  {
+    "id": 155,
+    "worldCupId": 7,
+    "homeTeamId": 34,
+    "awayTeamId": 3,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1962-06-06"
+  },
+  {
+    "id": 156,
+    "worldCupId": 7,
+    "homeTeamId": 27,
+    "awayTeamId": 12,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1962-06-06"
+  },
+  {
+    "id": 157,
+    "worldCupId": 7,
+    "homeTeamId": 81,
+    "awayTeamId": 16,
+    "homeScore": 5,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1962-06-07"
+  },
+  {
+    "id": 158,
+    "worldCupId": 7,
+    "homeTeamId": 47,
+    "awayTeamId": 70,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1962-06-07"
+  },
+  {
+    "id": 159,
+    "worldCupId": 7,
+    "homeTeamId": 24,
+    "awayTeamId": 10,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1962-06-07"
+  },
+  {
+    "id": 160,
+    "worldCupId": 7,
+    "homeTeamId": 40,
+    "awayTeamId": 66,
+    "homeScore": 3,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1962-06-07"
+  },
+  {
+    "id": 161,
+    "worldCupId": 7,
+    "homeTeamId": 12,
+    "awayTeamId": 77,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Quarter-final",
+    "date": "1962-06-10"
+  },
+  {
+    "id": 162,
+    "worldCupId": 7,
+    "homeTeamId": 9,
+    "awayTeamId": 24,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Quarter-final",
+    "date": "1962-06-10"
+  },
+  {
+    "id": 163,
+    "worldCupId": 7,
+    "homeTeamId": 70,
+    "awayTeamId": 34,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Quarter-final",
+    "date": "1962-06-10"
+  },
+  {
+    "id": 164,
+    "worldCupId": 7,
+    "homeTeamId": 81,
+    "awayTeamId": 27,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Quarter-final",
+    "date": "1962-06-10"
+  },
+  {
+    "id": 165,
+    "worldCupId": 7,
+    "homeTeamId": 70,
+    "awayTeamId": 81,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Semi-final",
+    "date": "1962-06-13"
+  },
+  {
+    "id": 166,
+    "worldCupId": 7,
+    "homeTeamId": 9,
+    "awayTeamId": 12,
+    "homeScore": 4,
+    "awayScore": 2,
+    "stage": "Semi-final",
+    "date": "1962-06-13"
+  },
+  {
+    "id": 167,
+    "worldCupId": 7,
+    "homeTeamId": 12,
+    "awayTeamId": 81,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Match for third place",
+    "date": "1962-06-16"
+  },
+  {
+    "id": 168,
+    "worldCupId": 7,
+    "homeTeamId": 9,
+    "awayTeamId": 70,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Final",
+    "date": "1962-06-17"
+  },
+  {
+    "id": 169,
+    "worldCupId": 8,
+    "homeTeamId": 24,
+    "awayTeamId": 78,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1966-07-11"
+  },
+  {
+    "id": 170,
+    "worldCupId": 8,
+    "homeTeamId": 27,
+    "awayTeamId": 66,
+    "homeScore": 5,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1966-07-12"
+  },
+  {
+    "id": 171,
+    "worldCupId": 8,
+    "homeTeamId": 9,
+    "awayTeamId": 10,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1966-07-12"
+  },
+  {
+    "id": 172,
+    "worldCupId": 8,
+    "homeTeamId": 77,
+    "awayTeamId": 57,
+    "homeScore": 3,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1966-07-12"
+  },
+  {
+    "id": 173,
+    "worldCupId": 8,
+    "homeTeamId": 26,
+    "awayTeamId": 47,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1966-07-13"
+  },
+  {
+    "id": 174,
+    "worldCupId": 8,
+    "homeTeamId": 56,
+    "awayTeamId": 34,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1966-07-13"
+  },
+  {
+    "id": 175,
+    "worldCupId": 8,
+    "homeTeamId": 3,
+    "awayTeamId": 25,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1966-07-13"
+  },
+  {
+    "id": 176,
+    "worldCupId": 8,
+    "homeTeamId": 40,
+    "awayTeamId": 12,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1966-07-13"
+  },
+  {
+    "id": 177,
+    "worldCupId": 8,
+    "homeTeamId": 78,
+    "awayTeamId": 26,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1966-07-15"
+  },
+  {
+    "id": 178,
+    "worldCupId": 8,
+    "homeTeamId": 25,
+    "awayTeamId": 66,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1966-07-15"
+  },
+  {
+    "id": 179,
+    "worldCupId": 8,
+    "homeTeamId": 34,
+    "awayTeamId": 9,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1966-07-15"
+  },
+  {
+    "id": 180,
+    "worldCupId": 8,
+    "homeTeamId": 57,
+    "awayTeamId": 12,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1966-07-15"
+  },
+  {
+    "id": 181,
+    "worldCupId": 8,
+    "homeTeamId": 56,
+    "awayTeamId": 10,
+    "homeScore": 3,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1966-07-16"
+  },
+  {
+    "id": 182,
+    "worldCupId": 8,
+    "homeTeamId": 27,
+    "awayTeamId": 3,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1966-07-16"
+  },
+  {
+    "id": 183,
+    "worldCupId": 8,
+    "homeTeamId": 77,
+    "awayTeamId": 40,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1966-07-16"
+  },
+  {
+    "id": 184,
+    "worldCupId": 8,
+    "homeTeamId": 24,
+    "awayTeamId": 47,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1966-07-16"
+  },
+  {
+    "id": 185,
+    "worldCupId": 8,
+    "homeTeamId": 78,
+    "awayTeamId": 47,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1966-07-19"
+  },
+  {
+    "id": 186,
+    "worldCupId": 8,
+    "homeTeamId": 3,
+    "awayTeamId": 66,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1966-07-19"
+  },
+  {
+    "id": 187,
+    "worldCupId": 8,
+    "homeTeamId": 56,
+    "awayTeamId": 9,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1966-07-19"
+  },
+  {
+    "id": 188,
+    "worldCupId": 8,
+    "homeTeamId": 57,
+    "awayTeamId": 40,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1966-07-19"
+  },
+  {
+    "id": 189,
+    "worldCupId": 8,
+    "homeTeamId": 24,
+    "awayTeamId": 26,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1966-07-20"
+  },
+  {
+    "id": 190,
+    "worldCupId": 8,
+    "homeTeamId": 34,
+    "awayTeamId": 10,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1966-07-20"
+  },
+  {
+    "id": 191,
+    "worldCupId": 8,
+    "homeTeamId": 27,
+    "awayTeamId": 25,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1966-07-20"
+  },
+  {
+    "id": 192,
+    "worldCupId": 8,
+    "homeTeamId": 77,
+    "awayTeamId": 12,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1966-07-20"
+  },
+  {
+    "id": 193,
+    "worldCupId": 8,
+    "homeTeamId": 24,
+    "awayTeamId": 3,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Quarter-final",
+    "date": "1966-07-23"
+  },
+  {
+    "id": 194,
+    "worldCupId": 8,
+    "homeTeamId": 27,
+    "awayTeamId": 78,
+    "homeScore": 4,
+    "awayScore": 0,
+    "stage": "Quarter-final",
+    "date": "1966-07-23"
+  },
+  {
+    "id": 195,
+    "worldCupId": 8,
+    "homeTeamId": 77,
+    "awayTeamId": 34,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Quarter-final",
+    "date": "1966-07-23"
+  },
+  {
+    "id": 196,
+    "worldCupId": 8,
+    "homeTeamId": 56,
+    "awayTeamId": 57,
+    "homeScore": 5,
+    "awayScore": 3,
+    "stage": "Quarter-final",
+    "date": "1966-07-23"
+  },
+  {
+    "id": 197,
+    "worldCupId": 8,
+    "homeTeamId": 27,
+    "awayTeamId": 77,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Semi-final",
+    "date": "1966-07-25"
+  },
+  {
+    "id": 198,
+    "worldCupId": 8,
+    "homeTeamId": 24,
+    "awayTeamId": 56,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Semi-final",
+    "date": "1966-07-26"
+  },
+  {
+    "id": 199,
+    "worldCupId": 8,
+    "homeTeamId": 56,
+    "awayTeamId": 77,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Match for third place",
+    "date": "1966-07-28"
+  },
+  {
+    "id": 200,
+    "worldCupId": 8,
+    "homeTeamId": 24,
+    "awayTeamId": 27,
+    "homeScore": 4,
+    "awayScore": 2,
+    "stage": "Final",
+    "date": "1966-07-30"
+  },
+  {
+    "id": 201,
+    "worldCupId": 9,
+    "homeTeamId": 47,
+    "awayTeamId": 77,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1970-05-31"
+  },
+  {
+    "id": 202,
+    "worldCupId": 9,
+    "homeTeamId": 78,
+    "awayTeamId": 39,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1970-06-02"
+  },
+  {
+    "id": 203,
+    "worldCupId": 9,
+    "homeTeamId": 54,
+    "awayTeamId": 10,
+    "homeScore": 3,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1970-06-02"
+  },
+  {
+    "id": 204,
+    "worldCupId": 9,
+    "homeTeamId": 24,
+    "awayTeamId": 58,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1970-06-02"
+  },
+  {
+    "id": 205,
+    "worldCupId": 9,
+    "homeTeamId": 40,
+    "awayTeamId": 69,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1970-06-03"
+  },
+  {
+    "id": 206,
+    "worldCupId": 9,
+    "homeTeamId": 27,
+    "awayTeamId": 46,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1970-06-03"
+  },
+  {
+    "id": 207,
+    "worldCupId": 9,
+    "homeTeamId": 9,
+    "awayTeamId": 70,
+    "homeScore": 4,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1970-06-03"
+  },
+  {
+    "id": 208,
+    "worldCupId": 9,
+    "homeTeamId": 6,
+    "awayTeamId": 64,
+    "homeScore": 3,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1970-06-03"
+  },
+  {
+    "id": 209,
+    "worldCupId": 9,
+    "homeTeamId": 78,
+    "awayTeamId": 40,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1970-06-06"
+  },
+  {
+    "id": 210,
+    "worldCupId": 9,
+    "homeTeamId": 54,
+    "awayTeamId": 46,
+    "homeScore": 3,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1970-06-06"
+  },
+  {
+    "id": 211,
+    "worldCupId": 9,
+    "homeTeamId": 58,
+    "awayTeamId": 70,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1970-06-06"
+  },
+  {
+    "id": 212,
+    "worldCupId": 9,
+    "homeTeamId": 77,
+    "awayTeamId": 6,
+    "homeScore": 4,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1970-06-06"
+  },
+  {
+    "id": 213,
+    "worldCupId": 9,
+    "homeTeamId": 69,
+    "awayTeamId": 39,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1970-06-07"
+  },
+  {
+    "id": 214,
+    "worldCupId": 9,
+    "homeTeamId": 27,
+    "awayTeamId": 10,
+    "homeScore": 5,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1970-06-07"
+  },
+  {
+    "id": 215,
+    "worldCupId": 9,
+    "homeTeamId": 9,
+    "awayTeamId": 24,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1970-06-07"
+  },
+  {
+    "id": 216,
+    "worldCupId": 9,
+    "homeTeamId": 47,
+    "awayTeamId": 64,
+    "homeScore": 4,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1970-06-07"
+  },
+  {
+    "id": 217,
+    "worldCupId": 9,
+    "homeTeamId": 69,
+    "awayTeamId": 78,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1970-06-10"
+  },
+  {
+    "id": 218,
+    "worldCupId": 9,
+    "homeTeamId": 27,
+    "awayTeamId": 54,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1970-06-10"
+  },
+  {
+    "id": 219,
+    "worldCupId": 9,
+    "homeTeamId": 9,
+    "awayTeamId": 58,
+    "homeScore": 3,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1970-06-10"
+  },
+  {
+    "id": 220,
+    "worldCupId": 9,
+    "homeTeamId": 77,
+    "awayTeamId": 64,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1970-06-10"
+  },
+  {
+    "id": 221,
+    "worldCupId": 9,
+    "homeTeamId": 40,
+    "awayTeamId": 39,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1970-06-11"
+  },
+  {
+    "id": 222,
+    "worldCupId": 9,
+    "homeTeamId": 10,
+    "awayTeamId": 46,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1970-06-11"
+  },
+  {
+    "id": 223,
+    "worldCupId": 9,
+    "homeTeamId": 24,
+    "awayTeamId": 70,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1970-06-11"
+  },
+  {
+    "id": 224,
+    "worldCupId": 9,
+    "homeTeamId": 47,
+    "awayTeamId": 6,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1970-06-11"
+  },
+  {
+    "id": 225,
+    "worldCupId": 9,
+    "homeTeamId": 40,
+    "awayTeamId": 47,
+    "homeScore": 4,
+    "awayScore": 1,
+    "stage": "Quarter-final",
+    "date": "1970-06-14"
+  },
+  {
+    "id": 226,
+    "worldCupId": 9,
+    "homeTeamId": 27,
+    "awayTeamId": 24,
+    "homeScore": 3,
+    "awayScore": 2,
+    "stage": "Quarter-final",
+    "date": "1970-06-14"
+  },
+  {
+    "id": 227,
+    "worldCupId": 9,
+    "homeTeamId": 9,
+    "awayTeamId": 54,
+    "homeScore": 4,
+    "awayScore": 2,
+    "stage": "Quarter-final",
+    "date": "1970-06-14"
+  },
+  {
+    "id": 228,
+    "worldCupId": 9,
+    "homeTeamId": 78,
+    "awayTeamId": 77,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Quarter-final",
+    "date": "1970-06-14"
+  },
+  {
+    "id": 229,
+    "worldCupId": 9,
+    "homeTeamId": 9,
+    "awayTeamId": 78,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Semi-final",
+    "date": "1970-06-17"
+  },
+  {
+    "id": 230,
+    "worldCupId": 9,
+    "homeTeamId": 40,
+    "awayTeamId": 27,
+    "homeScore": 4,
+    "awayScore": 3,
+    "stage": "Semi-final",
+    "date": "1970-06-17"
+  },
+  {
+    "id": 231,
+    "worldCupId": 9,
+    "homeTeamId": 27,
+    "awayTeamId": 78,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Match for third place",
+    "date": "1970-06-20"
+  },
+  {
+    "id": 232,
+    "worldCupId": 9,
+    "homeTeamId": 9,
+    "awayTeamId": 40,
+    "homeScore": 4,
+    "awayScore": 1,
+    "stage": "Final",
+    "date": "1970-06-21"
+  },
+  {
+    "id": 233,
+    "worldCupId": 10,
+    "homeTeamId": 9,
+    "awayTeamId": 81,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1974-06-13"
+  },
+  {
+    "id": 234,
+    "worldCupId": 10,
+    "homeTeamId": 27,
+    "awayTeamId": 12,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1974-06-14"
+  },
+  {
+    "id": 235,
+    "worldCupId": 10,
+    "homeTeamId": 28,
+    "awayTeamId": 4,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1974-06-14"
+  },
+  {
+    "id": 236,
+    "worldCupId": 10,
+    "homeTeamId": 82,
+    "awayTeamId": 62,
+    "homeScore": 0,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1974-06-14"
+  },
+  {
+    "id": 237,
+    "worldCupId": 10,
+    "homeTeamId": 78,
+    "awayTeamId": 48,
+    "homeScore": 0,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1974-06-15"
+  },
+  {
+    "id": 238,
+    "worldCupId": 10,
+    "homeTeamId": 69,
+    "awayTeamId": 10,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1974-06-15"
+  },
+  {
+    "id": 239,
+    "worldCupId": 10,
+    "homeTeamId": 40,
+    "awayTeamId": 32,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1974-06-15"
+  },
+  {
+    "id": 240,
+    "worldCupId": 10,
+    "homeTeamId": 55,
+    "awayTeamId": 3,
+    "homeScore": 3,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1974-06-15"
+  },
+  {
+    "id": 241,
+    "worldCupId": 10,
+    "homeTeamId": 4,
+    "awayTeamId": 27,
+    "homeScore": 0,
+    "awayScore": 3,
+    "stage": "Group Stage",
+    "date": "1974-06-18"
+  },
+  {
+    "id": 242,
+    "worldCupId": 10,
+    "homeTeamId": 62,
+    "awayTeamId": 9,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1974-06-18"
+  },
+  {
+    "id": 243,
+    "worldCupId": 10,
+    "homeTeamId": 12,
+    "awayTeamId": 28,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1974-06-18"
+  },
+  {
+    "id": 244,
+    "worldCupId": 10,
+    "homeTeamId": 81,
+    "awayTeamId": 82,
+    "homeScore": 9,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1974-06-18"
+  },
+  {
+    "id": 245,
+    "worldCupId": 10,
+    "homeTeamId": 48,
+    "awayTeamId": 69,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1974-06-19"
+  },
+  {
+    "id": 246,
+    "worldCupId": 10,
+    "homeTeamId": 10,
+    "awayTeamId": 78,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1974-06-19"
+  },
+  {
+    "id": 247,
+    "worldCupId": 10,
+    "homeTeamId": 32,
+    "awayTeamId": 55,
+    "homeScore": 0,
+    "awayScore": 7,
+    "stage": "Group Stage",
+    "date": "1974-06-19"
+  },
+  {
+    "id": 248,
+    "worldCupId": 10,
+    "homeTeamId": 3,
+    "awayTeamId": 40,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1974-06-19"
+  },
+  {
+    "id": 249,
+    "worldCupId": 10,
+    "homeTeamId": 62,
+    "awayTeamId": 81,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1974-06-22"
+  },
+  {
+    "id": 250,
+    "worldCupId": 10,
+    "homeTeamId": 4,
+    "awayTeamId": 12,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1974-06-22"
+  },
+  {
+    "id": 251,
+    "worldCupId": 10,
+    "homeTeamId": 82,
+    "awayTeamId": 9,
+    "homeScore": 0,
+    "awayScore": 3,
+    "stage": "Group Stage",
+    "date": "1974-06-22"
+  },
+  {
+    "id": 252,
+    "worldCupId": 10,
+    "homeTeamId": 28,
+    "awayTeamId": 27,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1974-06-22"
+  },
+  {
+    "id": 253,
+    "worldCupId": 10,
+    "homeTeamId": 10,
+    "awayTeamId": 48,
+    "homeScore": 1,
+    "awayScore": 4,
+    "stage": "Group Stage",
+    "date": "1974-06-23"
+  },
+  {
+    "id": 254,
+    "worldCupId": 10,
+    "homeTeamId": 3,
+    "awayTeamId": 32,
+    "homeScore": 4,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1974-06-23"
+  },
+  {
+    "id": 255,
+    "worldCupId": 10,
+    "homeTeamId": 69,
+    "awayTeamId": 78,
+    "homeScore": 3,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1974-06-23"
+  },
+  {
+    "id": 256,
+    "worldCupId": 10,
+    "homeTeamId": 55,
+    "awayTeamId": 40,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1974-06-23"
+  },
+  {
+    "id": 257,
+    "worldCupId": 10,
+    "homeTeamId": 81,
+    "awayTeamId": 27,
+    "homeScore": 0,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1974-06-26"
+  },
+  {
+    "id": 258,
+    "worldCupId": 10,
+    "homeTeamId": 9,
+    "awayTeamId": 28,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1974-06-26"
+  },
+  {
+    "id": 259,
+    "worldCupId": 10,
+    "homeTeamId": 48,
+    "awayTeamId": 3,
+    "homeScore": 4,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1974-06-26"
+  },
+  {
+    "id": 260,
+    "worldCupId": 10,
+    "homeTeamId": 69,
+    "awayTeamId": 55,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1974-06-26"
+  },
+  {
+    "id": 261,
+    "worldCupId": 10,
+    "homeTeamId": 3,
+    "awayTeamId": 9,
+    "homeScore": 1,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1974-06-30"
+  },
+  {
+    "id": 262,
+    "worldCupId": 10,
+    "homeTeamId": 55,
+    "awayTeamId": 81,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1974-06-30"
+  },
+  {
+    "id": 263,
+    "worldCupId": 10,
+    "homeTeamId": 28,
+    "awayTeamId": 48,
+    "homeScore": 0,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1974-06-30"
+  },
+  {
+    "id": 264,
+    "worldCupId": 10,
+    "homeTeamId": 27,
+    "awayTeamId": 69,
+    "homeScore": 4,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1974-06-30"
+  },
+  {
+    "id": 265,
+    "worldCupId": 10,
+    "homeTeamId": 55,
+    "awayTeamId": 27,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1974-07-03"
+  },
+  {
+    "id": 266,
+    "worldCupId": 10,
+    "homeTeamId": 48,
+    "awayTeamId": 9,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1974-07-03"
+  },
+  {
+    "id": 267,
+    "worldCupId": 10,
+    "homeTeamId": 3,
+    "awayTeamId": 28,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1974-07-03"
+  },
+  {
+    "id": 268,
+    "worldCupId": 10,
+    "homeTeamId": 69,
+    "awayTeamId": 81,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1974-07-03"
+  },
+  {
+    "id": 269,
+    "worldCupId": 10,
+    "homeTeamId": 9,
+    "awayTeamId": 55,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Match for third place",
+    "date": "1974-07-06"
+  },
+  {
+    "id": 270,
+    "worldCupId": 10,
+    "homeTeamId": 48,
+    "awayTeamId": 27,
+    "homeScore": 1,
+    "awayScore": 2,
+    "stage": "Final",
+    "date": "1974-07-07"
+  },
+  {
+    "id": 271,
+    "worldCupId": 11,
+    "homeTeamId": 27,
+    "awayTeamId": 55,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1978-06-01"
+  },
+  {
+    "id": 272,
+    "worldCupId": 11,
+    "homeTeamId": 40,
+    "awayTeamId": 26,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1978-06-02"
+  },
+  {
+    "id": 273,
+    "worldCupId": 11,
+    "homeTeamId": 73,
+    "awayTeamId": 47,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1978-06-02"
+  },
+  {
+    "id": 274,
+    "worldCupId": 11,
+    "homeTeamId": 3,
+    "awayTeamId": 34,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1978-06-02"
+  },
+  {
+    "id": 275,
+    "worldCupId": 11,
+    "homeTeamId": 69,
+    "awayTeamId": 9,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1978-06-03"
+  },
+  {
+    "id": 276,
+    "worldCupId": 11,
+    "homeTeamId": 5,
+    "awayTeamId": 25,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1978-06-03"
+  },
+  {
+    "id": 277,
+    "worldCupId": 11,
+    "homeTeamId": 54,
+    "awayTeamId": 62,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1978-06-03"
+  },
+  {
+    "id": 278,
+    "worldCupId": 11,
+    "homeTeamId": 48,
+    "awayTeamId": 37,
+    "homeScore": 3,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1978-06-03"
+  },
+  {
+    "id": 279,
+    "worldCupId": 11,
+    "homeTeamId": 40,
+    "awayTeamId": 34,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1978-06-06"
+  },
+  {
+    "id": 280,
+    "worldCupId": 11,
+    "homeTeamId": 55,
+    "awayTeamId": 73,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1978-06-06"
+  },
+  {
+    "id": 281,
+    "worldCupId": 11,
+    "homeTeamId": 27,
+    "awayTeamId": 47,
+    "homeScore": 6,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1978-06-06"
+  },
+  {
+    "id": 282,
+    "worldCupId": 11,
+    "homeTeamId": 3,
+    "awayTeamId": 26,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1978-06-06"
+  },
+  {
+    "id": 283,
+    "worldCupId": 11,
+    "homeTeamId": 9,
+    "awayTeamId": 25,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1978-06-07"
+  },
+  {
+    "id": 284,
+    "worldCupId": 11,
+    "homeTeamId": 5,
+    "awayTeamId": 69,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1978-06-07"
+  },
+  {
+    "id": 285,
+    "worldCupId": 11,
+    "homeTeamId": 62,
+    "awayTeamId": 37,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1978-06-07"
+  },
+  {
+    "id": 286,
+    "worldCupId": 11,
+    "homeTeamId": 48,
+    "awayTeamId": 54,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1978-06-07"
+  },
+  {
+    "id": 287,
+    "worldCupId": 11,
+    "homeTeamId": 26,
+    "awayTeamId": 34,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1978-06-10"
+  },
+  {
+    "id": 288,
+    "worldCupId": 11,
+    "homeTeamId": 55,
+    "awayTeamId": 47,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1978-06-10"
+  },
+  {
+    "id": 289,
+    "worldCupId": 11,
+    "homeTeamId": 27,
+    "awayTeamId": 73,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1978-06-10"
+  },
+  {
+    "id": 290,
+    "worldCupId": 11,
+    "homeTeamId": 40,
+    "awayTeamId": 3,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1978-06-10"
+  },
+  {
+    "id": 291,
+    "worldCupId": 11,
+    "homeTeamId": 9,
+    "awayTeamId": 5,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1978-06-11"
+  },
+  {
+    "id": 292,
+    "worldCupId": 11,
+    "homeTeamId": 25,
+    "awayTeamId": 69,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1978-06-11"
+  },
+  {
+    "id": 293,
+    "worldCupId": 11,
+    "homeTeamId": 54,
+    "awayTeamId": 37,
+    "homeScore": 4,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1978-06-11"
+  },
+  {
+    "id": 294,
+    "worldCupId": 11,
+    "homeTeamId": 62,
+    "awayTeamId": 48,
+    "homeScore": 3,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1978-06-11"
+  },
+  {
+    "id": 295,
+    "worldCupId": 11,
+    "homeTeamId": 27,
+    "awayTeamId": 40,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1978-06-14"
+  },
+  {
+    "id": 296,
+    "worldCupId": 11,
+    "homeTeamId": 48,
+    "awayTeamId": 5,
+    "homeScore": 5,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1978-06-14"
+  },
+  {
+    "id": 297,
+    "worldCupId": 11,
+    "homeTeamId": 9,
+    "awayTeamId": 54,
+    "homeScore": 3,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1978-06-14"
+  },
+  {
+    "id": 298,
+    "worldCupId": 11,
+    "homeTeamId": 3,
+    "awayTeamId": 55,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1978-06-14"
+  },
+  {
+    "id": 299,
+    "worldCupId": 11,
+    "homeTeamId": 55,
+    "awayTeamId": 54,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1978-06-18"
+  },
+  {
+    "id": 300,
+    "worldCupId": 11,
+    "homeTeamId": 40,
+    "awayTeamId": 5,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1978-06-18"
+  },
+  {
+    "id": 301,
+    "worldCupId": 11,
+    "homeTeamId": 27,
+    "awayTeamId": 48,
+    "homeScore": 2,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1978-06-18"
+  },
+  {
+    "id": 302,
+    "worldCupId": 11,
+    "homeTeamId": 3,
+    "awayTeamId": 9,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1978-06-18"
+  },
+  {
+    "id": 303,
+    "worldCupId": 11,
+    "homeTeamId": 48,
+    "awayTeamId": 40,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1978-06-21"
+  },
+  {
+    "id": 304,
+    "worldCupId": 11,
+    "homeTeamId": 5,
+    "awayTeamId": 27,
+    "homeScore": 3,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1978-06-21"
+  },
+  {
+    "id": 305,
+    "worldCupId": 11,
+    "homeTeamId": 9,
+    "awayTeamId": 55,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1978-06-21"
+  },
+  {
+    "id": 306,
+    "worldCupId": 11,
+    "homeTeamId": 3,
+    "awayTeamId": 54,
+    "homeScore": 6,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1978-06-21"
+  },
+  {
+    "id": 307,
+    "worldCupId": 11,
+    "homeTeamId": 9,
+    "awayTeamId": 40,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Match for third place",
+    "date": "1978-06-24"
+  },
+  {
+    "id": 308,
+    "worldCupId": 11,
+    "homeTeamId": 3,
+    "awayTeamId": 48,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Final",
+    "date": "1978-06-25"
+  },
+  {
+    "id": 309,
+    "worldCupId": 12,
+    "homeTeamId": 3,
+    "awayTeamId": 6,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1982-06-13"
+  },
+  {
+    "id": 310,
+    "worldCupId": 12,
+    "homeTeamId": 40,
+    "awayTeamId": 55,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1982-06-14"
+  },
+  {
+    "id": 311,
+    "worldCupId": 12,
+    "homeTeamId": 9,
+    "awayTeamId": 77,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1982-06-14"
+  },
+  {
+    "id": 312,
+    "worldCupId": 12,
+    "homeTeamId": 54,
+    "awayTeamId": 15,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1982-06-15"
+  },
+  {
+    "id": 313,
+    "worldCupId": 12,
+    "homeTeamId": 34,
+    "awayTeamId": 64,
+    "homeScore": 10,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1982-06-15"
+  },
+  {
+    "id": 314,
+    "worldCupId": 12,
+    "homeTeamId": 62,
+    "awayTeamId": 52,
+    "homeScore": 5,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1982-06-15"
+  },
+  {
+    "id": 315,
+    "worldCupId": 12,
+    "homeTeamId": 27,
+    "awayTeamId": 1,
+    "homeScore": 1,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1982-06-16"
+  },
+  {
+    "id": 316,
+    "worldCupId": 12,
+    "homeTeamId": 24,
+    "awayTeamId": 26,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1982-06-16"
+  },
+  {
+    "id": 317,
+    "worldCupId": 12,
+    "homeTeamId": 25,
+    "awayTeamId": 33,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1982-06-16"
+  },
+  {
+    "id": 318,
+    "worldCupId": 12,
+    "homeTeamId": 12,
+    "awayTeamId": 5,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1982-06-17"
+  },
+  {
+    "id": 319,
+    "worldCupId": 12,
+    "homeTeamId": 70,
+    "awayTeamId": 45,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1982-06-17"
+  },
+  {
+    "id": 320,
+    "worldCupId": 12,
+    "homeTeamId": 81,
+    "awayTeamId": 50,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1982-06-17"
+  },
+  {
+    "id": 321,
+    "worldCupId": 12,
+    "homeTeamId": 40,
+    "awayTeamId": 54,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1982-06-18"
+  },
+  {
+    "id": 322,
+    "worldCupId": 12,
+    "homeTeamId": 3,
+    "awayTeamId": 34,
+    "homeScore": 4,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1982-06-18"
+  },
+  {
+    "id": 323,
+    "worldCupId": 12,
+    "homeTeamId": 9,
+    "awayTeamId": 62,
+    "homeScore": 4,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1982-06-18"
+  },
+  {
+    "id": 324,
+    "worldCupId": 12,
+    "homeTeamId": 55,
+    "awayTeamId": 15,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1982-06-19"
+  },
+  {
+    "id": 325,
+    "worldCupId": 12,
+    "homeTeamId": 6,
+    "awayTeamId": 64,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1982-06-19"
+  },
+  {
+    "id": 326,
+    "worldCupId": 12,
+    "homeTeamId": 77,
+    "awayTeamId": 52,
+    "homeScore": 3,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1982-06-19"
+  },
+  {
+    "id": 327,
+    "worldCupId": 12,
+    "homeTeamId": 27,
+    "awayTeamId": 12,
+    "homeScore": 4,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1982-06-20"
+  },
+  {
+    "id": 328,
+    "worldCupId": 12,
+    "homeTeamId": 24,
+    "awayTeamId": 70,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1982-06-20"
+  },
+  {
+    "id": 329,
+    "worldCupId": 12,
+    "homeTeamId": 25,
+    "awayTeamId": 81,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1982-06-20"
+  },
+  {
+    "id": 330,
+    "worldCupId": 12,
+    "homeTeamId": 1,
+    "awayTeamId": 5,
+    "homeScore": 0,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1982-06-21"
+  },
+  {
+    "id": 331,
+    "worldCupId": 12,
+    "homeTeamId": 26,
+    "awayTeamId": 45,
+    "homeScore": 4,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1982-06-21"
+  },
+  {
+    "id": 332,
+    "worldCupId": 12,
+    "homeTeamId": 33,
+    "awayTeamId": 50,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1982-06-21"
+  },
+  {
+    "id": 333,
+    "worldCupId": 12,
+    "homeTeamId": 55,
+    "awayTeamId": 54,
+    "homeScore": 5,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1982-06-22"
+  },
+  {
+    "id": 334,
+    "worldCupId": 12,
+    "homeTeamId": 6,
+    "awayTeamId": 34,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1982-06-22"
+  },
+  {
+    "id": 335,
+    "worldCupId": 12,
+    "homeTeamId": 77,
+    "awayTeamId": 62,
+    "homeScore": 2,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1982-06-22"
+  },
+  {
+    "id": 336,
+    "worldCupId": 12,
+    "homeTeamId": 40,
+    "awayTeamId": 15,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1982-06-23"
+  },
+  {
+    "id": 337,
+    "worldCupId": 12,
+    "homeTeamId": 3,
+    "awayTeamId": 64,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1982-06-23"
+  },
+  {
+    "id": 338,
+    "worldCupId": 12,
+    "homeTeamId": 9,
+    "awayTeamId": 52,
+    "homeScore": 4,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1982-06-23"
+  },
+  {
+    "id": 339,
+    "worldCupId": 12,
+    "homeTeamId": 1,
+    "awayTeamId": 12,
+    "homeScore": 3,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1982-06-24"
+  },
+  {
+    "id": 340,
+    "worldCupId": 12,
+    "homeTeamId": 26,
+    "awayTeamId": 70,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1982-06-24"
+  },
+  {
+    "id": 341,
+    "worldCupId": 12,
+    "homeTeamId": 33,
+    "awayTeamId": 81,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1982-06-24"
+  },
+  {
+    "id": 342,
+    "worldCupId": 12,
+    "homeTeamId": 27,
+    "awayTeamId": 5,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1982-06-25"
+  },
+  {
+    "id": 343,
+    "worldCupId": 12,
+    "homeTeamId": 24,
+    "awayTeamId": 45,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1982-06-25"
+  },
+  {
+    "id": 344,
+    "worldCupId": 12,
+    "homeTeamId": 50,
+    "awayTeamId": 25,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1982-06-25"
+  },
+  {
+    "id": 345,
+    "worldCupId": 12,
+    "homeTeamId": 5,
+    "awayTeamId": 26,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1982-06-28"
+  },
+  {
+    "id": 346,
+    "worldCupId": 12,
+    "homeTeamId": 55,
+    "awayTeamId": 6,
+    "homeScore": 3,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1982-06-28"
+  },
+  {
+    "id": 347,
+    "worldCupId": 12,
+    "homeTeamId": 40,
+    "awayTeamId": 3,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1982-06-29"
+  },
+  {
+    "id": 348,
+    "worldCupId": 12,
+    "homeTeamId": 27,
+    "awayTeamId": 24,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1982-06-29"
+  },
+  {
+    "id": 349,
+    "worldCupId": 12,
+    "homeTeamId": 5,
+    "awayTeamId": 50,
+    "homeScore": 2,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1982-07-01"
+  },
+  {
+    "id": 350,
+    "worldCupId": 12,
+    "homeTeamId": 6,
+    "awayTeamId": 77,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1982-07-01"
+  },
+  {
+    "id": 351,
+    "worldCupId": 12,
+    "homeTeamId": 3,
+    "awayTeamId": 9,
+    "homeScore": 1,
+    "awayScore": 3,
+    "stage": "Group Stage",
+    "date": "1982-07-02"
+  },
+  {
+    "id": 352,
+    "worldCupId": 12,
+    "homeTeamId": 27,
+    "awayTeamId": 25,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1982-07-02"
+  },
+  {
+    "id": 353,
+    "worldCupId": 12,
+    "homeTeamId": 26,
+    "awayTeamId": 50,
+    "homeScore": 4,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1982-07-04"
+  },
+  {
+    "id": 354,
+    "worldCupId": 12,
+    "homeTeamId": 55,
+    "awayTeamId": 77,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1982-07-04"
+  },
+  {
+    "id": 355,
+    "worldCupId": 12,
+    "homeTeamId": 40,
+    "awayTeamId": 9,
+    "homeScore": 3,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1982-07-05"
+  },
+  {
+    "id": 356,
+    "worldCupId": 12,
+    "homeTeamId": 25,
+    "awayTeamId": 24,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1982-07-05"
+  },
+  {
+    "id": 357,
+    "worldCupId": 12,
+    "homeTeamId": 55,
+    "awayTeamId": 40,
+    "homeScore": 0,
+    "awayScore": 2,
+    "stage": "Semi-final",
+    "date": "1982-07-08"
+  },
+  {
+    "id": 358,
+    "worldCupId": 12,
+    "homeTeamId": 27,
+    "awayTeamId": 26,
+    "homeScore": 3,
+    "awayScore": 3,
+    "stage": "Semi-final",
+    "date": "1982-07-08"
+  },
+  {
+    "id": 359,
+    "worldCupId": 12,
+    "homeTeamId": 55,
+    "awayTeamId": 26,
+    "homeScore": 3,
+    "awayScore": 2,
+    "stage": "Match for third place",
+    "date": "1982-07-10"
+  },
+  {
+    "id": 360,
+    "worldCupId": 12,
+    "homeTeamId": 40,
+    "awayTeamId": 27,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Final",
+    "date": "1982-07-11"
+  },
+  {
+    "id": 361,
+    "worldCupId": 13,
+    "homeTeamId": 10,
+    "awayTeamId": 40,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1986-05-31"
+  },
+  {
+    "id": 362,
+    "worldCupId": 13,
+    "homeTeamId": 11,
+    "awayTeamId": 26,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1986-06-01"
+  },
+  {
+    "id": 363,
+    "worldCupId": 13,
+    "homeTeamId": 25,
+    "awayTeamId": 9,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1986-06-01"
+  },
+  {
+    "id": 364,
+    "worldCupId": 13,
+    "homeTeamId": 77,
+    "awayTeamId": 34,
+    "homeScore": 6,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1986-06-02"
+  },
+  {
+    "id": 365,
+    "worldCupId": 13,
+    "homeTeamId": 3,
+    "awayTeamId": 43,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1986-06-02"
+  },
+  {
+    "id": 366,
+    "worldCupId": 13,
+    "homeTeamId": 46,
+    "awayTeamId": 55,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1986-06-02"
+  },
+  {
+    "id": 367,
+    "worldCupId": 13,
+    "homeTeamId": 1,
+    "awayTeamId": 50,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1986-06-03"
+  },
+  {
+    "id": 368,
+    "worldCupId": 13,
+    "homeTeamId": 6,
+    "awayTeamId": 47,
+    "homeScore": 1,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1986-06-03"
+  },
+  {
+    "id": 369,
+    "worldCupId": 13,
+    "homeTeamId": 56,
+    "awayTeamId": 24,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1986-06-03"
+  },
+  {
+    "id": 370,
+    "worldCupId": 13,
+    "homeTeamId": 53,
+    "awayTeamId": 38,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1986-06-04"
+  },
+  {
+    "id": 371,
+    "worldCupId": 13,
+    "homeTeamId": 62,
+    "awayTeamId": 21,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1986-06-04"
+  },
+  {
+    "id": 372,
+    "worldCupId": 13,
+    "homeTeamId": 78,
+    "awayTeamId": 27,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1986-06-04"
+  },
+  {
+    "id": 373,
+    "worldCupId": 13,
+    "homeTeamId": 40,
+    "awayTeamId": 3,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1986-06-05"
+  },
+  {
+    "id": 374,
+    "worldCupId": 13,
+    "homeTeamId": 26,
+    "awayTeamId": 77,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1986-06-05"
+  },
+  {
+    "id": 375,
+    "worldCupId": 13,
+    "homeTeamId": 43,
+    "awayTeamId": 10,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1986-06-05"
+  },
+  {
+    "id": 376,
+    "worldCupId": 13,
+    "homeTeamId": 34,
+    "awayTeamId": 11,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1986-06-06"
+  },
+  {
+    "id": 377,
+    "worldCupId": 13,
+    "homeTeamId": 9,
+    "awayTeamId": 1,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1986-06-06"
+  },
+  {
+    "id": 378,
+    "worldCupId": 13,
+    "homeTeamId": 24,
+    "awayTeamId": 46,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1986-06-06"
+  },
+  {
+    "id": 379,
+    "worldCupId": 13,
+    "homeTeamId": 50,
+    "awayTeamId": 25,
+    "homeScore": 1,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1986-06-07"
+  },
+  {
+    "id": 380,
+    "worldCupId": 13,
+    "homeTeamId": 47,
+    "awayTeamId": 53,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1986-06-07"
+  },
+  {
+    "id": 381,
+    "worldCupId": 13,
+    "homeTeamId": 55,
+    "awayTeamId": 56,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1986-06-07"
+  },
+  {
+    "id": 382,
+    "worldCupId": 13,
+    "homeTeamId": 38,
+    "awayTeamId": 6,
+    "homeScore": 1,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1986-06-08"
+  },
+  {
+    "id": 383,
+    "worldCupId": 13,
+    "homeTeamId": 21,
+    "awayTeamId": 78,
+    "homeScore": 6,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1986-06-08"
+  },
+  {
+    "id": 384,
+    "worldCupId": 13,
+    "homeTeamId": 27,
+    "awayTeamId": 62,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1986-06-08"
+  },
+  {
+    "id": 385,
+    "worldCupId": 13,
+    "homeTeamId": 34,
+    "awayTeamId": 26,
+    "homeScore": 0,
+    "awayScore": 3,
+    "stage": "Group Stage",
+    "date": "1986-06-09"
+  },
+  {
+    "id": 386,
+    "worldCupId": 13,
+    "homeTeamId": 77,
+    "awayTeamId": 11,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1986-06-09"
+  },
+  {
+    "id": 387,
+    "worldCupId": 13,
+    "homeTeamId": 43,
+    "awayTeamId": 40,
+    "homeScore": 2,
+    "awayScore": 3,
+    "stage": "Group Stage",
+    "date": "1986-06-10"
+  },
+  {
+    "id": 388,
+    "worldCupId": 13,
+    "homeTeamId": 3,
+    "awayTeamId": 10,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1986-06-10"
+  },
+  {
+    "id": 389,
+    "worldCupId": 13,
+    "homeTeamId": 53,
+    "awayTeamId": 6,
+    "homeScore": 2,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1986-06-11"
+  },
+  {
+    "id": 390,
+    "worldCupId": 13,
+    "homeTeamId": 38,
+    "awayTeamId": 47,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1986-06-11"
+  },
+  {
+    "id": 391,
+    "worldCupId": 13,
+    "homeTeamId": 56,
+    "awayTeamId": 46,
+    "homeScore": 1,
+    "awayScore": 3,
+    "stage": "Group Stage",
+    "date": "1986-06-11"
+  },
+  {
+    "id": 392,
+    "worldCupId": 13,
+    "homeTeamId": 24,
+    "awayTeamId": 55,
+    "homeScore": 3,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1986-06-11"
+  },
+  {
+    "id": 393,
+    "worldCupId": 13,
+    "homeTeamId": 50,
+    "awayTeamId": 9,
+    "homeScore": 0,
+    "awayScore": 3,
+    "stage": "Group Stage",
+    "date": "1986-06-12"
+  },
+  {
+    "id": 394,
+    "worldCupId": 13,
+    "homeTeamId": 1,
+    "awayTeamId": 25,
+    "homeScore": 0,
+    "awayScore": 3,
+    "stage": "Group Stage",
+    "date": "1986-06-12"
+  },
+  {
+    "id": 395,
+    "worldCupId": 13,
+    "homeTeamId": 62,
+    "awayTeamId": 78,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1986-06-13"
+  },
+  {
+    "id": 396,
+    "worldCupId": 13,
+    "homeTeamId": 21,
+    "awayTeamId": 27,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1986-06-13"
+  },
+  {
+    "id": 397,
+    "worldCupId": 13,
+    "homeTeamId": 77,
+    "awayTeamId": 6,
+    "homeScore": 3,
+    "awayScore": 4,
+    "stage": "Round of 16",
+    "date": "1986-06-15"
+  },
+  {
+    "id": 398,
+    "worldCupId": 13,
+    "homeTeamId": 47,
+    "awayTeamId": 10,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Round of 16",
+    "date": "1986-06-15"
+  },
+  {
+    "id": 399,
+    "worldCupId": 13,
+    "homeTeamId": 3,
+    "awayTeamId": 78,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Round of 16",
+    "date": "1986-06-16"
+  },
+  {
+    "id": 400,
+    "worldCupId": 13,
+    "homeTeamId": 9,
+    "awayTeamId": 55,
+    "homeScore": 4,
+    "awayScore": 0,
+    "stage": "Round of 16",
+    "date": "1986-06-16"
+  },
+  {
+    "id": 401,
+    "worldCupId": 13,
+    "homeTeamId": 40,
+    "awayTeamId": 26,
+    "homeScore": 0,
+    "awayScore": 2,
+    "stage": "Round of 16",
+    "date": "1986-06-17"
+  },
+  {
+    "id": 402,
+    "worldCupId": 13,
+    "homeTeamId": 46,
+    "awayTeamId": 27,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Round of 16",
+    "date": "1986-06-17"
+  },
+  {
+    "id": 403,
+    "worldCupId": 13,
+    "homeTeamId": 24,
+    "awayTeamId": 53,
+    "homeScore": 3,
+    "awayScore": 0,
+    "stage": "Round of 16",
+    "date": "1986-06-18"
+  },
+  {
+    "id": 404,
+    "worldCupId": 13,
+    "homeTeamId": 21,
+    "awayTeamId": 25,
+    "homeScore": 1,
+    "awayScore": 5,
+    "stage": "Round of 16",
+    "date": "1986-06-18"
+  },
+  {
+    "id": 405,
+    "worldCupId": 13,
+    "homeTeamId": 9,
+    "awayTeamId": 26,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Quarter-final",
+    "date": "1986-06-21"
+  },
+  {
+    "id": 406,
+    "worldCupId": 13,
+    "homeTeamId": 27,
+    "awayTeamId": 47,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Quarter-final",
+    "date": "1986-06-21"
+  },
+  {
+    "id": 407,
+    "worldCupId": 13,
+    "homeTeamId": 25,
+    "awayTeamId": 6,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Quarter-final",
+    "date": "1986-06-22"
+  },
+  {
+    "id": 408,
+    "worldCupId": 13,
+    "homeTeamId": 3,
+    "awayTeamId": 24,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Quarter-final",
+    "date": "1986-06-22"
+  },
+  {
+    "id": 409,
+    "worldCupId": 13,
+    "homeTeamId": 26,
+    "awayTeamId": 27,
+    "homeScore": 0,
+    "awayScore": 2,
+    "stage": "Semi-final",
+    "date": "1986-06-25"
+  },
+  {
+    "id": 410,
+    "worldCupId": 13,
+    "homeTeamId": 3,
+    "awayTeamId": 6,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Semi-final",
+    "date": "1986-06-25"
+  },
+  {
+    "id": 411,
+    "worldCupId": 13,
+    "homeTeamId": 26,
+    "awayTeamId": 6,
+    "homeScore": 4,
+    "awayScore": 2,
+    "stage": "Match for third place",
+    "date": "1986-06-28"
+  },
+  {
+    "id": 412,
+    "worldCupId": 13,
+    "homeTeamId": 3,
+    "awayTeamId": 27,
+    "homeScore": 3,
+    "awayScore": 2,
+    "stage": "Final",
+    "date": "1986-06-29"
+  },
+  {
+    "id": 413,
+    "worldCupId": 14,
+    "homeTeamId": 3,
+    "awayTeamId": 15,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1990-06-08"
+  },
+  {
+    "id": 414,
+    "worldCupId": 14,
+    "homeTeamId": 77,
+    "awayTeamId": 58,
+    "homeScore": 0,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1990-06-09"
+  },
+  {
+    "id": 415,
+    "worldCupId": 14,
+    "homeTeamId": 75,
+    "awayTeamId": 16,
+    "homeScore": 0,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1990-06-09"
+  },
+  {
+    "id": 416,
+    "worldCupId": 14,
+    "homeTeamId": 40,
+    "awayTeamId": 5,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1990-06-09"
+  },
+  {
+    "id": 417,
+    "worldCupId": 14,
+    "homeTeamId": 79,
+    "awayTeamId": 70,
+    "homeScore": 1,
+    "awayScore": 5,
+    "stage": "Group Stage",
+    "date": "1990-06-10"
+  },
+  {
+    "id": 418,
+    "worldCupId": 14,
+    "homeTeamId": 9,
+    "awayTeamId": 69,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1990-06-10"
+  },
+  {
+    "id": 419,
+    "worldCupId": 14,
+    "homeTeamId": 27,
+    "awayTeamId": 81,
+    "homeScore": 4,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1990-06-10"
+  },
+  {
+    "id": 420,
+    "worldCupId": 14,
+    "homeTeamId": 17,
+    "awayTeamId": 62,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1990-06-11"
+  },
+  {
+    "id": 421,
+    "worldCupId": 14,
+    "homeTeamId": 24,
+    "awayTeamId": 36,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1990-06-11"
+  },
+  {
+    "id": 422,
+    "worldCupId": 14,
+    "homeTeamId": 6,
+    "awayTeamId": 43,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1990-06-12"
+  },
+  {
+    "id": 423,
+    "worldCupId": 14,
+    "homeTeamId": 48,
+    "awayTeamId": 23,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1990-06-12"
+  },
+  {
+    "id": 424,
+    "worldCupId": 14,
+    "homeTeamId": 78,
+    "awayTeamId": 25,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1990-06-13"
+  },
+  {
+    "id": 425,
+    "worldCupId": 14,
+    "homeTeamId": 3,
+    "awayTeamId": 77,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1990-06-13"
+  },
+  {
+    "id": 426,
+    "worldCupId": 14,
+    "homeTeamId": 15,
+    "awayTeamId": 58,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1990-06-14"
+  },
+  {
+    "id": 427,
+    "worldCupId": 14,
+    "homeTeamId": 81,
+    "awayTeamId": 16,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1990-06-14"
+  },
+  {
+    "id": 428,
+    "worldCupId": 14,
+    "homeTeamId": 40,
+    "awayTeamId": 79,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1990-06-14"
+  },
+  {
+    "id": 429,
+    "worldCupId": 14,
+    "homeTeamId": 5,
+    "awayTeamId": 70,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1990-06-15"
+  },
+  {
+    "id": 430,
+    "worldCupId": 14,
+    "homeTeamId": 27,
+    "awayTeamId": 75,
+    "homeScore": 5,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1990-06-15"
+  },
+  {
+    "id": 431,
+    "worldCupId": 14,
+    "homeTeamId": 9,
+    "awayTeamId": 17,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1990-06-16"
+  },
+  {
+    "id": 432,
+    "worldCupId": 14,
+    "homeTeamId": 69,
+    "awayTeamId": 62,
+    "homeScore": 1,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1990-06-16"
+  },
+  {
+    "id": 433,
+    "worldCupId": 14,
+    "homeTeamId": 24,
+    "awayTeamId": 48,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1990-06-16"
+  },
+  {
+    "id": 434,
+    "worldCupId": 14,
+    "homeTeamId": 36,
+    "awayTeamId": 23,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1990-06-17"
+  },
+  {
+    "id": 435,
+    "worldCupId": 14,
+    "homeTeamId": 43,
+    "awayTeamId": 25,
+    "homeScore": 1,
+    "awayScore": 3,
+    "stage": "Group Stage",
+    "date": "1990-06-17"
+  },
+  {
+    "id": 436,
+    "worldCupId": 14,
+    "homeTeamId": 6,
+    "awayTeamId": 78,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1990-06-17"
+  },
+  {
+    "id": 437,
+    "worldCupId": 14,
+    "homeTeamId": 3,
+    "awayTeamId": 58,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1990-06-18"
+  },
+  {
+    "id": 438,
+    "worldCupId": 14,
+    "homeTeamId": 15,
+    "awayTeamId": 77,
+    "homeScore": 0,
+    "awayScore": 4,
+    "stage": "Group Stage",
+    "date": "1990-06-18"
+  },
+  {
+    "id": 439,
+    "worldCupId": 14,
+    "homeTeamId": 27,
+    "awayTeamId": 16,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1990-06-19"
+  },
+  {
+    "id": 440,
+    "worldCupId": 14,
+    "homeTeamId": 81,
+    "awayTeamId": 75,
+    "homeScore": 4,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1990-06-19"
+  },
+  {
+    "id": 441,
+    "worldCupId": 14,
+    "homeTeamId": 40,
+    "awayTeamId": 70,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1990-06-19"
+  },
+  {
+    "id": 442,
+    "worldCupId": 14,
+    "homeTeamId": 5,
+    "awayTeamId": 79,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1990-06-19"
+  },
+  {
+    "id": 443,
+    "worldCupId": 14,
+    "homeTeamId": 9,
+    "awayTeamId": 62,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1990-06-20"
+  },
+  {
+    "id": 444,
+    "worldCupId": 14,
+    "homeTeamId": 69,
+    "awayTeamId": 17,
+    "homeScore": 1,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1990-06-20"
+  },
+  {
+    "id": 445,
+    "worldCupId": 14,
+    "homeTeamId": 43,
+    "awayTeamId": 78,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1990-06-21"
+  },
+  {
+    "id": 446,
+    "worldCupId": 14,
+    "homeTeamId": 6,
+    "awayTeamId": 25,
+    "homeScore": 1,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1990-06-21"
+  },
+  {
+    "id": 447,
+    "worldCupId": 14,
+    "homeTeamId": 36,
+    "awayTeamId": 48,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1990-06-21"
+  },
+  {
+    "id": 448,
+    "worldCupId": 14,
+    "homeTeamId": 24,
+    "awayTeamId": 23,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1990-06-21"
+  },
+  {
+    "id": 449,
+    "worldCupId": 14,
+    "homeTeamId": 15,
+    "awayTeamId": 16,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Round of 16",
+    "date": "1990-06-23"
+  },
+  {
+    "id": 450,
+    "worldCupId": 14,
+    "homeTeamId": 70,
+    "awayTeamId": 17,
+    "homeScore": 4,
+    "awayScore": 1,
+    "stage": "Round of 16",
+    "date": "1990-06-23"
+  },
+  {
+    "id": 451,
+    "worldCupId": 14,
+    "homeTeamId": 9,
+    "awayTeamId": 3,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Round of 16",
+    "date": "1990-06-24"
+  },
+  {
+    "id": 452,
+    "worldCupId": 14,
+    "homeTeamId": 27,
+    "awayTeamId": 48,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Round of 16",
+    "date": "1990-06-24"
+  },
+  {
+    "id": 453,
+    "worldCupId": 14,
+    "homeTeamId": 36,
+    "awayTeamId": 58,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Round of 16",
+    "date": "1990-06-25"
+  },
+  {
+    "id": 454,
+    "worldCupId": 14,
+    "homeTeamId": 40,
+    "awayTeamId": 78,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Round of 16",
+    "date": "1990-06-25"
+  },
+  {
+    "id": 455,
+    "worldCupId": 14,
+    "homeTeamId": 25,
+    "awayTeamId": 81,
+    "homeScore": 1,
+    "awayScore": 2,
+    "stage": "Round of 16",
+    "date": "1990-06-26"
+  },
+  {
+    "id": 456,
+    "worldCupId": 14,
+    "homeTeamId": 24,
+    "awayTeamId": 6,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Round of 16",
+    "date": "1990-06-26"
+  },
+  {
+    "id": 457,
+    "worldCupId": 14,
+    "homeTeamId": 81,
+    "awayTeamId": 3,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Quarter-final",
+    "date": "1990-06-30"
+  },
+  {
+    "id": 458,
+    "worldCupId": 14,
+    "homeTeamId": 40,
+    "awayTeamId": 36,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Quarter-final",
+    "date": "1990-06-30"
+  },
+  {
+    "id": 459,
+    "worldCupId": 14,
+    "homeTeamId": 27,
+    "awayTeamId": 70,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Quarter-final",
+    "date": "1990-07-01"
+  },
+  {
+    "id": 460,
+    "worldCupId": 14,
+    "homeTeamId": 24,
+    "awayTeamId": 15,
+    "homeScore": 3,
+    "awayScore": 2,
+    "stage": "Quarter-final",
+    "date": "1990-07-01"
+  },
+  {
+    "id": 461,
+    "worldCupId": 14,
+    "homeTeamId": 40,
+    "awayTeamId": 3,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Semi-final",
+    "date": "1990-07-03"
+  },
+  {
+    "id": 462,
+    "worldCupId": 14,
+    "homeTeamId": 27,
+    "awayTeamId": 24,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Semi-final",
+    "date": "1990-07-04"
+  },
+  {
+    "id": 463,
+    "worldCupId": 14,
+    "homeTeamId": 40,
+    "awayTeamId": 24,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Match for third place",
+    "date": "1990-07-07"
+  },
+  {
+    "id": 464,
+    "worldCupId": 14,
+    "homeTeamId": 27,
+    "awayTeamId": 3,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Final",
+    "date": "1990-07-08"
+  },
+  {
+    "id": 465,
+    "worldCupId": 15,
+    "homeTeamId": 25,
+    "awayTeamId": 43,
+    "homeScore": 2,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1994-06-17"
+  },
+  {
+    "id": 466,
+    "worldCupId": 15,
+    "homeTeamId": 29,
+    "awayTeamId": 8,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1994-06-17"
+  },
+  {
+    "id": 467,
+    "worldCupId": 15,
+    "homeTeamId": 79,
+    "awayTeamId": 66,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1994-06-18"
+  },
+  {
+    "id": 468,
+    "worldCupId": 15,
+    "homeTeamId": 40,
+    "awayTeamId": 36,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1994-06-18"
+  },
+  {
+    "id": 469,
+    "worldCupId": 15,
+    "homeTeamId": 16,
+    "awayTeamId": 58,
+    "homeScore": 1,
+    "awayScore": 3,
+    "stage": "Group Stage",
+    "date": "1994-06-18"
+  },
+  {
+    "id": 470,
+    "worldCupId": 15,
+    "homeTeamId": 6,
+    "awayTeamId": 46,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1994-06-19"
+  },
+  {
+    "id": 471,
+    "worldCupId": 15,
+    "homeTeamId": 51,
+    "awayTeamId": 47,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1994-06-19"
+  },
+  {
+    "id": 472,
+    "worldCupId": 15,
+    "homeTeamId": 15,
+    "awayTeamId": 69,
+    "homeScore": 2,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1994-06-19"
+  },
+  {
+    "id": 473,
+    "worldCupId": 15,
+    "homeTeamId": 48,
+    "awayTeamId": 44,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1994-06-20"
+  },
+  {
+    "id": 474,
+    "worldCupId": 15,
+    "homeTeamId": 9,
+    "awayTeamId": 60,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1994-06-20"
+  },
+  {
+    "id": 475,
+    "worldCupId": 15,
+    "homeTeamId": 3,
+    "awayTeamId": 31,
+    "homeScore": 4,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1994-06-21"
+  },
+  {
+    "id": 476,
+    "worldCupId": 15,
+    "homeTeamId": 49,
+    "awayTeamId": 10,
+    "homeScore": 3,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1994-06-21"
+  },
+  {
+    "id": 477,
+    "worldCupId": 15,
+    "homeTeamId": 29,
+    "awayTeamId": 25,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1994-06-21"
+  },
+  {
+    "id": 478,
+    "worldCupId": 15,
+    "homeTeamId": 58,
+    "awayTeamId": 66,
+    "homeScore": 1,
+    "awayScore": 4,
+    "stage": "Group Stage",
+    "date": "1994-06-22"
+  },
+  {
+    "id": 479,
+    "worldCupId": 15,
+    "homeTeamId": 79,
+    "awayTeamId": 16,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1994-06-22"
+  },
+  {
+    "id": 480,
+    "worldCupId": 15,
+    "homeTeamId": 40,
+    "awayTeamId": 51,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1994-06-23"
+  },
+  {
+    "id": 481,
+    "worldCupId": 15,
+    "homeTeamId": 43,
+    "awayTeamId": 8,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1994-06-23"
+  },
+  {
+    "id": 482,
+    "worldCupId": 15,
+    "homeTeamId": 47,
+    "awayTeamId": 36,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1994-06-24"
+  },
+  {
+    "id": 483,
+    "worldCupId": 15,
+    "homeTeamId": 69,
+    "awayTeamId": 60,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1994-06-24"
+  },
+  {
+    "id": 484,
+    "worldCupId": 15,
+    "homeTeamId": 9,
+    "awayTeamId": 15,
+    "homeScore": 3,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1994-06-24"
+  },
+  {
+    "id": 485,
+    "worldCupId": 15,
+    "homeTeamId": 6,
+    "awayTeamId": 48,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1994-06-25"
+  },
+  {
+    "id": 486,
+    "worldCupId": 15,
+    "homeTeamId": 44,
+    "awayTeamId": 46,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1994-06-25"
+  },
+  {
+    "id": 487,
+    "worldCupId": 15,
+    "homeTeamId": 3,
+    "awayTeamId": 49,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1994-06-25"
+  },
+  {
+    "id": 488,
+    "worldCupId": 15,
+    "homeTeamId": 10,
+    "awayTeamId": 31,
+    "homeScore": 4,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1994-06-26"
+  },
+  {
+    "id": 489,
+    "worldCupId": 15,
+    "homeTeamId": 79,
+    "awayTeamId": 58,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1994-06-26"
+  },
+  {
+    "id": 490,
+    "worldCupId": 15,
+    "homeTeamId": 66,
+    "awayTeamId": 16,
+    "homeScore": 0,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1994-06-26"
+  },
+  {
+    "id": 491,
+    "worldCupId": 15,
+    "homeTeamId": 29,
+    "awayTeamId": 43,
+    "homeScore": 3,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1994-06-27"
+  },
+  {
+    "id": 492,
+    "worldCupId": 15,
+    "homeTeamId": 8,
+    "awayTeamId": 25,
+    "homeScore": 1,
+    "awayScore": 3,
+    "stage": "Group Stage",
+    "date": "1994-06-27"
+  },
+  {
+    "id": 493,
+    "worldCupId": 15,
+    "homeTeamId": 36,
+    "awayTeamId": 51,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1994-06-28"
+  },
+  {
+    "id": 494,
+    "worldCupId": 15,
+    "homeTeamId": 9,
+    "awayTeamId": 69,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1994-06-28"
+  },
+  {
+    "id": 495,
+    "worldCupId": 15,
+    "homeTeamId": 40,
+    "awayTeamId": 47,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1994-06-28"
+  },
+  {
+    "id": 496,
+    "worldCupId": 15,
+    "homeTeamId": 60,
+    "awayTeamId": 15,
+    "homeScore": 6,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1994-06-28"
+  },
+  {
+    "id": 497,
+    "worldCupId": 15,
+    "homeTeamId": 46,
+    "awayTeamId": 48,
+    "homeScore": 1,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1994-06-29"
+  },
+  {
+    "id": 498,
+    "worldCupId": 15,
+    "homeTeamId": 6,
+    "awayTeamId": 44,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1994-06-29"
+  },
+  {
+    "id": 499,
+    "worldCupId": 15,
+    "homeTeamId": 31,
+    "awayTeamId": 49,
+    "homeScore": 0,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1994-06-30"
+  },
+  {
+    "id": 500,
+    "worldCupId": 15,
+    "homeTeamId": 3,
+    "awayTeamId": 10,
+    "homeScore": 0,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1994-06-30"
+  },
+  {
+    "id": 501,
+    "worldCupId": 15,
+    "homeTeamId": 29,
+    "awayTeamId": 6,
+    "homeScore": 3,
+    "awayScore": 2,
+    "stage": "Round of 16",
+    "date": "1994-07-02"
+  },
+  {
+    "id": 502,
+    "worldCupId": 15,
+    "homeTeamId": 25,
+    "awayTeamId": 66,
+    "homeScore": 3,
+    "awayScore": 0,
+    "stage": "Round of 16",
+    "date": "1994-07-02"
+  },
+  {
+    "id": 503,
+    "worldCupId": 15,
+    "homeTeamId": 44,
+    "awayTeamId": 69,
+    "homeScore": 1,
+    "awayScore": 3,
+    "stage": "Round of 16",
+    "date": "1994-07-03"
+  },
+  {
+    "id": 504,
+    "worldCupId": 15,
+    "homeTeamId": 58,
+    "awayTeamId": 3,
+    "homeScore": 3,
+    "awayScore": 2,
+    "stage": "Round of 16",
+    "date": "1994-07-03"
+  },
+  {
+    "id": 505,
+    "worldCupId": 15,
+    "homeTeamId": 48,
+    "awayTeamId": 36,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Round of 16",
+    "date": "1994-07-04"
+  },
+  {
+    "id": 506,
+    "worldCupId": 15,
+    "homeTeamId": 9,
+    "awayTeamId": 79,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Round of 16",
+    "date": "1994-07-04"
+  },
+  {
+    "id": 507,
+    "worldCupId": 15,
+    "homeTeamId": 49,
+    "awayTeamId": 40,
+    "homeScore": 1,
+    "awayScore": 2,
+    "stage": "Round of 16",
+    "date": "1994-07-05"
+  },
+  {
+    "id": 508,
+    "worldCupId": 15,
+    "homeTeamId": 47,
+    "awayTeamId": 10,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Round of 16",
+    "date": "1994-07-05"
+  },
+  {
+    "id": 509,
+    "worldCupId": 15,
+    "homeTeamId": 40,
+    "awayTeamId": 25,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Quarter-final",
+    "date": "1994-07-09"
+  },
+  {
+    "id": 510,
+    "worldCupId": 15,
+    "homeTeamId": 48,
+    "awayTeamId": 9,
+    "homeScore": 2,
+    "awayScore": 3,
+    "stage": "Quarter-final",
+    "date": "1994-07-09"
+  },
+  {
+    "id": 511,
+    "worldCupId": 15,
+    "homeTeamId": 10,
+    "awayTeamId": 29,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Quarter-final",
+    "date": "1994-07-10"
+  },
+  {
+    "id": 512,
+    "worldCupId": 15,
+    "homeTeamId": 58,
+    "awayTeamId": 69,
+    "homeScore": 2,
+    "awayScore": 2,
+    "stage": "Quarter-final",
+    "date": "1994-07-10"
+  },
+  {
+    "id": 513,
+    "worldCupId": 15,
+    "homeTeamId": 10,
+    "awayTeamId": 40,
+    "homeScore": 1,
+    "awayScore": 2,
+    "stage": "Semi-final",
+    "date": "1994-07-13"
+  },
+  {
+    "id": 514,
+    "worldCupId": 15,
+    "homeTeamId": 69,
+    "awayTeamId": 9,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Semi-final",
+    "date": "1994-07-13"
+  },
+  {
+    "id": 515,
+    "worldCupId": 15,
+    "homeTeamId": 69,
+    "awayTeamId": 10,
+    "homeScore": 4,
+    "awayScore": 0,
+    "stage": "Match for third place",
+    "date": "1994-07-16"
+  },
+  {
+    "id": 516,
+    "worldCupId": 15,
+    "homeTeamId": 9,
+    "awayTeamId": 40,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Final",
+    "date": "1994-07-17"
+  },
+  {
+    "id": 517,
+    "worldCupId": 16,
+    "homeTeamId": 9,
+    "awayTeamId": 62,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1998-06-10"
+  },
+  {
+    "id": 518,
+    "worldCupId": 16,
+    "homeTeamId": 46,
+    "awayTeamId": 51,
+    "homeScore": 2,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1998-06-10"
+  },
+  {
+    "id": 519,
+    "worldCupId": 16,
+    "homeTeamId": 40,
+    "awayTeamId": 12,
+    "homeScore": 2,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1998-06-11"
+  },
+  {
+    "id": 520,
+    "worldCupId": 16,
+    "homeTeamId": 15,
+    "awayTeamId": 5,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1998-06-11"
+  },
+  {
+    "id": 521,
+    "worldCupId": 16,
+    "homeTeamId": 53,
+    "awayTeamId": 10,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1998-06-12"
+  },
+  {
+    "id": 522,
+    "worldCupId": 16,
+    "homeTeamId": 44,
+    "awayTeamId": 21,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1998-06-12"
+  },
+  {
+    "id": 523,
+    "worldCupId": 16,
+    "homeTeamId": 26,
+    "awayTeamId": 59,
+    "homeScore": 3,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1998-06-12"
+  },
+  {
+    "id": 524,
+    "worldCupId": 16,
+    "homeTeamId": 25,
+    "awayTeamId": 49,
+    "homeScore": 2,
+    "awayScore": 3,
+    "stage": "Group Stage",
+    "date": "1998-06-13"
+  },
+  {
+    "id": 525,
+    "worldCupId": 16,
+    "homeTeamId": 43,
+    "awayTeamId": 47,
+    "homeScore": 1,
+    "awayScore": 3,
+    "stage": "Group Stage",
+    "date": "1998-06-13"
+  },
+  {
+    "id": 526,
+    "worldCupId": 16,
+    "homeTeamId": 48,
+    "awayTeamId": 6,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1998-06-13"
+  },
+  {
+    "id": 527,
+    "worldCupId": 16,
+    "homeTeamId": 3,
+    "awayTeamId": 42,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1998-06-14"
+  },
+  {
+    "id": 528,
+    "worldCupId": 16,
+    "homeTeamId": 81,
+    "awayTeamId": 37,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1998-06-14"
+  },
+  {
+    "id": 529,
+    "worldCupId": 16,
+    "homeTeamId": 41,
+    "awayTeamId": 18,
+    "homeScore": 1,
+    "awayScore": 3,
+    "stage": "Group Stage",
+    "date": "1998-06-14"
+  },
+  {
+    "id": 530,
+    "worldCupId": 16,
+    "homeTeamId": 24,
+    "awayTeamId": 73,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1998-06-15"
+  },
+  {
+    "id": 531,
+    "worldCupId": 16,
+    "homeTeamId": 58,
+    "awayTeamId": 16,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1998-06-15"
+  },
+  {
+    "id": 532,
+    "worldCupId": 16,
+    "homeTeamId": 29,
+    "awayTeamId": 79,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1998-06-15"
+  },
+  {
+    "id": 533,
+    "worldCupId": 16,
+    "homeTeamId": 62,
+    "awayTeamId": 51,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1998-06-16"
+  },
+  {
+    "id": 534,
+    "worldCupId": 16,
+    "homeTeamId": 9,
+    "awayTeamId": 46,
+    "homeScore": 3,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1998-06-16"
+  },
+  {
+    "id": 535,
+    "worldCupId": 16,
+    "homeTeamId": 12,
+    "awayTeamId": 5,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1998-06-17"
+  },
+  {
+    "id": 536,
+    "worldCupId": 16,
+    "homeTeamId": 40,
+    "awayTeamId": 15,
+    "homeScore": 3,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1998-06-17"
+  },
+  {
+    "id": 537,
+    "worldCupId": 16,
+    "homeTeamId": 59,
+    "awayTeamId": 21,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1998-06-18"
+  },
+  {
+    "id": 538,
+    "worldCupId": 16,
+    "homeTeamId": 26,
+    "awayTeamId": 44,
+    "homeScore": 4,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1998-06-18"
+  },
+  {
+    "id": 539,
+    "worldCupId": 16,
+    "homeTeamId": 49,
+    "awayTeamId": 10,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1998-06-19"
+  },
+  {
+    "id": 540,
+    "worldCupId": 16,
+    "homeTeamId": 25,
+    "awayTeamId": 53,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1998-06-19"
+  },
+  {
+    "id": 541,
+    "worldCupId": 16,
+    "homeTeamId": 42,
+    "awayTeamId": 18,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1998-06-20"
+  },
+  {
+    "id": 542,
+    "worldCupId": 16,
+    "homeTeamId": 6,
+    "awayTeamId": 47,
+    "homeScore": 2,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1998-06-20"
+  },
+  {
+    "id": 543,
+    "worldCupId": 16,
+    "homeTeamId": 48,
+    "awayTeamId": 43,
+    "homeScore": 5,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1998-06-20"
+  },
+  {
+    "id": 544,
+    "worldCupId": 16,
+    "homeTeamId": 29,
+    "awayTeamId": 81,
+    "homeScore": 2,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1998-06-21"
+  },
+  {
+    "id": 545,
+    "worldCupId": 16,
+    "homeTeamId": 3,
+    "awayTeamId": 41,
+    "homeScore": 5,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1998-06-21"
+  },
+  {
+    "id": 546,
+    "worldCupId": 16,
+    "homeTeamId": 79,
+    "awayTeamId": 37,
+    "homeScore": 1,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1998-06-21"
+  },
+  {
+    "id": 547,
+    "worldCupId": 16,
+    "homeTeamId": 16,
+    "awayTeamId": 73,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1998-06-22"
+  },
+  {
+    "id": 548,
+    "worldCupId": 16,
+    "homeTeamId": 58,
+    "awayTeamId": 24,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1998-06-22"
+  },
+  {
+    "id": 549,
+    "worldCupId": 16,
+    "homeTeamId": 40,
+    "awayTeamId": 5,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1998-06-23"
+  },
+  {
+    "id": 550,
+    "worldCupId": 16,
+    "homeTeamId": 12,
+    "awayTeamId": 15,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1998-06-23"
+  },
+  {
+    "id": 551,
+    "worldCupId": 16,
+    "homeTeamId": 62,
+    "awayTeamId": 46,
+    "homeScore": 0,
+    "awayScore": 3,
+    "stage": "Group Stage",
+    "date": "1998-06-23"
+  },
+  {
+    "id": 552,
+    "worldCupId": 16,
+    "homeTeamId": 9,
+    "awayTeamId": 51,
+    "homeScore": 1,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1998-06-23"
+  },
+  {
+    "id": 553,
+    "worldCupId": 16,
+    "homeTeamId": 26,
+    "awayTeamId": 21,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1998-06-24"
+  },
+  {
+    "id": 554,
+    "worldCupId": 16,
+    "homeTeamId": 59,
+    "awayTeamId": 44,
+    "homeScore": 2,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1998-06-24"
+  },
+  {
+    "id": 555,
+    "worldCupId": 16,
+    "homeTeamId": 25,
+    "awayTeamId": 10,
+    "homeScore": 6,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1998-06-24"
+  },
+  {
+    "id": 556,
+    "worldCupId": 16,
+    "homeTeamId": 49,
+    "awayTeamId": 53,
+    "homeScore": 1,
+    "awayScore": 3,
+    "stage": "Group Stage",
+    "date": "1998-06-24"
+  },
+  {
+    "id": 557,
+    "worldCupId": 16,
+    "homeTeamId": 6,
+    "awayTeamId": 43,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1998-06-25"
+  },
+  {
+    "id": 558,
+    "worldCupId": 16,
+    "homeTeamId": 48,
+    "awayTeamId": 47,
+    "homeScore": 2,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1998-06-25"
+  },
+  {
+    "id": 559,
+    "worldCupId": 16,
+    "homeTeamId": 29,
+    "awayTeamId": 37,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1998-06-25"
+  },
+  {
+    "id": 560,
+    "worldCupId": 16,
+    "homeTeamId": 79,
+    "awayTeamId": 81,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1998-06-25"
+  },
+  {
+    "id": 561,
+    "worldCupId": 16,
+    "homeTeamId": 42,
+    "awayTeamId": 41,
+    "homeScore": 1,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1998-06-26"
+  },
+  {
+    "id": 562,
+    "worldCupId": 16,
+    "homeTeamId": 3,
+    "awayTeamId": 18,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "1998-06-26"
+  },
+  {
+    "id": 563,
+    "worldCupId": 16,
+    "homeTeamId": 58,
+    "awayTeamId": 73,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "1998-06-26"
+  },
+  {
+    "id": 564,
+    "worldCupId": 16,
+    "homeTeamId": 16,
+    "awayTeamId": 24,
+    "homeScore": 0,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "1998-06-26"
+  },
+  {
+    "id": 565,
+    "worldCupId": 16,
+    "homeTeamId": 40,
+    "awayTeamId": 51,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Round of 16",
+    "date": "1998-06-27"
+  },
+  {
+    "id": 566,
+    "worldCupId": 16,
+    "homeTeamId": 9,
+    "awayTeamId": 12,
+    "homeScore": 4,
+    "awayScore": 1,
+    "stage": "Round of 16",
+    "date": "1998-06-27"
+  },
+  {
+    "id": 567,
+    "worldCupId": 16,
+    "homeTeamId": 26,
+    "awayTeamId": 53,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Round of 16",
+    "date": "1998-06-28"
+  },
+  {
+    "id": 568,
+    "worldCupId": 16,
+    "homeTeamId": 49,
+    "awayTeamId": 21,
+    "homeScore": 1,
+    "awayScore": 4,
+    "stage": "Round of 16",
+    "date": "1998-06-28"
+  },
+  {
+    "id": 569,
+    "worldCupId": 16,
+    "homeTeamId": 29,
+    "awayTeamId": 47,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Round of 16",
+    "date": "1998-06-29"
+  },
+  {
+    "id": 570,
+    "worldCupId": 16,
+    "homeTeamId": 48,
+    "awayTeamId": 81,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Round of 16",
+    "date": "1998-06-29"
+  },
+  {
+    "id": 571,
+    "worldCupId": 16,
+    "homeTeamId": 58,
+    "awayTeamId": 18,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Round of 16",
+    "date": "1998-06-30"
+  },
+  {
+    "id": 572,
+    "worldCupId": 16,
+    "homeTeamId": 3,
+    "awayTeamId": 24,
+    "homeScore": 2,
+    "awayScore": 2,
+    "stage": "Round of 16",
+    "date": "1998-06-30"
+  },
+  {
+    "id": 573,
+    "worldCupId": 16,
+    "homeTeamId": 40,
+    "awayTeamId": 26,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Quarter-final",
+    "date": "1998-07-03"
+  },
+  {
+    "id": 574,
+    "worldCupId": 16,
+    "homeTeamId": 9,
+    "awayTeamId": 21,
+    "homeScore": 3,
+    "awayScore": 2,
+    "stage": "Quarter-final",
+    "date": "1998-07-03"
+  },
+  {
+    "id": 575,
+    "worldCupId": 16,
+    "homeTeamId": 48,
+    "awayTeamId": 3,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Quarter-final",
+    "date": "1998-07-04"
+  },
+  {
+    "id": 576,
+    "worldCupId": 16,
+    "homeTeamId": 29,
+    "awayTeamId": 18,
+    "homeScore": 0,
+    "awayScore": 3,
+    "stage": "Quarter-final",
+    "date": "1998-07-04"
+  },
+  {
+    "id": 577,
+    "worldCupId": 16,
+    "homeTeamId": 9,
+    "awayTeamId": 48,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Semi-final",
+    "date": "1998-07-07"
+  },
+  {
+    "id": 578,
+    "worldCupId": 16,
+    "homeTeamId": 26,
+    "awayTeamId": 18,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Semi-final",
+    "date": "1998-07-08"
+  },
+  {
+    "id": 579,
+    "worldCupId": 16,
+    "homeTeamId": 48,
+    "awayTeamId": 18,
+    "homeScore": 1,
+    "awayScore": 2,
+    "stage": "Match for third place",
+    "date": "1998-07-11"
+  },
+  {
+    "id": 580,
+    "worldCupId": 16,
+    "homeTeamId": 9,
+    "awayTeamId": 26,
+    "homeScore": 0,
+    "awayScore": 3,
+    "stage": "Final",
+    "date": "1998-07-12"
+  },
+  {
+    "id": 581,
+    "worldCupId": 17,
+    "homeTeamId": 26,
+    "awayTeamId": 63,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2002-05-31"
+  },
+  {
+    "id": 582,
+    "worldCupId": 17,
+    "homeTeamId": 78,
+    "awayTeamId": 21,
+    "homeScore": 1,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "2002-06-01"
+  },
+  {
+    "id": 583,
+    "worldCupId": 17,
+    "homeTeamId": 36,
+    "awayTeamId": 15,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2002-06-01"
+  },
+  {
+    "id": 584,
+    "worldCupId": 17,
+    "homeTeamId": 29,
+    "awayTeamId": 44,
+    "homeScore": 8,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2002-06-01"
+  },
+  {
+    "id": 585,
+    "worldCupId": 17,
+    "homeTeamId": 3,
+    "awayTeamId": 49,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2002-06-02"
+  },
+  {
+    "id": 586,
+    "worldCupId": 17,
+    "homeTeamId": 53,
+    "awayTeamId": 59,
+    "homeScore": 2,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "2002-06-02"
+  },
+  {
+    "id": 587,
+    "worldCupId": 17,
+    "homeTeamId": 24,
+    "awayTeamId": 69,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2002-06-02"
+  },
+  {
+    "id": 588,
+    "worldCupId": 17,
+    "homeTeamId": 25,
+    "awayTeamId": 68,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2002-06-02"
+  },
+  {
+    "id": 589,
+    "worldCupId": 17,
+    "homeTeamId": 9,
+    "awayTeamId": 74,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2002-06-03"
+  },
+  {
+    "id": 590,
+    "worldCupId": 17,
+    "homeTeamId": 40,
+    "awayTeamId": 22,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2002-06-03"
+  },
+  {
+    "id": 591,
+    "worldCupId": 17,
+    "homeTeamId": 18,
+    "awayTeamId": 47,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2002-06-03"
+  },
+  {
+    "id": 592,
+    "worldCupId": 17,
+    "homeTeamId": 13,
+    "awayTeamId": 17,
+    "homeScore": 0,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "2002-06-04"
+  },
+  {
+    "id": 593,
+    "worldCupId": 17,
+    "homeTeamId": 42,
+    "awayTeamId": 6,
+    "homeScore": 2,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "2002-06-04"
+  },
+  {
+    "id": 594,
+    "worldCupId": 17,
+    "homeTeamId": 43,
+    "awayTeamId": 55,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2002-06-04"
+  },
+  {
+    "id": 595,
+    "worldCupId": 17,
+    "homeTeamId": 60,
+    "awayTeamId": 73,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2002-06-05"
+  },
+  {
+    "id": 596,
+    "worldCupId": 17,
+    "homeTeamId": 79,
+    "awayTeamId": 56,
+    "homeScore": 3,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "2002-06-05"
+  },
+  {
+    "id": 597,
+    "worldCupId": 17,
+    "homeTeamId": 29,
+    "awayTeamId": 36,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2002-06-05"
+  },
+  {
+    "id": 598,
+    "worldCupId": 17,
+    "homeTeamId": 21,
+    "awayTeamId": 63,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2002-06-06"
+  },
+  {
+    "id": 599,
+    "worldCupId": 17,
+    "homeTeamId": 15,
+    "awayTeamId": 44,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2002-06-06"
+  },
+  {
+    "id": 600,
+    "worldCupId": 17,
+    "homeTeamId": 26,
+    "awayTeamId": 78,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2002-06-06"
+  },
+  {
+    "id": 601,
+    "worldCupId": 17,
+    "homeTeamId": 69,
+    "awayTeamId": 49,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2002-06-07"
+  },
+  {
+    "id": 602,
+    "worldCupId": 17,
+    "homeTeamId": 3,
+    "awayTeamId": 24,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2002-06-07"
+  },
+  {
+    "id": 603,
+    "worldCupId": 17,
+    "homeTeamId": 25,
+    "awayTeamId": 53,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2002-06-07"
+  },
+  {
+    "id": 604,
+    "worldCupId": 17,
+    "homeTeamId": 59,
+    "awayTeamId": 68,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2002-06-08"
+  },
+  {
+    "id": 605,
+    "worldCupId": 17,
+    "homeTeamId": 9,
+    "awayTeamId": 13,
+    "homeScore": 4,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2002-06-08"
+  },
+  {
+    "id": 606,
+    "worldCupId": 17,
+    "homeTeamId": 40,
+    "awayTeamId": 18,
+    "homeScore": 1,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "2002-06-08"
+  },
+  {
+    "id": 607,
+    "worldCupId": 17,
+    "homeTeamId": 17,
+    "awayTeamId": 74,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2002-06-09"
+  },
+  {
+    "id": 608,
+    "worldCupId": 17,
+    "homeTeamId": 42,
+    "awayTeamId": 60,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2002-06-09"
+  },
+  {
+    "id": 609,
+    "worldCupId": 17,
+    "homeTeamId": 47,
+    "awayTeamId": 22,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2002-06-09"
+  },
+  {
+    "id": 610,
+    "worldCupId": 17,
+    "homeTeamId": 43,
+    "awayTeamId": 79,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2002-06-10"
+  },
+  {
+    "id": 611,
+    "worldCupId": 17,
+    "homeTeamId": 56,
+    "awayTeamId": 55,
+    "homeScore": 4,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2002-06-10"
+  },
+  {
+    "id": 612,
+    "worldCupId": 17,
+    "homeTeamId": 73,
+    "awayTeamId": 6,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2002-06-10"
+  },
+  {
+    "id": 613,
+    "worldCupId": 17,
+    "homeTeamId": 21,
+    "awayTeamId": 26,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2002-06-11"
+  },
+  {
+    "id": 614,
+    "worldCupId": 17,
+    "homeTeamId": 63,
+    "awayTeamId": 78,
+    "homeScore": 3,
+    "awayScore": 3,
+    "stage": "Group Stage",
+    "date": "2002-06-11"
+  },
+  {
+    "id": 615,
+    "worldCupId": 17,
+    "homeTeamId": 44,
+    "awayTeamId": 36,
+    "homeScore": 0,
+    "awayScore": 3,
+    "stage": "Group Stage",
+    "date": "2002-06-11"
+  },
+  {
+    "id": 616,
+    "worldCupId": 17,
+    "homeTeamId": 15,
+    "awayTeamId": 29,
+    "homeScore": 0,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "2002-06-11"
+  },
+  {
+    "id": 617,
+    "worldCupId": 17,
+    "homeTeamId": 69,
+    "awayTeamId": 3,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2002-06-12"
+  },
+  {
+    "id": 618,
+    "worldCupId": 17,
+    "homeTeamId": 49,
+    "awayTeamId": 24,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2002-06-12"
+  },
+  {
+    "id": 619,
+    "worldCupId": 17,
+    "homeTeamId": 68,
+    "awayTeamId": 53,
+    "homeScore": 1,
+    "awayScore": 3,
+    "stage": "Group Stage",
+    "date": "2002-06-12"
+  },
+  {
+    "id": 620,
+    "worldCupId": 17,
+    "homeTeamId": 59,
+    "awayTeamId": 25,
+    "homeScore": 2,
+    "awayScore": 3,
+    "stage": "Group Stage",
+    "date": "2002-06-12"
+  },
+  {
+    "id": 621,
+    "worldCupId": 17,
+    "homeTeamId": 17,
+    "awayTeamId": 9,
+    "homeScore": 2,
+    "awayScore": 5,
+    "stage": "Group Stage",
+    "date": "2002-06-13"
+  },
+  {
+    "id": 622,
+    "worldCupId": 17,
+    "homeTeamId": 74,
+    "awayTeamId": 13,
+    "homeScore": 3,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2002-06-13"
+  },
+  {
+    "id": 623,
+    "worldCupId": 17,
+    "homeTeamId": 22,
+    "awayTeamId": 18,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2002-06-13"
+  },
+  {
+    "id": 624,
+    "worldCupId": 17,
+    "homeTeamId": 47,
+    "awayTeamId": 40,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2002-06-13"
+  },
+  {
+    "id": 625,
+    "worldCupId": 17,
+    "homeTeamId": 73,
+    "awayTeamId": 42,
+    "homeScore": 0,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "2002-06-14"
+  },
+  {
+    "id": 626,
+    "worldCupId": 17,
+    "homeTeamId": 56,
+    "awayTeamId": 43,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2002-06-14"
+  },
+  {
+    "id": 627,
+    "worldCupId": 17,
+    "homeTeamId": 55,
+    "awayTeamId": 79,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2002-06-14"
+  },
+  {
+    "id": 628,
+    "worldCupId": 17,
+    "homeTeamId": 6,
+    "awayTeamId": 60,
+    "homeScore": 3,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "2002-06-14"
+  },
+  {
+    "id": 629,
+    "worldCupId": 17,
+    "homeTeamId": 21,
+    "awayTeamId": 24,
+    "homeScore": 0,
+    "awayScore": 3,
+    "stage": "Round of 16",
+    "date": "2002-06-15"
+  },
+  {
+    "id": 630,
+    "worldCupId": 17,
+    "homeTeamId": 29,
+    "awayTeamId": 53,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Round of 16",
+    "date": "2002-06-15"
+  },
+  {
+    "id": 631,
+    "worldCupId": 17,
+    "homeTeamId": 25,
+    "awayTeamId": 36,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Round of 16",
+    "date": "2002-06-16"
+  },
+  {
+    "id": 632,
+    "worldCupId": 17,
+    "homeTeamId": 69,
+    "awayTeamId": 63,
+    "homeScore": 1,
+    "awayScore": 2,
+    "stage": "Round of 16",
+    "date": "2002-06-16"
+  },
+  {
+    "id": 633,
+    "worldCupId": 17,
+    "homeTeamId": 9,
+    "awayTeamId": 6,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Round of 16",
+    "date": "2002-06-17"
+  },
+  {
+    "id": 634,
+    "worldCupId": 17,
+    "homeTeamId": 47,
+    "awayTeamId": 79,
+    "homeScore": 0,
+    "awayScore": 2,
+    "stage": "Round of 16",
+    "date": "2002-06-17"
+  },
+  {
+    "id": 635,
+    "worldCupId": 17,
+    "homeTeamId": 42,
+    "awayTeamId": 74,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Round of 16",
+    "date": "2002-06-18"
+  },
+  {
+    "id": 636,
+    "worldCupId": 17,
+    "homeTeamId": 43,
+    "awayTeamId": 40,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Round of 16",
+    "date": "2002-06-18"
+  },
+  {
+    "id": 637,
+    "worldCupId": 17,
+    "homeTeamId": 24,
+    "awayTeamId": 9,
+    "homeScore": 1,
+    "awayScore": 2,
+    "stage": "Quarter-final",
+    "date": "2002-06-21"
+  },
+  {
+    "id": 638,
+    "worldCupId": 17,
+    "homeTeamId": 29,
+    "awayTeamId": 79,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Quarter-final",
+    "date": "2002-06-21"
+  },
+  {
+    "id": 639,
+    "worldCupId": 17,
+    "homeTeamId": 63,
+    "awayTeamId": 74,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Quarter-final",
+    "date": "2002-06-22"
+  },
+  {
+    "id": 640,
+    "worldCupId": 17,
+    "homeTeamId": 25,
+    "awayTeamId": 43,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Quarter-final",
+    "date": "2002-06-22"
+  },
+  {
+    "id": 641,
+    "worldCupId": 17,
+    "homeTeamId": 29,
+    "awayTeamId": 43,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Semi-final",
+    "date": "2002-06-25"
+  },
+  {
+    "id": 642,
+    "worldCupId": 17,
+    "homeTeamId": 9,
+    "awayTeamId": 74,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Semi-final",
+    "date": "2002-06-26"
+  },
+  {
+    "id": 643,
+    "worldCupId": 17,
+    "homeTeamId": 43,
+    "awayTeamId": 74,
+    "homeScore": 2,
+    "awayScore": 3,
+    "stage": "Third place",
+    "date": "2002-06-29"
+  },
+  {
+    "id": 644,
+    "worldCupId": 17,
+    "homeTeamId": 29,
+    "awayTeamId": 9,
+    "homeScore": 0,
+    "awayScore": 2,
+    "stage": "Final",
+    "date": "2002-06-30"
+  },
+  {
+    "id": 645,
+    "worldCupId": 18,
+    "homeTeamId": 29,
+    "awayTeamId": 17,
+    "homeScore": 4,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "2006-06-09"
+  },
+  {
+    "id": 646,
+    "worldCupId": 18,
+    "homeTeamId": 55,
+    "awayTeamId": 22,
+    "homeScore": 0,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "2006-06-09"
+  },
+  {
+    "id": 647,
+    "worldCupId": 18,
+    "homeTeamId": 24,
+    "awayTeamId": 53,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2006-06-10"
+  },
+  {
+    "id": 648,
+    "worldCupId": 18,
+    "homeTeamId": 72,
+    "awayTeamId": 69,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2006-06-10"
+  },
+  {
+    "id": 649,
+    "worldCupId": 18,
+    "homeTeamId": 3,
+    "awayTeamId": 14,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2006-06-10"
+  },
+  {
+    "id": 650,
+    "worldCupId": 18,
+    "homeTeamId": 61,
+    "awayTeamId": 48,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2006-06-11"
+  },
+  {
+    "id": 651,
+    "worldCupId": 18,
+    "homeTeamId": 47,
+    "awayTeamId": 37,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2006-06-11"
+  },
+  {
+    "id": 652,
+    "worldCupId": 18,
+    "homeTeamId": 2,
+    "awayTeamId": 56,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2006-06-11"
+  },
+  {
+    "id": 653,
+    "worldCupId": 18,
+    "homeTeamId": 4,
+    "awayTeamId": 42,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2006-06-12"
+  },
+  {
+    "id": 654,
+    "worldCupId": 18,
+    "homeTeamId": 79,
+    "awayTeamId": 20,
+    "homeScore": 0,
+    "awayScore": 3,
+    "stage": "Group Stage",
+    "date": "2006-06-12"
+  },
+  {
+    "id": 655,
+    "worldCupId": 18,
+    "homeTeamId": 40,
+    "awayTeamId": 30,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2006-06-12"
+  },
+  {
+    "id": 656,
+    "worldCupId": 18,
+    "homeTeamId": 43,
+    "awayTeamId": 71,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2006-06-13"
+  },
+  {
+    "id": 657,
+    "worldCupId": 18,
+    "homeTeamId": 26,
+    "awayTeamId": 66,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2006-06-13"
+  },
+  {
+    "id": 658,
+    "worldCupId": 18,
+    "homeTeamId": 9,
+    "awayTeamId": 18,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2006-06-13"
+  },
+  {
+    "id": 659,
+    "worldCupId": 18,
+    "homeTeamId": 25,
+    "awayTeamId": 76,
+    "homeScore": 4,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2006-06-14"
+  },
+  {
+    "id": 660,
+    "worldCupId": 18,
+    "homeTeamId": 73,
+    "awayTeamId": 44,
+    "homeScore": 2,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "2006-06-14"
+  },
+  {
+    "id": 661,
+    "worldCupId": 18,
+    "homeTeamId": 29,
+    "awayTeamId": 55,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2006-06-14"
+  },
+  {
+    "id": 662,
+    "worldCupId": 18,
+    "homeTeamId": 22,
+    "awayTeamId": 17,
+    "homeScore": 3,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2006-06-15"
+  },
+  {
+    "id": 663,
+    "worldCupId": 18,
+    "homeTeamId": 24,
+    "awayTeamId": 72,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2006-06-15"
+  },
+  {
+    "id": 664,
+    "worldCupId": 18,
+    "homeTeamId": 69,
+    "awayTeamId": 53,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2006-06-15"
+  },
+  {
+    "id": 665,
+    "worldCupId": 18,
+    "homeTeamId": 3,
+    "awayTeamId": 61,
+    "homeScore": 6,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2006-06-16"
+  },
+  {
+    "id": 666,
+    "worldCupId": 18,
+    "homeTeamId": 48,
+    "awayTeamId": 14,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2006-06-16"
+  },
+  {
+    "id": 667,
+    "worldCupId": 18,
+    "homeTeamId": 47,
+    "awayTeamId": 2,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2006-06-16"
+  },
+  {
+    "id": 668,
+    "worldCupId": 18,
+    "homeTeamId": 56,
+    "awayTeamId": 37,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2006-06-17"
+  },
+  {
+    "id": 669,
+    "worldCupId": 18,
+    "homeTeamId": 20,
+    "awayTeamId": 30,
+    "homeScore": 0,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "2006-06-17"
+  },
+  {
+    "id": 670,
+    "worldCupId": 18,
+    "homeTeamId": 40,
+    "awayTeamId": 79,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2006-06-17"
+  },
+  {
+    "id": 671,
+    "worldCupId": 18,
+    "homeTeamId": 42,
+    "awayTeamId": 18,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2006-06-18"
+  },
+  {
+    "id": 672,
+    "worldCupId": 18,
+    "homeTeamId": 9,
+    "awayTeamId": 4,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2006-06-18"
+  },
+  {
+    "id": 673,
+    "worldCupId": 18,
+    "homeTeamId": 26,
+    "awayTeamId": 43,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2006-06-18"
+  },
+  {
+    "id": 674,
+    "worldCupId": 18,
+    "homeTeamId": 71,
+    "awayTeamId": 66,
+    "homeScore": 0,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "2006-06-19"
+  },
+  {
+    "id": 675,
+    "worldCupId": 18,
+    "homeTeamId": 44,
+    "awayTeamId": 76,
+    "homeScore": 0,
+    "awayScore": 4,
+    "stage": "Group Stage",
+    "date": "2006-06-19"
+  },
+  {
+    "id": 676,
+    "worldCupId": 18,
+    "homeTeamId": 25,
+    "awayTeamId": 73,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2006-06-19"
+  },
+  {
+    "id": 677,
+    "worldCupId": 18,
+    "homeTeamId": 22,
+    "awayTeamId": 29,
+    "homeScore": 0,
+    "awayScore": 3,
+    "stage": "Group Stage",
+    "date": "2006-06-20"
+  },
+  {
+    "id": 678,
+    "worldCupId": 18,
+    "homeTeamId": 17,
+    "awayTeamId": 55,
+    "homeScore": 1,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "2006-06-20"
+  },
+  {
+    "id": 679,
+    "worldCupId": 18,
+    "homeTeamId": 69,
+    "awayTeamId": 24,
+    "homeScore": 2,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "2006-06-20"
+  },
+  {
+    "id": 680,
+    "worldCupId": 18,
+    "homeTeamId": 53,
+    "awayTeamId": 72,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2006-06-20"
+  },
+  {
+    "id": 681,
+    "worldCupId": 18,
+    "homeTeamId": 37,
+    "awayTeamId": 2,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2006-06-21"
+  },
+  {
+    "id": 682,
+    "worldCupId": 18,
+    "homeTeamId": 56,
+    "awayTeamId": 47,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2006-06-21"
+  },
+  {
+    "id": 683,
+    "worldCupId": 18,
+    "homeTeamId": 48,
+    "awayTeamId": 3,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2006-06-21"
+  },
+  {
+    "id": 684,
+    "worldCupId": 18,
+    "homeTeamId": 14,
+    "awayTeamId": 61,
+    "homeScore": 3,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "2006-06-21"
+  },
+  {
+    "id": 685,
+    "worldCupId": 18,
+    "homeTeamId": 20,
+    "awayTeamId": 40,
+    "homeScore": 0,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "2006-06-22"
+  },
+  {
+    "id": 686,
+    "worldCupId": 18,
+    "homeTeamId": 30,
+    "awayTeamId": 79,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2006-06-22"
+  },
+  {
+    "id": 687,
+    "worldCupId": 18,
+    "homeTeamId": 42,
+    "awayTeamId": 9,
+    "homeScore": 1,
+    "awayScore": 4,
+    "stage": "Group Stage",
+    "date": "2006-06-22"
+  },
+  {
+    "id": 688,
+    "worldCupId": 18,
+    "homeTeamId": 18,
+    "awayTeamId": 4,
+    "homeScore": 2,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "2006-06-22"
+  },
+  {
+    "id": 689,
+    "worldCupId": 18,
+    "homeTeamId": 76,
+    "awayTeamId": 73,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2006-06-23"
+  },
+  {
+    "id": 690,
+    "worldCupId": 18,
+    "homeTeamId": 44,
+    "awayTeamId": 25,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2006-06-23"
+  },
+  {
+    "id": 691,
+    "worldCupId": 18,
+    "homeTeamId": 71,
+    "awayTeamId": 26,
+    "homeScore": 0,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "2006-06-23"
+  },
+  {
+    "id": 692,
+    "worldCupId": 18,
+    "homeTeamId": 66,
+    "awayTeamId": 43,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2006-06-23"
+  },
+  {
+    "id": 693,
+    "worldCupId": 18,
+    "homeTeamId": 29,
+    "awayTeamId": 69,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Round of 16",
+    "date": "2006-06-24"
+  },
+  {
+    "id": 694,
+    "worldCupId": 18,
+    "homeTeamId": 3,
+    "awayTeamId": 47,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Round of 16",
+    "date": "2006-06-24"
+  },
+  {
+    "id": 695,
+    "worldCupId": 18,
+    "homeTeamId": 24,
+    "awayTeamId": 22,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Round of 16",
+    "date": "2006-06-25"
+  },
+  {
+    "id": 696,
+    "worldCupId": 18,
+    "homeTeamId": 56,
+    "awayTeamId": 48,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Round of 16",
+    "date": "2006-06-25"
+  },
+  {
+    "id": 697,
+    "worldCupId": 18,
+    "homeTeamId": 40,
+    "awayTeamId": 4,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Round of 16",
+    "date": "2006-06-26"
+  },
+  {
+    "id": 698,
+    "worldCupId": 18,
+    "homeTeamId": 66,
+    "awayTeamId": 76,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Round of 16",
+    "date": "2006-06-26"
+  },
+  {
+    "id": 699,
+    "worldCupId": 18,
+    "homeTeamId": 9,
+    "awayTeamId": 30,
+    "homeScore": 3,
+    "awayScore": 0,
+    "stage": "Round of 16",
+    "date": "2006-06-27"
+  },
+  {
+    "id": 700,
+    "worldCupId": 18,
+    "homeTeamId": 25,
+    "awayTeamId": 26,
+    "homeScore": 1,
+    "awayScore": 3,
+    "stage": "Round of 16",
+    "date": "2006-06-27"
+  },
+  {
+    "id": 701,
+    "worldCupId": 18,
+    "homeTeamId": 29,
+    "awayTeamId": 3,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Quarter-final",
+    "date": "2006-06-30"
+  },
+  {
+    "id": 702,
+    "worldCupId": 18,
+    "homeTeamId": 40,
+    "awayTeamId": 76,
+    "homeScore": 3,
+    "awayScore": 0,
+    "stage": "Quarter-final",
+    "date": "2006-06-30"
+  },
+  {
+    "id": 703,
+    "worldCupId": 18,
+    "homeTeamId": 24,
+    "awayTeamId": 56,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Quarter-final",
+    "date": "2006-07-01"
+  },
+  {
+    "id": 704,
+    "worldCupId": 18,
+    "homeTeamId": 9,
+    "awayTeamId": 26,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Quarter-final",
+    "date": "2006-07-01"
+  },
+  {
+    "id": 705,
+    "worldCupId": 18,
+    "homeTeamId": 29,
+    "awayTeamId": 40,
+    "homeScore": 0,
+    "awayScore": 2,
+    "stage": "Semi-final",
+    "date": "2006-07-04"
+  },
+  {
+    "id": 706,
+    "worldCupId": 18,
+    "homeTeamId": 56,
+    "awayTeamId": 26,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Semi-final",
+    "date": "2006-07-05"
+  },
+  {
+    "id": 707,
+    "worldCupId": 18,
+    "homeTeamId": 29,
+    "awayTeamId": 56,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Third place",
+    "date": "2006-07-08"
+  },
+  {
+    "id": 708,
+    "worldCupId": 18,
+    "homeTeamId": 40,
+    "awayTeamId": 26,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Final",
+    "date": "2006-07-09"
+  },
+  {
+    "id": 709,
+    "worldCupId": 19,
+    "homeTeamId": 59,
+    "awayTeamId": 47,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2010-06-11"
+  },
+  {
+    "id": 710,
+    "worldCupId": 19,
+    "homeTeamId": 78,
+    "awayTeamId": 26,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2010-06-11"
+  },
+  {
+    "id": 711,
+    "worldCupId": 19,
+    "homeTeamId": 43,
+    "awayTeamId": 31,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2010-06-12"
+  },
+  {
+    "id": 712,
+    "worldCupId": 19,
+    "homeTeamId": 3,
+    "awayTeamId": 49,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2010-06-12"
+  },
+  {
+    "id": 713,
+    "worldCupId": 19,
+    "homeTeamId": 24,
+    "awayTeamId": 79,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2010-06-12"
+  },
+  {
+    "id": 714,
+    "worldCupId": 19,
+    "homeTeamId": 1,
+    "awayTeamId": 68,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2010-06-13"
+  },
+  {
+    "id": 715,
+    "worldCupId": 19,
+    "homeTeamId": 65,
+    "awayTeamId": 30,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2010-06-13"
+  },
+  {
+    "id": 716,
+    "worldCupId": 19,
+    "homeTeamId": 29,
+    "awayTeamId": 4,
+    "homeScore": 4,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2010-06-13"
+  },
+  {
+    "id": 717,
+    "worldCupId": 19,
+    "homeTeamId": 48,
+    "awayTeamId": 21,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2010-06-14"
+  },
+  {
+    "id": 718,
+    "worldCupId": 19,
+    "homeTeamId": 42,
+    "awayTeamId": 15,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2010-06-14"
+  },
+  {
+    "id": 719,
+    "worldCupId": 19,
+    "homeTeamId": 40,
+    "awayTeamId": 53,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2010-06-14"
+  },
+  {
+    "id": 720,
+    "worldCupId": 19,
+    "homeTeamId": 52,
+    "awayTeamId": 67,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2010-06-15"
+  },
+  {
+    "id": 721,
+    "worldCupId": 19,
+    "homeTeamId": 14,
+    "awayTeamId": 56,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2010-06-15"
+  },
+  {
+    "id": 722,
+    "worldCupId": 19,
+    "homeTeamId": 9,
+    "awayTeamId": 57,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2010-06-15"
+  },
+  {
+    "id": 723,
+    "worldCupId": 19,
+    "homeTeamId": 33,
+    "awayTeamId": 12,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2010-06-16"
+  },
+  {
+    "id": 724,
+    "worldCupId": 19,
+    "homeTeamId": 25,
+    "awayTeamId": 66,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2010-06-16"
+  },
+  {
+    "id": 725,
+    "worldCupId": 19,
+    "homeTeamId": 59,
+    "awayTeamId": 78,
+    "homeScore": 0,
+    "awayScore": 3,
+    "stage": "Group Stage",
+    "date": "2010-06-16"
+  },
+  {
+    "id": 726,
+    "worldCupId": 19,
+    "homeTeamId": 3,
+    "awayTeamId": 43,
+    "homeScore": 4,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2010-06-17"
+  },
+  {
+    "id": 727,
+    "worldCupId": 19,
+    "homeTeamId": 31,
+    "awayTeamId": 49,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2010-06-17"
+  },
+  {
+    "id": 728,
+    "worldCupId": 19,
+    "homeTeamId": 26,
+    "awayTeamId": 47,
+    "homeScore": 0,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "2010-06-17"
+  },
+  {
+    "id": 729,
+    "worldCupId": 19,
+    "homeTeamId": 29,
+    "awayTeamId": 65,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2010-06-18"
+  },
+  {
+    "id": 730,
+    "worldCupId": 19,
+    "homeTeamId": 68,
+    "awayTeamId": 79,
+    "homeScore": 2,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "2010-06-18"
+  },
+  {
+    "id": 731,
+    "worldCupId": 19,
+    "homeTeamId": 24,
+    "awayTeamId": 1,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2010-06-18"
+  },
+  {
+    "id": 732,
+    "worldCupId": 19,
+    "homeTeamId": 48,
+    "awayTeamId": 42,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2010-06-19"
+  },
+  {
+    "id": 733,
+    "worldCupId": 19,
+    "homeTeamId": 30,
+    "awayTeamId": 4,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2010-06-19"
+  },
+  {
+    "id": 734,
+    "worldCupId": 19,
+    "homeTeamId": 15,
+    "awayTeamId": 21,
+    "homeScore": 1,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "2010-06-19"
+  },
+  {
+    "id": 735,
+    "worldCupId": 19,
+    "homeTeamId": 67,
+    "awayTeamId": 53,
+    "homeScore": 0,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "2010-06-20"
+  },
+  {
+    "id": 736,
+    "worldCupId": 19,
+    "homeTeamId": 40,
+    "awayTeamId": 52,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2010-06-20"
+  },
+  {
+    "id": 737,
+    "worldCupId": 19,
+    "homeTeamId": 9,
+    "awayTeamId": 14,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2010-06-20"
+  },
+  {
+    "id": 738,
+    "worldCupId": 19,
+    "homeTeamId": 56,
+    "awayTeamId": 57,
+    "homeScore": 7,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2010-06-21"
+  },
+  {
+    "id": 739,
+    "worldCupId": 19,
+    "homeTeamId": 12,
+    "awayTeamId": 66,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2010-06-21"
+  },
+  {
+    "id": 740,
+    "worldCupId": 19,
+    "homeTeamId": 25,
+    "awayTeamId": 33,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2010-06-21"
+  },
+  {
+    "id": 741,
+    "worldCupId": 19,
+    "homeTeamId": 47,
+    "awayTeamId": 78,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2010-06-22"
+  },
+  {
+    "id": 742,
+    "worldCupId": 19,
+    "homeTeamId": 26,
+    "awayTeamId": 59,
+    "homeScore": 1,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "2010-06-22"
+  },
+  {
+    "id": 743,
+    "worldCupId": 19,
+    "homeTeamId": 49,
+    "awayTeamId": 43,
+    "homeScore": 2,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "2010-06-22"
+  },
+  {
+    "id": 744,
+    "worldCupId": 19,
+    "homeTeamId": 31,
+    "awayTeamId": 3,
+    "homeScore": 0,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "2010-06-22"
+  },
+  {
+    "id": 745,
+    "worldCupId": 19,
+    "homeTeamId": 68,
+    "awayTeamId": 24,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2010-06-23"
+  },
+  {
+    "id": 746,
+    "worldCupId": 19,
+    "homeTeamId": 79,
+    "awayTeamId": 1,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2010-06-23"
+  },
+  {
+    "id": 747,
+    "worldCupId": 19,
+    "homeTeamId": 30,
+    "awayTeamId": 29,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2010-06-23"
+  },
+  {
+    "id": 748,
+    "worldCupId": 19,
+    "homeTeamId": 4,
+    "awayTeamId": 65,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2010-06-23"
+  },
+  {
+    "id": 749,
+    "worldCupId": 19,
+    "homeTeamId": 67,
+    "awayTeamId": 40,
+    "homeScore": 3,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "2010-06-24"
+  },
+  {
+    "id": 750,
+    "worldCupId": 19,
+    "homeTeamId": 53,
+    "awayTeamId": 52,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2010-06-24"
+  },
+  {
+    "id": 751,
+    "worldCupId": 19,
+    "homeTeamId": 21,
+    "awayTeamId": 42,
+    "homeScore": 1,
+    "awayScore": 3,
+    "stage": "Group Stage",
+    "date": "2010-06-24"
+  },
+  {
+    "id": 752,
+    "worldCupId": 19,
+    "homeTeamId": 15,
+    "awayTeamId": 48,
+    "homeScore": 1,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "2010-06-24"
+  },
+  {
+    "id": 753,
+    "worldCupId": 19,
+    "homeTeamId": 56,
+    "awayTeamId": 9,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2010-06-25"
+  },
+  {
+    "id": 754,
+    "worldCupId": 19,
+    "homeTeamId": 57,
+    "awayTeamId": 14,
+    "homeScore": 0,
+    "awayScore": 3,
+    "stage": "Group Stage",
+    "date": "2010-06-25"
+  },
+  {
+    "id": 755,
+    "worldCupId": 19,
+    "homeTeamId": 12,
+    "awayTeamId": 25,
+    "homeScore": 1,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "2010-06-25"
+  },
+  {
+    "id": 756,
+    "worldCupId": 19,
+    "homeTeamId": 66,
+    "awayTeamId": 33,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2010-06-25"
+  },
+  {
+    "id": 757,
+    "worldCupId": 19,
+    "homeTeamId": 78,
+    "awayTeamId": 43,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Round of 16",
+    "date": "2010-06-26"
+  },
+  {
+    "id": 758,
+    "worldCupId": 19,
+    "homeTeamId": 79,
+    "awayTeamId": 30,
+    "homeScore": 1,
+    "awayScore": 2,
+    "stage": "Round of 16",
+    "date": "2010-06-26"
+  },
+  {
+    "id": 759,
+    "worldCupId": 19,
+    "homeTeamId": 29,
+    "awayTeamId": 24,
+    "homeScore": 4,
+    "awayScore": 1,
+    "stage": "Round of 16",
+    "date": "2010-06-27"
+  },
+  {
+    "id": 760,
+    "worldCupId": 19,
+    "homeTeamId": 3,
+    "awayTeamId": 47,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Round of 16",
+    "date": "2010-06-27"
+  },
+  {
+    "id": 761,
+    "worldCupId": 19,
+    "homeTeamId": 48,
+    "awayTeamId": 67,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Round of 16",
+    "date": "2010-06-28"
+  },
+  {
+    "id": 762,
+    "worldCupId": 19,
+    "homeTeamId": 9,
+    "awayTeamId": 12,
+    "homeScore": 3,
+    "awayScore": 0,
+    "stage": "Round of 16",
+    "date": "2010-06-28"
+  },
+  {
+    "id": 763,
+    "worldCupId": 19,
+    "homeTeamId": 53,
+    "awayTeamId": 42,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Round of 16",
+    "date": "2010-06-29"
+  },
+  {
+    "id": 764,
+    "worldCupId": 19,
+    "homeTeamId": 25,
+    "awayTeamId": 56,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Round of 16",
+    "date": "2010-06-29"
+  },
+  {
+    "id": 765,
+    "worldCupId": 19,
+    "homeTeamId": 48,
+    "awayTeamId": 9,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Quarter-final",
+    "date": "2010-07-02"
+  },
+  {
+    "id": 766,
+    "worldCupId": 19,
+    "homeTeamId": 78,
+    "awayTeamId": 30,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Quarter-final",
+    "date": "2010-07-02"
+  },
+  {
+    "id": 767,
+    "worldCupId": 19,
+    "homeTeamId": 3,
+    "awayTeamId": 29,
+    "homeScore": 0,
+    "awayScore": 4,
+    "stage": "Quarter-final",
+    "date": "2010-07-03"
+  },
+  {
+    "id": 768,
+    "worldCupId": 19,
+    "homeTeamId": 53,
+    "awayTeamId": 25,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Quarter-final",
+    "date": "2010-07-03"
+  },
+  {
+    "id": 769,
+    "worldCupId": 19,
+    "homeTeamId": 78,
+    "awayTeamId": 48,
+    "homeScore": 2,
+    "awayScore": 3,
+    "stage": "Semi-final",
+    "date": "2010-07-06"
+  },
+  {
+    "id": 770,
+    "worldCupId": 19,
+    "homeTeamId": 29,
+    "awayTeamId": 25,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Semi-final",
+    "date": "2010-07-07"
+  },
+  {
+    "id": 771,
+    "worldCupId": 19,
+    "homeTeamId": 78,
+    "awayTeamId": 29,
+    "homeScore": 2,
+    "awayScore": 3,
+    "stage": "Match for third place",
+    "date": "2010-07-10"
+  },
+  {
+    "id": 772,
+    "worldCupId": 19,
+    "homeTeamId": 48,
+    "awayTeamId": 25,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Final",
+    "date": "2010-07-11"
+  },
+  {
+    "id": 773,
+    "worldCupId": 20,
+    "homeTeamId": 9,
+    "awayTeamId": 18,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2014-06-12"
+  },
+  {
+    "id": 774,
+    "worldCupId": 20,
+    "homeTeamId": 47,
+    "awayTeamId": 15,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2014-06-13"
+  },
+  {
+    "id": 775,
+    "worldCupId": 20,
+    "homeTeamId": 25,
+    "awayTeamId": 48,
+    "homeScore": 1,
+    "awayScore": 5,
+    "stage": "Group Stage",
+    "date": "2014-06-13"
+  },
+  {
+    "id": 776,
+    "worldCupId": 20,
+    "homeTeamId": 12,
+    "awayTeamId": 4,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2014-06-13"
+  },
+  {
+    "id": 777,
+    "worldCupId": 20,
+    "homeTeamId": 16,
+    "awayTeamId": 31,
+    "homeScore": 3,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2014-06-14"
+  },
+  {
+    "id": 778,
+    "worldCupId": 20,
+    "homeTeamId": 78,
+    "awayTeamId": 17,
+    "homeScore": 1,
+    "awayScore": 3,
+    "stage": "Group Stage",
+    "date": "2014-06-14"
+  },
+  {
+    "id": 779,
+    "worldCupId": 20,
+    "homeTeamId": 24,
+    "awayTeamId": 40,
+    "homeScore": 1,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "2014-06-14"
+  },
+  {
+    "id": 780,
+    "worldCupId": 20,
+    "homeTeamId": 14,
+    "awayTeamId": 42,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2014-06-14"
+  },
+  {
+    "id": 781,
+    "worldCupId": 20,
+    "homeTeamId": 66,
+    "awayTeamId": 22,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2014-06-15"
+  },
+  {
+    "id": 782,
+    "worldCupId": 20,
+    "homeTeamId": 26,
+    "awayTeamId": 33,
+    "homeScore": 3,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2014-06-15"
+  },
+  {
+    "id": 783,
+    "worldCupId": 20,
+    "homeTeamId": 3,
+    "awayTeamId": 7,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2014-06-15"
+  },
+  {
+    "id": 784,
+    "worldCupId": 20,
+    "homeTeamId": 29,
+    "awayTeamId": 56,
+    "homeScore": 4,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2014-06-16"
+  },
+  {
+    "id": 785,
+    "worldCupId": 20,
+    "homeTeamId": 37,
+    "awayTeamId": 49,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2014-06-16"
+  },
+  {
+    "id": 786,
+    "worldCupId": 20,
+    "homeTeamId": 30,
+    "awayTeamId": 79,
+    "homeScore": 1,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "2014-06-16"
+  },
+  {
+    "id": 787,
+    "worldCupId": 20,
+    "homeTeamId": 6,
+    "awayTeamId": 1,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2014-06-17"
+  },
+  {
+    "id": 788,
+    "worldCupId": 20,
+    "homeTeamId": 9,
+    "awayTeamId": 47,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2014-06-17"
+  },
+  {
+    "id": 789,
+    "worldCupId": 20,
+    "homeTeamId": 60,
+    "awayTeamId": 43,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2014-06-17"
+  },
+  {
+    "id": 790,
+    "worldCupId": 20,
+    "homeTeamId": 4,
+    "awayTeamId": 48,
+    "homeScore": 2,
+    "awayScore": 3,
+    "stage": "Group Stage",
+    "date": "2014-06-18"
+  },
+  {
+    "id": 791,
+    "worldCupId": 20,
+    "homeTeamId": 25,
+    "awayTeamId": 12,
+    "homeScore": 0,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "2014-06-18"
+  },
+  {
+    "id": 792,
+    "worldCupId": 20,
+    "homeTeamId": 15,
+    "awayTeamId": 18,
+    "homeScore": 0,
+    "awayScore": 4,
+    "stage": "Group Stage",
+    "date": "2014-06-18"
+  },
+  {
+    "id": 793,
+    "worldCupId": 20,
+    "homeTeamId": 16,
+    "awayTeamId": 14,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2014-06-19"
+  },
+  {
+    "id": 794,
+    "worldCupId": 20,
+    "homeTeamId": 78,
+    "awayTeamId": 24,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2014-06-19"
+  },
+  {
+    "id": 795,
+    "worldCupId": 20,
+    "homeTeamId": 42,
+    "awayTeamId": 31,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2014-06-19"
+  },
+  {
+    "id": 796,
+    "worldCupId": 20,
+    "homeTeamId": 40,
+    "awayTeamId": 17,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2014-06-20"
+  },
+  {
+    "id": 797,
+    "worldCupId": 20,
+    "homeTeamId": 66,
+    "awayTeamId": 26,
+    "homeScore": 2,
+    "awayScore": 5,
+    "stage": "Group Stage",
+    "date": "2014-06-20"
+  },
+  {
+    "id": 798,
+    "worldCupId": 20,
+    "homeTeamId": 33,
+    "awayTeamId": 22,
+    "homeScore": 1,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "2014-06-20"
+  },
+  {
+    "id": 799,
+    "worldCupId": 20,
+    "homeTeamId": 3,
+    "awayTeamId": 37,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2014-06-21"
+  },
+  {
+    "id": 800,
+    "worldCupId": 20,
+    "homeTeamId": 29,
+    "awayTeamId": 30,
+    "homeScore": 2,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "2014-06-21"
+  },
+  {
+    "id": 801,
+    "worldCupId": 20,
+    "homeTeamId": 49,
+    "awayTeamId": 7,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2014-06-21"
+  },
+  {
+    "id": 802,
+    "worldCupId": 20,
+    "homeTeamId": 6,
+    "awayTeamId": 60,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2014-06-22"
+  },
+  {
+    "id": 803,
+    "worldCupId": 20,
+    "homeTeamId": 43,
+    "awayTeamId": 1,
+    "homeScore": 2,
+    "awayScore": 4,
+    "stage": "Group Stage",
+    "date": "2014-06-22"
+  },
+  {
+    "id": 804,
+    "worldCupId": 20,
+    "homeTeamId": 79,
+    "awayTeamId": 56,
+    "homeScore": 2,
+    "awayScore": 2,
+    "stage": "Group Stage",
+    "date": "2014-06-22"
+  },
+  {
+    "id": 805,
+    "worldCupId": 20,
+    "homeTeamId": 4,
+    "awayTeamId": 25,
+    "homeScore": 0,
+    "awayScore": 3,
+    "stage": "Group Stage",
+    "date": "2014-06-23"
+  },
+  {
+    "id": 806,
+    "worldCupId": 20,
+    "homeTeamId": 48,
+    "awayTeamId": 12,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2014-06-23"
+  },
+  {
+    "id": 807,
+    "worldCupId": 20,
+    "homeTeamId": 15,
+    "awayTeamId": 9,
+    "homeScore": 1,
+    "awayScore": 4,
+    "stage": "Group Stage",
+    "date": "2014-06-23"
+  },
+  {
+    "id": 808,
+    "worldCupId": 20,
+    "homeTeamId": 18,
+    "awayTeamId": 47,
+    "homeScore": 1,
+    "awayScore": 3,
+    "stage": "Group Stage",
+    "date": "2014-06-23"
+  },
+  {
+    "id": 809,
+    "worldCupId": 20,
+    "homeTeamId": 40,
+    "awayTeamId": 78,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2014-06-24"
+  },
+  {
+    "id": 810,
+    "worldCupId": 20,
+    "homeTeamId": 17,
+    "awayTeamId": 24,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2014-06-24"
+  },
+  {
+    "id": 811,
+    "worldCupId": 20,
+    "homeTeamId": 42,
+    "awayTeamId": 16,
+    "homeScore": 1,
+    "awayScore": 4,
+    "stage": "Group Stage",
+    "date": "2014-06-24"
+  },
+  {
+    "id": 812,
+    "worldCupId": 20,
+    "homeTeamId": 31,
+    "awayTeamId": 14,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2014-06-24"
+  },
+  {
+    "id": 813,
+    "worldCupId": 20,
+    "homeTeamId": 49,
+    "awayTeamId": 3,
+    "homeScore": 2,
+    "awayScore": 3,
+    "stage": "Group Stage",
+    "date": "2014-06-25"
+  },
+  {
+    "id": 814,
+    "worldCupId": 20,
+    "homeTeamId": 7,
+    "awayTeamId": 37,
+    "homeScore": 3,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2014-06-25"
+  },
+  {
+    "id": 815,
+    "worldCupId": 20,
+    "homeTeamId": 33,
+    "awayTeamId": 66,
+    "homeScore": 0,
+    "awayScore": 3,
+    "stage": "Group Stage",
+    "date": "2014-06-25"
+  },
+  {
+    "id": 816,
+    "worldCupId": 20,
+    "homeTeamId": 22,
+    "awayTeamId": 26,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Group Stage",
+    "date": "2014-06-25"
+  },
+  {
+    "id": 817,
+    "worldCupId": 20,
+    "homeTeamId": 79,
+    "awayTeamId": 29,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2014-06-26"
+  },
+  {
+    "id": 818,
+    "worldCupId": 20,
+    "homeTeamId": 56,
+    "awayTeamId": 30,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2014-06-26"
+  },
+  {
+    "id": 819,
+    "worldCupId": 20,
+    "homeTeamId": 43,
+    "awayTeamId": 6,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2014-06-26"
+  },
+  {
+    "id": 820,
+    "worldCupId": 20,
+    "homeTeamId": 1,
+    "awayTeamId": 60,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Group Stage",
+    "date": "2014-06-26"
+  },
+  {
+    "id": 821,
+    "worldCupId": 20,
+    "homeTeamId": 9,
+    "awayTeamId": 12,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Round of 16",
+    "date": "2014-06-28"
+  },
+  {
+    "id": 822,
+    "worldCupId": 20,
+    "homeTeamId": 16,
+    "awayTeamId": 78,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Round of 16",
+    "date": "2014-06-28"
+  },
+  {
+    "id": 823,
+    "worldCupId": 20,
+    "homeTeamId": 48,
+    "awayTeamId": 47,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Round of 16",
+    "date": "2014-06-29"
+  },
+  {
+    "id": 824,
+    "worldCupId": 20,
+    "homeTeamId": 17,
+    "awayTeamId": 31,
+    "homeScore": 1,
+    "awayScore": 1,
+    "stage": "Round of 16",
+    "date": "2014-06-29"
+  },
+  {
+    "id": 825,
+    "worldCupId": 20,
+    "homeTeamId": 26,
+    "awayTeamId": 49,
+    "homeScore": 2,
+    "awayScore": 0,
+    "stage": "Round of 16",
+    "date": "2014-06-30"
+  },
+  {
+    "id": 826,
+    "worldCupId": 20,
+    "homeTeamId": 29,
+    "awayTeamId": 1,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Round of 16",
+    "date": "2014-06-30"
+  },
+  {
+    "id": 827,
+    "worldCupId": 20,
+    "homeTeamId": 3,
+    "awayTeamId": 66,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Round of 16",
+    "date": "2014-07-01"
+  },
+  {
+    "id": 828,
+    "worldCupId": 20,
+    "homeTeamId": 6,
+    "awayTeamId": 79,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Round of 16",
+    "date": "2014-07-01"
+  },
+  {
+    "id": 829,
+    "worldCupId": 20,
+    "homeTeamId": 9,
+    "awayTeamId": 16,
+    "homeScore": 2,
+    "awayScore": 1,
+    "stage": "Quarter-final",
+    "date": "2014-07-04"
+  },
+  {
+    "id": 830,
+    "worldCupId": 20,
+    "homeTeamId": 26,
+    "awayTeamId": 29,
+    "homeScore": 0,
+    "awayScore": 1,
+    "stage": "Quarter-final",
+    "date": "2014-07-04"
+  },
+  {
+    "id": 831,
+    "worldCupId": 20,
+    "homeTeamId": 48,
+    "awayTeamId": 17,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Quarter-final",
+    "date": "2014-07-05"
+  },
+  {
+    "id": 832,
+    "worldCupId": 20,
+    "homeTeamId": 3,
+    "awayTeamId": 6,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Quarter-final",
+    "date": "2014-07-05"
+  },
+  {
+    "id": 833,
+    "worldCupId": 20,
+    "homeTeamId": 9,
+    "awayTeamId": 29,
+    "homeScore": 1,
+    "awayScore": 7,
+    "stage": "Semi-final",
+    "date": "2014-07-08"
+  },
+  {
+    "id": 834,
+    "worldCupId": 20,
+    "homeTeamId": 48,
+    "awayTeamId": 3,
+    "homeScore": 0,
+    "awayScore": 0,
+    "stage": "Semi-final",
+    "date": "2014-07-09"
+  },
+  {
+    "id": 835,
+    "worldCupId": 20,
+    "homeTeamId": 9,
+    "awayTeamId": 48,
+    "homeScore": 0,
+    "awayScore": 3,
+    "stage": "Play-off for third place",
+    "date": "2014-07-12"
+  },
+  {
+    "id": 836,
+    "worldCupId": 20,
+    "homeTeamId": 29,
+    "awayTeamId": 3,
+    "homeScore": 1,
+    "awayScore": 0,
+    "stage": "Final",
+    "date": "2014-07-13"
+  }
 ]
