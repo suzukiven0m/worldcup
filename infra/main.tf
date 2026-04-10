@@ -67,7 +67,10 @@ resource "azurerm_linux_web_app" "main" {
 
   logs {
     http_logs {
-      retention_in_days = 7
+      retention_policy {
+        days    = 7
+        enabled = true
+      }
     }
     application_logs {
       file_system_level = "Warning"
