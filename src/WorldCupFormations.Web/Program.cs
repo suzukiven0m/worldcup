@@ -10,9 +10,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
-var dbDir  = Path.Combine(builder.Environment.ContentRootPath, "App_Data");
+// DB_PATH env var lets Azure (or any host) put the database outside the
+// deployed directory, so it survives redeployments without reseeding.
+var dbPath = Environment.GetEnvironmentVariable("DB_PATH")
+          ?? Path.Combine(builder.Environment.ContentRootPath, "App_Data", "worldcup.db");
+var dbDir  = Path.GetDirectoryName(dbPath)!;
 Directory.CreateDirectory(dbDir);
-var dbPath = Path.Combine(dbDir, "worldcup.db");
 
 builder.Services.AddDbContextFactory<AppDbContext>(opts =>
     opts.UseSqlite($"Data Source={dbPath}"));
