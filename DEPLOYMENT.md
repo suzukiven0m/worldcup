@@ -1,7 +1,8 @@
-# Deploying to Azure App Service
+# Deploying to Azure App Service with OpenTofu
 
-This guide covers deploying World Cup Formations (Blazor Server, .NET 10, SQLite) to
-Azure App Service using your Azure for Students subscription.
+This guide provisions World Cup Formations (Blazor Server, .NET 10, SQLite) on
+Azure App Service using **OpenTofu** (open-source Terraform fork) and your Azure
+for Students subscription.
 
 ---
 
@@ -14,8 +15,8 @@ Azure App Service using your Azure for Students subscription.
 | Azure Functions | ❌ No | Serverless — no persistent connections, no SignalR |
 | Container Apps | ✅ Works | Docker-based alternative; more setup required |
 
-Blazor Server relies on a long-lived SignalR connection between the browser and the
-server. App Service keeps the process running, which is exactly what it needs.
+Blazor Server relies on a long-lived SignalR connection. App Service keeps the
+process running continuously, which is what it needs.
 
 ---
 
@@ -23,125 +24,120 @@ server. App Service keeps the process running, which is exactly what it needs.
 
 | Tool | Install |
 |---|---|
-| Azure CLI | `winget install Microsoft.AzureCLI` · [aka.ms/installazurecliwindows](https://aka.ms/installazurecliwindows) |
-| .NET 10 SDK | `winget install Microsoft.DotNet.SDK.10` · [dot.net/download](https://dotnet.microsoft.com/download) |
-| Git | Already installed if you can push this repo |
+| Azure CLI | [aka.ms/installazurecliwindows](https://aka.ms/installazurecliwindows) or `winget install Microsoft.AzureCLI` |
+| OpenTofu | [opentofu.org/docs/intro/install](https://opentofu.org/docs/intro/install/) |
+| .NET 10 SDK | [dotnet.microsoft.com/download](https://dotnet.microsoft.com/download) |
 
 Verify:
 
 ```bash
 az --version
-dotnet --version   # should print 10.x.x
+tofu --version    # should print OpenTofu v1.8.x or later
+dotnet --version  # should print 10.x.x
 ```
 
 ---
 
-## Part 1 — Azure Setup (one-time)
-
-### 1.1 Log in
+## Part 1 — Azure login
 
 ```bash
 az login
 ```
 
-A browser window opens. Sign in with your student account
-(the one that has Azure for Students credits).
+A browser window opens. Sign in with your student account.
 
-### 1.2 Confirm your subscription
+Confirm you are on the right subscription:
 
 ```bash
 az account show --query "{name:name, id:id}" -o table
 ```
 
-If you have multiple subscriptions, select the student one:
+If you have multiple subscriptions:
 
 ```bash
 az account set --subscription "<subscription-id-or-name>"
 ```
 
-### 1.3 Create a Resource Group
-
-A resource group is a logical container for all your Azure resources.
-Pick a region close to your users (`westeurope`, `eastus`, `japaneast`, etc.).
-
-```bash
-az group create \
-  --name rg-worldcup \
-  --location westeurope
-```
-
-### 1.4 Create an App Service Plan
-
-The plan defines the hardware tier. Start with **B1 Basic** (1 core, 1.75 GB RAM,
-~$13/month — well within student credits). B1 enables "Always On" so the app
-doesn't sleep on idle traffic.
-
-```bash
-az appservice plan create \
-  --name plan-worldcup \
-  --resource-group rg-worldcup \
-  --sku B1 \
-  --is-linux
-```
-
-> **Free tier (F1)**: If you want zero cost, replace `--sku B1` with `--sku F1`.
-> F1 has a 60-CPU-minute/day limit, no Always On (app sleeps after 20 min idle),
-> and slower cold starts. Fine for occasional demos; not great for a portfolio
-> that needs to impress at a moment's notice.
-
-### 1.5 Create the Web App
-
-Pick a globally unique name — it becomes `<name>.azurewebsites.net`.
-
-```bash
-az webapp create \
-  --name worldcup-formations \
-  --resource-group rg-worldcup \
-  --plan plan-worldcup \
-  --runtime "DOTNETCORE:10.0"
-```
-
-> If `DOTNETCORE:10.0` isn't listed run `az webapp list-runtimes --os linux` to see
-> current options. Use the closest available (e.g. `DOTNETCORE:9.0`).
-
-### 1.6 Set the database path environment variable
-
-This puts the SQLite database in `/home/data/` — a directory that persists across
-redeployments on App Service Linux (backed by Azure Files). Without this, the database
-lands inside the deployed package directory and gets wiped on every new deploy, forcing
-a full reseed each time (~2–3 s, which is acceptable, but avoidable).
-
-```bash
-az webapp config appsettings set \
-  --name worldcup-formations \
-  --resource-group rg-worldcup \
-  --settings DB_PATH="/home/data/worldcup.db"
-```
-
-### 1.7 Enable Always On (B1 and above only)
-
-```bash
-az webapp config set \
-  --name worldcup-formations \
-  --resource-group rg-worldcup \
-  --always-on true
-```
+Note your **subscription ID** — you will need it in the next step.
 
 ---
 
-## Part 2A — Deploy manually (fastest first deploy)
+## Part 2 — Configure OpenTofu variables
 
-Use this when you want to push a one-off build without setting up GitHub Actions yet.
-
-### 2A.1 Publish the app locally
+The infrastructure lives in `infra/`. Copy the example vars file:
 
 ```bash
+cp infra/terraform.tfvars.example infra/terraform.tfvars
+```
+
+Open `infra/terraform.tfvars` and fill in your values:
+
+```hcl
+subscription_id     = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"   # from az account show
+location            = "westeurope"     # or eastus, japaneast, etc.
+resource_group_name = "rg-worldcup"
+plan_name           = "plan-worldcup"
+webapp_name         = "worldcup-formations"   # must be globally unique
+sku_name            = "B1"                    # see tier table below
+```
+
+> `terraform.tfvars` is in `.gitignore` — it will not be committed.
+
+### Tier guide
+
+| SKU | vCPU | RAM | Cost/month | Notes |
+|---|---|---|---|---|
+| `F1` | shared | 1 GB | $0 | 60 CPU-min/day cap; no Always On; app sleeps after 20 min idle |
+| `B1` | 1 | 1.75 GB | ~$13 | **Recommended.** Always On, custom domain + SSL |
+| `B2` | 2 | 3.5 GB | ~$26 | Use if B1 feels sluggish under load |
+
+At B1, $100 of student credit covers ~7.5 months.
+
+---
+
+## Part 3 — Provision infrastructure with OpenTofu
+
+```bash
+cd infra
+
+# Download the azurerm provider
+tofu init
+
+# Preview what will be created (nothing is changed yet)
+tofu plan
+
+# Create the resources (~2 minutes)
+tofu apply
+```
+
+Type `yes` when prompted. When it completes you will see:
+
+```
+Outputs:
+  webapp_name = "worldcup-formations"
+  webapp_url  = "https://worldcup-formations.azurewebsites.net"
+  resource_group_name = "rg-worldcup"
+```
+
+The App Service is now running and waiting for your application code.
+
+---
+
+## Part 4A — Deploy manually (fastest first deploy)
+
+Use this when you want to push a one-off build without GitHub Actions.
+
+### 4A.1 Publish the app
+
+```bash
+cd ..   # back to repo root
+
 dotnet publish src/WorldCupFormations.Web/WorldCupFormations.Web.csproj \
   --configuration Release \
   --output ./publish
 ```
 
-### 2A.2 Zip the published output
+### 4A.2 Zip the published output
 
 **Linux / macOS:**
 ```bash
@@ -153,7 +149,7 @@ cd publish && zip -r ../deploy.zip . && cd ..
 Compress-Archive -Path publish\* -DestinationPath deploy.zip -Force
 ```
 
-### 2A.3 Upload and deploy
+### 4A.3 Upload and deploy
 
 ```bash
 az webapp deploy \
@@ -163,22 +159,23 @@ az webapp deploy \
   --type zip
 ```
 
-Deployment takes about 60–90 seconds. When it completes:
+Deployment takes ~60–90 seconds. Open the app:
 
 ```bash
 az webapp browse --name worldcup-formations --resource-group rg-worldcup
 ```
 
-Your browser should open `https://worldcup-formations.azurewebsites.net`.
-The first request takes 5–15 seconds while the app starts and seeds the database.
+The first request takes 5–15 seconds while the app seeds the database.
+Subsequent cold starts skip seeding (the database already exists at
+`/home/data/worldcup.db`).
 
 ---
 
-## Part 2B — Automated deployment via GitHub Actions (recommended)
+## Part 4B — Automated deployment via GitHub Actions (recommended)
 
 Set this up once; every push to `master` deploys automatically.
 
-### 2B.1 Download the publish profile
+### 4B.1 Download the publish profile
 
 ```bash
 az webapp deployment list-publishing-profiles \
@@ -188,36 +185,32 @@ az webapp deployment list-publishing-profiles \
   --output tsv > publish-profile.xml
 ```
 
-Open `publish-profile.xml` and copy its **entire contents** (it's XML starting with
-`<publishData>`).
+Open `publish-profile.xml` and copy its **entire contents** (XML starting
+with `<publishData>`).
 
-> Delete this file locally after copying — it contains credentials.
+> Delete the file after copying — it contains credentials.
 > `rm publish-profile.xml`
 
-### 2B.2 Add secrets to your GitHub repository
+### 4B.2 Add secrets to your GitHub repository
 
-Go to your repo on GitHub:
 **Settings → Secrets and variables → Actions → New repository secret**
 
 | Secret name | Value |
 |---|---|
-| `AZURE_WEBAPP_NAME` | `worldcup-formations` (the name you chose in 1.5) |
+| `AZURE_WEBAPP_NAME` | `worldcup-formations` (the name you set in `terraform.tfvars`) |
 | `AZURE_PUBLISH_PROFILE` | The full XML content you copied above |
 
-### 2B.3 The workflow file is already in the repo
+### 4B.3 The workflow file is already in the repo
 
-`.github/workflows/azure-deploy.yml` was added alongside this guide. It:
+`.github/workflows/azure-deploy.yml` runs on every push to `master`:
 
-1. Runs on every push to `master` (and on manual trigger)
-2. Sets up .NET 10
-3. Runs `dotnet publish --configuration Release`
-4. Deploys to App Service using the publish profile
+1. Sets up .NET 10
+2. Runs `dotnet publish --configuration Release`
+3. Deploys to App Service using the publish profile
 
-Push to `master` to trigger the first automated deploy:
+Trigger your first automated deploy:
 
 ```bash
-git add .
-git commit -m "add Azure deployment workflow"
 git push origin master
 ```
 
@@ -225,7 +218,7 @@ Watch it run under **Actions** in your GitHub repo. Green checkmark = live.
 
 ---
 
-## Part 3 — Verify the live app
+## Part 5 — Verify the live app
 
 ```bash
 # Check the app is responding
@@ -237,8 +230,7 @@ az webapp log tail \
   --resource-group rg-worldcup
 ```
 
-The startup log should show EF Core applying migrations and then the seed insert.
-Subsequent restarts skip seeding (database already exists at `/home/data/worldcup.db`).
+The startup log shows EF Core applying migrations, then the seed insert.
 
 ---
 
@@ -246,11 +238,10 @@ Subsequent restarts skip seeding (database already exists at `/home/data/worldcu
 
 ### Force a database reseed
 
-The database is seeded once on first startup. If you update the JSON seed files and
-want to re-import the data, delete the database and restart the app:
+If you update seed data and want a fresh import:
 
 ```bash
-# Open an SSH session into the container
+# SSH into the container
 az webapp ssh --name worldcup-formations --resource-group rg-worldcup
 
 # Inside the container:
@@ -270,19 +261,24 @@ az webapp config appsettings list \
   --output table
 ```
 
-### Scale up the plan (if the app feels slow)
+### Scale up the plan
+
+Edit `infra/terraform.tfvars`:
+
+```hcl
+sku_name = "B2"
+```
+
+Then:
 
 ```bash
-az appservice plan update \
-  --name plan-worldcup \
-  --resource-group rg-worldcup \
-  --sku B2   # 2 cores, 3.5 GB RAM
+cd infra && tofu apply
 ```
 
 ### Add a custom domain
 
 1. Buy or transfer a domain (Namecheap, Cloudflare, etc.)
-2. Add a CNAME record: `www` → `worldcup-formations.azurewebsites.net`
+2. Add a CNAME: `www` → `worldcup-formations.azurewebsites.net`
 3. In Azure:
 
 ```bash
@@ -301,32 +297,38 @@ az webapp config ssl create \
   --hostname www.yourdomain.com
 ```
 
----
+### Store Terraform state in Azure (optional, for teams)
 
-## Tiers and cost on Azure for Students
-
-Azure for Students gives **$100 USD in free credits** and renews annually.
-
-| Tier | vCPU | RAM | Cost/month | Notes |
-|---|---|---|---|---|
-| **F1 Free** | shared | 1 GB | $0 | 60 CPU-min/day cap, no Always On, no custom domain SSL |
-| **B1 Basic** | 1 | 1.75 GB | ~$13 | Recommended. Always On, custom domain + SSL |
-| **B2 Basic** | 2 | 3.5 GB | ~$26 | Use if B1 feels sluggish under load |
-
-At B1, $100 of student credit covers ~7.5 months. The app is read-only and
-single-threaded by nature; B1 is more than sufficient.
-
-**Estimated total cost for a year** (B1 × 12 months ≈ $156):
-- Year 1: covered by student credit ($100) + ~$56 out of pocket, or top up with a
-  second student subscription year
-- After student subscription: ~$13/month ongoing
-
-To check your remaining credit balance:
+By default OpenTofu stores state in `infra/terraform.tfstate` on your local
+machine. For a shared team setup, uncomment the `backend "azurerm"` block in
+`infra/main.tf` and create a storage account first:
 
 ```bash
-az consumption budget list 2>/dev/null || true
-# Or visit: https://www.microsoftazuresponsorships.com/Balance
+az group create --name rg-tfstate --location westeurope
+
+az storage account create \
+  --name <unique-storage-name> \
+  --resource-group rg-tfstate \
+  --sku Standard_LRS
+
+az storage container create \
+  --name tfstate \
+  --account-name <unique-storage-name>
 ```
+
+Then fill in the backend block in `infra/main.tf` and run `tofu init` again.
+
+---
+
+## Tear everything down
+
+```bash
+cd infra
+tofu destroy
+```
+
+Type `yes` when prompted. This deletes the App Service, plan, and resource
+group in one operation and stops all billing immediately.
 
 ---
 
@@ -346,15 +348,13 @@ az webapp log tail --name worldcup-formations --resource-group rg-worldcup
 A previous `dotnet run` process is still holding the port.
 
 ```bash
-fuser -k 5292/tcp    # Linux
-# or
-netstat -ano | findstr :5292   # Windows — then: taskkill /PID <pid> /F
+fuser -k 5292/tcp    # Linux/macOS
+# Windows: netstat -ano | findstr :5292 → taskkill /PID <pid> /F
 ```
 
 ### Startup crashes with a migration error
 
-The database file may be corrupt or from a different migration baseline. Delete it and
-let it reseed:
+The database file may be from a different migration baseline. Delete it:
 
 ```bash
 az webapp ssh --name worldcup-formations --resource-group rg-worldcup
@@ -363,26 +363,20 @@ exit
 az webapp restart --name worldcup-formations --resource-group rg-worldcup
 ```
 
-### GitHub Actions deploy fails at "Set up .NET"
+### GitHub Actions fails at "Set up .NET"
 
 The `10.0.x` version string may not yet be available on GitHub-hosted runners.
 Change `DOTNET_VERSION` in `.github/workflows/azure-deploy.yml` to `9.0.x` and
-also update the `--runtime` in the App Service to match.
+update the `dotnet_version` in `infra/main.tf` to `"9.0"` accordingly, then
+`tofu apply`.
 
-### App sleeps and takes 30+ seconds to respond (F1 tier)
+### App sleeps after 20+ minutes (F1 tier)
 
-App Service Free tier has no Always On. Either:
-- Upgrade to B1 (`az appservice plan update --sku B1`)
-- Or use a free uptime monitor (UptimeRobot, Better Uptime) to ping the app every
-  5 minutes to keep it warm
+F1 has no Always On. Either:
+- Change `sku_name` to `"B1"` in `terraform.tfvars` and run `tofu apply`
+- Or use a free uptime monitor (UptimeRobot) to ping the app every 5 minutes
 
----
+### `tofu apply` fails: "subscription not found"
 
-## Tear everything down
-
-When you no longer need the deployment, delete the entire resource group —
-this removes the App Service, plan, and all associated resources in one command:
-
-```bash
-az group delete --name rg-worldcup --yes --no-wait
-```
+Make sure `subscription_id` in `terraform.tfvars` matches what
+`az account show` reports, and that you are logged in with `az login`.
