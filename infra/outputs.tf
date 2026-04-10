@@ -1,14 +1,14 @@
-output "public_ip" {
-  description = "Public IP address of the VM — point your DNS A record here"
-  value       = azurerm_public_ip.main.ip_address
-}
-
-output "ssh_command" {
-  description = "SSH command to connect to the VM"
-  value       = "ssh ${var.admin_username}@${azurerm_public_ip.main.ip_address}"
-}
-
 output "app_url" {
-  description = "URL of the app (after DNS/nginx are configured)"
-  value       = "http://${azurerm_public_ip.main.ip_address}"
+  description = "Public HTTPS URL of the Container App"
+  value       = "https://${azurerm_container_app.main.ingress[0].fqdn}"
+}
+
+output "app_name" {
+  description = "Container App name (use as AZURE_APP_NAME in GitHub Actions)"
+  value       = azurerm_container_app.main.name
+}
+
+output "resource_group_name" {
+  description = "Resource group name"
+  value       = azurerm_resource_group.main.name
 }

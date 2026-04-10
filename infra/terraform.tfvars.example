@@ -4,7 +4,9 @@
 subscription_id     = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 location            = "swedencentral"
 resource_group_name = "rg-worldcup"
-vm_name             = "vm-worldcup"
-vm_size             = "Standard_B2as_v2"
-admin_username      = "azureuser"
-ssh_public_key_path = "~/.ssh/id_ed25519.pub"
+app_name            = "worldcup"
+container_image     = "ghcr.io/yourgithubuser/worldcup:latest"
+
+# 0 = scale to zero when idle (free tier, ~10s cold start on first visit)
+# 1 = always on (~$5-8/month, instant response)
+min_replicas = 0

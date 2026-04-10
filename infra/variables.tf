@@ -5,7 +5,7 @@ variable "subscription_id" {
 }
 
 variable "location" {
-  description = "Azure region (e.g. swedencentral, eastus, japaneast)"
+  description = "Azure region"
   type        = string
   default     = "swedencentral"
 }
@@ -16,26 +16,19 @@ variable "resource_group_name" {
   default     = "rg-worldcup"
 }
 
-variable "vm_name" {
-  description = "Name of the Virtual Machine"
+variable "app_name" {
+  description = "Name used for all resources (Container App, environment, logs)"
   type        = string
-  default     = "vm-worldcup"
+  default     = "worldcup"
 }
 
-variable "vm_size" {
-  description = "VM SKU — Standard_B2as_v2 works on Azure for Students in swedencentral"
+variable "container_image" {
+  description = "Docker image to deploy, e.g. ghcr.io/youruser/worldcup:latest"
   type        = string
-  default     = "Standard_B2as_v2"
 }
 
-variable "admin_username" {
-  description = "SSH admin username"
-  type        = string
-  default     = "azureuser"
-}
-
-variable "ssh_public_key_path" {
-  description = "Path to your SSH public key"
-  type        = string
-  default     = "~/.ssh/id_ed25519.pub"
+variable "min_replicas" {
+  description = "0 = scale to zero (free, ~10s cold start); 1 = always on (~$5-8/mo)"
+  type        = number
+  default     = 0
 }

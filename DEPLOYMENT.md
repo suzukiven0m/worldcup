@@ -1,15 +1,17 @@
-# Deploying to Azure VM with OpenTofu
+# Deploying to Azure Container Apps with OpenTofu
 
-This guide provisions World Cup Formations (Blazor Server, .NET 10, SQLite) on
-an Azure Linux VM using **OpenTofu**. App Service is blocked by the Azure for
-Students policy; a `Standard_B2as_v2` VM in `swedencentral` works instead.
+World Cup Formations (Blazor Server, .NET 10, SQLite) runs as a Docker container
+on **Azure Container Apps** (Consumption plan). The Docker image is stored for
+free on **GitHub Container Registry (ghcr.io)**. Every push to `master` builds
+and redeploys automatically via GitHub Actions.
 
-**What gets created:**
-- Ubuntu 24.04 LTS VM (`Standard_B2as_v2` — 2 vCPU, 8 GB RAM)
-- Static public IP, VNet, NSG (ports 22/80/443)
-- nginx reverse proxy → Blazor Server on 127.0.0.1:5000
-- `worldcup.service` systemd unit (auto-restart on crash/reboot)
-- SQLite database at `/var/worldcup/worldcup.db` (survives redeployments)
+**Estimated cost:**
+- `min_replicas = 0` (scale to zero) — effectively **free** for a portfolio app;
+  first visit after idle takes ~10 seconds to cold-start
+- `min_replicas = 1` (always on) — ~**$5–8/month**
+
+> **Note on SQLite**: the container filesystem is ephemeral. On each cold start
+> the database reseeds (~2–5 s). This is fine for a read-only portfolio app.
 
 ---
 
@@ -19,14 +21,14 @@ Students policy; a `Standard_B2as_v2` VM in `swedencentral` works instead.
 |---|---|
 | Azure CLI | [aka.ms/installazurecliwindows](https://aka.ms/installazurecliwindows) or `winget install Microsoft.AzureCLI` |
 | OpenTofu ≥ 1.8 | [opentofu.org/docs/intro/install](https://opentofu.org/docs/intro/install/) |
-| .NET 10 SDK | [dotnet.microsoft.com/download](https://dotnet.microsoft.com/download) |
+| Docker | [docs.docker.com/get-docker](https://docs.docker.com/get-docker/) |
 
 Verify:
 
 ```bash
 az --version
 tofu --version
-dotnet --version   # should print 10.x.x
+docker --version
 ```
 
 ---
@@ -38,26 +40,11 @@ az login
 az account show --query "{name:name, id:id}" -o table
 ```
 
-If you have multiple subscriptions:
-
-```bash
-az account set --subscription "<subscription-id>"
-```
+Note your **subscription ID** for the next step.
 
 ---
 
-## Part 2 — SSH key
-
-The VM uses SSH key auth. If you don't have a key yet:
-
-```bash
-ssh-keygen -t ed25519 -C "worldcup-vm"
-# Accept defaults — saves to ~/.ssh/id_ed25519
-```
-
----
-
-## Part 3 — Configure OpenTofu variables
+## Part 2 — Configure variables
 
 ```bash
 cp infra/terraform.tfvars.example infra/terraform.tfvars
@@ -66,20 +53,22 @@ cp infra/terraform.tfvars.example infra/terraform.tfvars
 Edit `infra/terraform.tfvars`:
 
 ```hcl
-subscription_id     = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"   # from az account show
+subscription_id     = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 location            = "swedencentral"
 resource_group_name = "rg-worldcup"
-vm_name             = "vm-worldcup"
-vm_size             = "Standard_B2as_v2"
-admin_username      = "azureuser"
-ssh_public_key_path = "~/.ssh/id_ed25519.pub"
+app_name            = "worldcup"
+container_image     = "ghcr.io/yourgithubuser/worldcup:latest"
+min_replicas        = 0
 ```
+
+Replace `yourgithubuser` with your actual GitHub username. The image doesn't
+exist yet — that's fine, we'll push it in Part 4.
 
 > `terraform.tfvars` is gitignored — it will not be committed.
 
 ---
 
-## Part 4 — Provision the VM
+## Part 3 — Provision infrastructure
 
 ```bash
 cd infra
@@ -88,222 +77,190 @@ tofu plan
 tofu apply
 ```
 
-Type `yes` when prompted. Takes ~3 minutes. When complete:
+Type `yes` when prompted. Creates:
+- Resource group
+- Log Analytics workspace
+- Container App Environment (Consumption plan)
+- Container App
+
+When complete:
 
 ```
 Outputs:
-  public_ip   = "x.x.x.x"
-  ssh_command = "ssh azureuser@x.x.x.x"
-  app_url     = "http://x.x.x.x"
+  app_url            = "https://worldcup.<hash>.swedencentral.azurecontainerapps.io"
+  app_name           = "worldcup"
+  resource_group_name = "rg-worldcup"
 ```
 
-The VM boots and cloud-init runs in the background (~2 minutes after apply).
-It installs .NET 10, nginx, and registers the systemd service. The service
-starts automatically once you deploy the app code in the next step.
+The app will show an error until you push the Docker image in the next step.
 
 ---
 
-## Part 5 — Deploy the app
+## Part 4 — Push the first Docker image manually
 
-### 5.1 Publish locally
+Do this once before GitHub Actions takes over.
 
 ```bash
 cd ..   # repo root
 
-dotnet publish src/WorldCupFormations.Web/WorldCupFormations.Web.csproj \
-  --configuration Release \
-  --output ./publish
+# Log in to GitHub Container Registry
+echo $CR_PAT | docker login ghcr.io -u yourgithubuser --password-stdin
+# (or: docker login ghcr.io  — then enter your GitHub username + Personal Access Token)
+
+# Build and push
+docker build -t ghcr.io/yourgithubuser/worldcup:latest .
+docker push ghcr.io/yourgithubuser/worldcup:latest
 ```
 
-### 5.2 Copy to the VM
-
-Replace `x.x.x.x` with your IP from the tofu output:
+Then update the Container App to use it:
 
 ```bash
-# Linux / macOS
-rsync -avz --delete publish/ azureuser@x.x.x.x:/tmp/worldcup-deploy/
-
-# Windows (PowerShell) — use scp instead
-scp -r publish\* azureuser@x.x.x.x:/tmp/worldcup-deploy/
+az containerapp update \
+  --name worldcup \
+  --resource-group rg-worldcup \
+  --image ghcr.io/yourgithubuser/worldcup:latest
 ```
 
-### 5.3 Install and start
-
-```bash
-ssh azureuser@x.x.x.x
-
-# On the VM:
-sudo rsync -a --delete /tmp/worldcup-deploy/ /opt/worldcup/
-sudo chown -R worldcup:worldcup /opt/worldcup
-sudo systemctl start worldcup
-sudo systemctl status worldcup   # should show "active (running)"
-exit
-```
-
-Open `http://x.x.x.x` in your browser. The first request seeds the database
-(~5–15 s). Subsequent starts skip seeding.
+Visit the URL from the tofu output. First request seeds the database (~5–10 s).
 
 ---
 
-## Part 6 — HTTPS with Let's Encrypt (optional but recommended)
+## Part 5 — Set up GitHub Actions (automated deploys)
 
-You need a domain name pointing to the VM's public IP first (DNS A record).
+Every push to `master` will build a new image and redeploy.
 
-```bash
-ssh azureuser@x.x.x.x
-
-sudo apt install -y certbot python3-certbot-nginx
-sudo certbot --nginx -d yourdomain.com
-# Follow prompts — certbot edits nginx config and installs the cert
-
-sudo systemctl reload nginx
-exit
-```
-
-Certbot auto-renews the certificate via a systemd timer. No further action needed.
-
----
-
-## Redeploying after code changes
+### 5.1 Create an Azure service principal
 
 ```bash
-# From repo root:
-dotnet publish src/WorldCupFormations.Web/WorldCupFormations.Web.csproj \
-  --configuration Release --output ./publish
-
-rsync -avz --delete publish/ azureuser@x.x.x.x:/tmp/worldcup-deploy/
-
-ssh azureuser@x.x.x.x "
-  sudo rsync -a --delete /tmp/worldcup-deploy/ /opt/worldcup/ &&
-  sudo chown -R worldcup:worldcup /opt/worldcup &&
-  sudo systemctl restart worldcup
-"
+az ad sp create-for-rbac \
+  --name "sp-worldcup-deploy" \
+  --role contributor \
+  --scopes /subscriptions/<your-subscription-id>/resourceGroups/rg-worldcup \
+  --sdk-auth
 ```
 
-The SQLite database at `/var/worldcup/worldcup.db` is untouched between deploys.
+Copy the entire JSON output — you need it in the next step.
+
+### 5.2 Add secrets to GitHub
+
+**Settings → Secrets and variables → Actions → New repository secret**
+
+| Secret name | Value |
+|---|---|
+| `AZURE_CREDENTIALS` | The full JSON from the sp create command above |
+| `AZURE_APP_NAME` | `worldcup` |
+| `AZURE_RESOURCE_GROUP` | `rg-worldcup` |
+
+The `GITHUB_TOKEN` for pushing to ghcr.io is provided automatically — no extra
+secret needed.
+
+### 5.3 Make your GitHub package public (optional but recommended)
+
+By default ghcr.io packages are private. If you want the Container App to pull
+without credentials, make the package public:
+
+**GitHub → Your profile → Packages → worldcup → Package settings → Change visibility → Public**
+
+Or keep it private — Container Apps can pull from private registries with a
+registry credential (see Troubleshooting below).
+
+### 5.4 Trigger the first automated deploy
+
+```bash
+git push origin master
+```
+
+Watch it run under **Actions** in your GitHub repo. Each push to `master` from
+now on builds a fresh image tagged with the commit SHA and redeploys.
 
 ---
 
 ## Useful operations
 
-### View live app logs
+### View live logs
 
 ```bash
-ssh azureuser@x.x.x.x
-sudo journalctl -u worldcup -f
+az containerapp logs show \
+  --name worldcup \
+  --resource-group rg-worldcup \
+  --follow
 ```
 
-### Force a database reseed
+### Force a redeploy (same image)
 
 ```bash
-ssh azureuser@x.x.x.x
-sudo systemctl stop worldcup
-sudo rm /var/worldcup/worldcup.db
-sudo systemctl start worldcup
-sudo journalctl -u worldcup -f   # watch the seed run
+az containerapp revision restart \
+  --name worldcup \
+  --resource-group rg-worldcup \
+  --revision $(az containerapp revision list \
+    --name worldcup \
+    --resource-group rg-worldcup \
+    --query "[0].name" -o tsv)
 ```
 
-### Check nginx status
+### Switch to always-on (no cold starts)
 
-```bash
-ssh azureuser@x.x.x.x
-sudo systemctl status nginx
-sudo nginx -t             # test config syntax
-sudo cat /var/log/nginx/error.log
-```
-
-### Check cloud-init completed successfully
-
-```bash
-ssh azureuser@x.x.x.x
-sudo cloud-init status    # should print "done"
-sudo cat /var/log/cloud-init-output.log
-dotnet --version          # should print 10.x.x
-```
-
-### Scale (resize the VM)
+Edit `infra/terraform.tfvars`:
 
 ```hcl
-# infra/terraform.tfvars
-vm_size = "Standard_B4as_v2"   # 4 vCPU, 16 GB
+min_replicas = 1
 ```
+
+Then:
 
 ```bash
 cd infra && tofu apply
 ```
 
-Azure stops, resizes, and restarts the VM. Downtime ~2 minutes.
-
----
-
-## Estimated cost (Azure for Students)
-
-| VM size | vCPU | RAM | Cost/month |
-|---|---|---|---|
-| Standard_B2as_v2 | 2 | 8 GB | ~$30 |
-| Standard_B4as_v2 | 4 | 16 GB | ~$60 |
-
-At ~$30/month, $100 of student credit covers ~3 months. The VM is significantly
-more powerful than App Service B1 for the price point.
-
----
-
-## Tear everything down
+### Tear everything down
 
 ```bash
 cd infra
 tofu destroy
 ```
 
-Deletes the VM, NIC, public IP, NSG, VNet, and resource group. All billing stops.
+Also delete the service principal if you no longer need it:
+
+```bash
+az ad sp delete --id $(az ad sp list --display-name sp-worldcup-deploy --query "[0].id" -o tsv)
+```
 
 ---
 
 ## Troubleshooting
 
-### cloud-init hasn't finished yet
+### Container App pulls fail (private image)
 
-After `tofu apply`, wait 2–3 minutes before deploying. Check:
-
-```bash
-ssh azureuser@x.x.x.x
-sudo cloud-init status
-```
-
-If it shows `running`, wait and check again. If `error`:
+If your ghcr.io package is private, register the registry with the Container App:
 
 ```bash
-sudo cat /var/log/cloud-init-output.log
+az containerapp registry set \
+  --name worldcup \
+  --resource-group rg-worldcup \
+  --server ghcr.io \
+  --username yourgithubuser \
+  --password <github-personal-access-token>
 ```
 
-### `systemctl start worldcup` fails — "no such file"
+### Cold start takes 30+ seconds
 
-The publish files haven't been copied yet, or were copied to the wrong path.
-Verify:
+The database is seeding. Blazor Server + EF Core + SQLite seed of ~37,000 rows
+takes ~5–10 s. The remaining time is container startup. This only happens on
+the first request after the container has been idle (scale-to-zero). Set
+`min_replicas = 1` in `terraform.tfvars` and `tofu apply` to eliminate it.
 
-```bash
-ls /opt/worldcup/WorldCupFormations.Web.dll
-```
+### `tofu apply` fails with "feature not supported in region"
 
-### nginx returns 502 Bad Gateway
+Try `location = "northeurope"` or `location = "eastus"` in `terraform.tfvars`.
+Container Apps use the `Microsoft.App` provider, which has different regional
+availability than App Service (`Microsoft.Web`).
 
-The app isn't running. Check:
+### GitHub Actions deploy step fails: "containerapp not found"
 
-```bash
-sudo systemctl status worldcup
-sudo journalctl -u worldcup -n 50
-```
+Make sure `AZURE_APP_NAME` and `AZURE_RESOURCE_GROUP` secrets match exactly what
+`tofu apply` created (check `tofu output`).
 
-### SSH connection refused
+### App returns 502 immediately after deploy
 
-The VM may still be booting (wait ~1 minute after `tofu apply`), or port 22
-is blocked. Verify the NSG rule exists:
-
-```bash
-az network nsg rule list --nsg-name vm-worldcup-nsg --resource-group rg-worldcup -o table
-```
-
-### `tofu apply` fails: "subscription not found"
-
-Make sure `subscription_id` in `terraform.tfvars` matches `az account show`,
-and that you are logged in with `az login`.
+The new revision is still starting. Container Apps does a zero-downtime revision
+swap — wait ~30 seconds and refresh.

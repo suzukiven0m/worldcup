@@ -1,41 +1,48 @@
-name: Deploy to Azure App Service
+name: Build and Deploy to Azure Container Apps
 
 on:
   push:
     branches: [ master ]
-  workflow_dispatch:      # allow manual trigger from GitHub UI
+  workflow_dispatch:
 
 env:
-  DOTNET_VERSION: '10.0.x'
-  PROJECT_PATH: 'src/WorldCupFormations.Web/WorldCupFormations.Web.csproj'
-  PUBLISH_DIR: 'publish'
+  IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/worldcup
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write   # needed to push to ghcr.io
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up .NET
-        uses: actions/setup-dotnet@v4
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
         with:
-          dotnet-version: ${{ env.DOTNET_VERSION }}
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Restore dependencies
-        run: dotnet restore ${{ env.PROJECT_PATH }}
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: |
+            ${{ env.IMAGE_NAME }}:latest
+            ${{ env.IMAGE_NAME }}:${{ github.sha }}
 
-      - name: Publish
+      - name: Log in to Azure
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Deploy to Azure Container Apps
         run: |
-          dotnet publish ${{ env.PROJECT_PATH }} \
-            --configuration Release \
-            --output ${{ env.PUBLISH_DIR }} \
-            --no-restore
-
-      - name: Deploy to Azure Web App
-        uses: azure/webapps-deploy@v3
-        with:
-          app-name: ${{ secrets.AZURE_WEBAPP_NAME }}
-          publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
-          package: ${{ env.PUBLISH_DIR }}
+          az containerapp update \
+            --name ${{ secrets.AZURE_APP_NAME }} \
+            --resource-group ${{ secrets.AZURE_RESOURCE_GROUP }} \
+            --image ${{ env.IMAGE_NAME }}:${{ github.sha }}
