@@ -1,14 +1,14 @@
-output "webapp_url" {
-  description = "HTTPS URL of the deployed web app"
-  value       = "https://${azurerm_linux_web_app.main.default_hostname}"
+output "public_ip" {
+  description = "Public IP address of the VM — point your DNS A record here"
+  value       = azurerm_public_ip.main.ip_address
 }
 
-output "webapp_name" {
-  description = "Name of the Azure Web App (use as AZURE_WEBAPP_NAME secret in GitHub Actions)"
-  value       = azurerm_linux_web_app.main.name
+output "ssh_command" {
+  description = "SSH command to connect to the VM"
+  value       = "ssh ${var.admin_username}@${azurerm_public_ip.main.ip_address}"
 }
 
-output "resource_group_name" {
-  description = "Name of the resource group"
-  value       = azurerm_resource_group.main.name
+output "app_url" {
+  description = "URL of the app (after DNS/nginx are configured)"
+  value       = "http://${azurerm_public_ip.main.ip_address}"
 }

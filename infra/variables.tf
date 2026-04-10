@@ -5,9 +5,9 @@ variable "subscription_id" {
 }
 
 variable "location" {
-  description = "Azure region (e.g. westeurope, eastus, japaneast)"
+  description = "Azure region (e.g. swedencentral, eastus, japaneast)"
   type        = string
-  default     = "westeurope"
+  default     = "swedencentral"
 }
 
 variable "resource_group_name" {
@@ -16,24 +16,26 @@ variable "resource_group_name" {
   default     = "rg-worldcup"
 }
 
-variable "plan_name" {
-  description = "Name of the App Service Plan"
+variable "vm_name" {
+  description = "Name of the Virtual Machine"
   type        = string
-  default     = "plan-worldcup"
+  default     = "vm-worldcup"
 }
 
-variable "webapp_name" {
-  description = "Globally unique name for the Web App (becomes <name>.azurewebsites.net)"
+variable "vm_size" {
+  description = "VM SKU — Standard_B2as_v2 works on Azure for Students in swedencentral"
   type        = string
+  default     = "Standard_B2as_v2"
 }
 
-variable "sku_name" {
-  description = "App Service Plan SKU. F1 = free, B1 = ~$13/month (recommended)"
+variable "admin_username" {
+  description = "SSH admin username"
   type        = string
-  default     = "B1"
+  default     = "azureuser"
+}
 
-  validation {
-    condition     = contains(["F1", "B1", "B2", "B3"], var.sku_name)
-    error_message = "sku_name must be one of: F1, B1, B2, B3."
-  }
+variable "ssh_public_key_path" {
+  description = "Path to your SSH public key"
+  type        = string
+  default     = "~/.ssh/id_ed25519.pub"
 }

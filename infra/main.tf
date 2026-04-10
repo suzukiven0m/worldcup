@@ -7,14 +7,6 @@ terraform {
       version = "~> 4.0"
     }
   }
-
-  # Uncomment and fill in to store state in Azure Storage (see DEPLOYMENT.md)
-  # backend "azurerm" {
-  #   resource_group_name  = "rg-tfstate"
-  #   storage_account_name = "<your-storage-account>"
-  #   container_name       = "tfstate"
-  #   key                  = "worldcup.terraform.tfstate"
-  # }
 }
 
 provider "azurerm" {
@@ -28,54 +20,123 @@ resource "azurerm_resource_group" "main" {
   location = var.location
 }
 
-# ── App Service Plan ───────────────────────────────────────────────────────────
-resource "azurerm_service_plan" "main" {
-  name                = var.plan_name
+# ── Networking ─────────────────────────────────────────────────────────────────
+resource "azurerm_virtual_network" "main" {
+  name                = "${var.vm_name}-vnet"
   resource_group_name = azurerm_resource_group.main.name
   location            = azurerm_resource_group.main.location
-  os_type             = "Linux"
-  sku_name            = var.sku_name
+  address_space       = ["10.0.0.0/16"]
 }
 
-# ── Web App ────────────────────────────────────────────────────────────────────
-resource "azurerm_linux_web_app" "main" {
-  name                = var.webapp_name
+resource "azurerm_subnet" "main" {
+  name                 = "default"
+  resource_group_name  = azurerm_resource_group.main.name
+  virtual_network_name = azurerm_virtual_network.main.name
+  address_prefixes     = ["10.0.1.0/24"]
+}
+
+resource "azurerm_public_ip" "main" {
+  name                = "${var.vm_name}-pip"
   resource_group_name = azurerm_resource_group.main.name
   location            = azurerm_resource_group.main.location
-  service_plan_id     = azurerm_service_plan.main.id
+  allocation_method   = "Static"
+  sku                 = "Standard"
+}
 
-  https_only = true
+resource "azurerm_network_security_group" "main" {
+  name                = "${var.vm_name}-nsg"
+  resource_group_name = azurerm_resource_group.main.name
+  location            = azurerm_resource_group.main.location
 
-  site_config {
-    # always_on is not supported on the Free (F1) tier
-    always_on = var.sku_name != "F1"
-
-    application_stack {
-      dotnet_version = "10.0"
-    }
-
-    # Allow SignalR WebSocket connections (required for Blazor Server)
-    websockets_enabled = true
+  # SSH
+  security_rule {
+    name                       = "SSH"
+    priority                   = 1001
+    direction                  = "Inbound"
+    access                     = "Allow"
+    protocol                   = "Tcp"
+    source_port_range          = "*"
+    destination_port_range     = "22"
+    source_address_prefix      = "*"
+    destination_address_prefix = "*"
   }
 
-  app_settings = {
-    # Put the SQLite database outside the deployed directory so it survives
-    # redeployments without having to reseed 37 000 records every time.
-    "DB_PATH"                = "/home/data/worldcup.db"
-    "ASPNETCORE_ENVIRONMENT" = "Production"
+  # HTTP — nginx handles TLS termination; redirects to HTTPS
+  security_rule {
+    name                       = "HTTP"
+    priority                   = 1002
+    direction                  = "Inbound"
+    access                     = "Allow"
+    protocol                   = "Tcp"
+    source_port_range          = "*"
+    destination_port_range     = "80"
+    source_address_prefix      = "*"
+    destination_address_prefix = "*"
   }
 
-  logs {
-    http_logs {
-      file_system {
-        retention_in_days = 7
-        retention_in_mb   = 35
-      }
-    }
-    application_logs {
-      file_system_level = "Warning"
-    }
+  # HTTPS
+  security_rule {
+    name                       = "HTTPS"
+    priority                   = 1003
+    direction                  = "Inbound"
+    access                     = "Allow"
+    protocol                   = "Tcp"
+    source_port_range          = "*"
+    destination_port_range     = "443"
+    source_address_prefix      = "*"
+    destination_address_prefix = "*"
   }
+}
+
+resource "azurerm_network_interface" "main" {
+  name                = "${var.vm_name}-nic"
+  resource_group_name = azurerm_resource_group.main.name
+  location            = azurerm_resource_group.main.location
+
+  ip_configuration {
+    name                          = "internal"
+    subnet_id                     = azurerm_subnet.main.id
+    private_ip_address_allocation = "Dynamic"
+    public_ip_address_id          = azurerm_public_ip.main.id
+  }
+}
+
+resource "azurerm_network_interface_security_group_association" "main" {
+  network_interface_id      = azurerm_network_interface.main.id
+  network_security_group_id = azurerm_network_security_group.main.id
+}
+
+# ── Virtual Machine ────────────────────────────────────────────────────────────
+resource "azurerm_linux_virtual_machine" "main" {
+  name                = var.vm_name
+  resource_group_name = azurerm_resource_group.main.name
+  location            = azurerm_resource_group.main.location
+  size                = var.vm_size
+  admin_username      = var.admin_username
+
+  network_interface_ids = [azurerm_network_interface.main.id]
+
+  admin_ssh_key {
+    username   = var.admin_username
+    public_key = file(var.ssh_public_key_path)
+  }
+
+  os_disk {
+    caching              = "ReadWrite"
+    storage_account_type = "Standard_LRS"
+  }
+
+  source_image_reference {
+    publisher = "Canonical"
+    offer     = "ubuntu-24_04-lts"
+    sku       = "server"
+    version   = "latest"
+  }
+
+  # Bootstrap: install .NET 10, nginx, configure systemd service
+  custom_data = base64encode(templatefile("${path.module}/cloud-init.yml", {
+    admin_username = var.admin_username
+  }))
 
   tags = {
     project = "world-cup-formations"

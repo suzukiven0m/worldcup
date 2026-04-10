@@ -1,9 +1,10 @@
 # Copy this file to terraform.tfvars and fill in your values.
-# terraform.tfvars is gitignored — never commit it (it contains your subscription ID).
+# terraform.tfvars is gitignored — never commit it.
 
 subscription_id     = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-location            = "westeurope"
+location            = "swedencentral"
 resource_group_name = "rg-worldcup"
-plan_name           = "plan-worldcup"
-webapp_name         = "worldcup-formations"   # must be globally unique on azurewebsites.net
-sku_name            = "B1"                    # F1 = free (limited), B1 = ~$13/month (recommended)
+vm_name             = "vm-worldcup"
+vm_size             = "Standard_B2as_v2"
+admin_username      = "azureuser"
+ssh_public_key_path = "~/.ssh/id_ed25519.pub"
